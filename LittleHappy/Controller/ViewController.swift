@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     //Menyimpan nilai feeling pada array
     var feels = ["Happy", "Sad", "Angry", "Fear", "Disgust"]
     
+    var kindOfFeels : [String] = []
+    var dateOfFeels : [String] = []
+    var timeOfFeels : [String] = []
+    
     //Membuat variabel untuk menyimpan senderTag
     var senderTag : Int = 0
     
@@ -38,6 +42,7 @@ class ViewController: UIViewController {
     //Membuat fungsi untuk Button Lets Play
     @IBAction func letsPlay(_ sender: Any) {
         setFeelData(senderTag)
+        print("LetsPlay Button \(senderTag)")
         
         performSegue(withIdentifier: "goToHome", sender: self)
     }
@@ -45,17 +50,23 @@ class ViewController: UIViewController {
     /////////////////////////////
     
     //Membuat fungsi untuk menyiapkan data feeling
-    func setFeelData(_ senderTag: Int){
-        let userFeelModel = UserFeelModel()
-
-        //Set model
-        userFeelModel.kindOfFeels.append(feels[senderTag])
-        userFeelModel.dateOfFeels.append(getDateTime()[0])
-        userFeelModel.dateOfFeels.append(getDateTime()[1])
+    func setFeelData(_ senderTags: Int){
         
-        print(userFeelModel.kindOfFeels.append(feels[senderTag]))
-        print(userFeelModel.dateOfFeels.append(getDateTime()[0]))
-        print(userFeelModel.dateOfFeels.append(getDateTime()[1]))
+        
+        //Membuat User Default untuk menyimpan data array
+        let defaults = UserDefaults.standard
+
+        kindOfFeels.append(feels[senderTags])
+        dateOfFeels.append(getDateTime()[0])
+        timeOfFeels.append(getDateTime()[1])
+        
+        print(kindOfFeels[0])
+        print(dateOfFeels[0])
+        print(timeOfFeels[0])
+        
+        defaults.set(kindOfFeels, forKey: "SavedFeelsAray")
+        defaults.set(dateOfFeels, forKey: "SavedDateArray")
+        defaults.set(timeOfFeels, forKey: "SavedTimeArray")
 
     } //func letsPlay
 
