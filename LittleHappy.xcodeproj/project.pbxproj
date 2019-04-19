@@ -12,6 +12,9 @@
 		0478848A22686FD500F28E16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478848822686FD500F28E16 /* Main.storyboard */; };
 		0478848C22686FD600F28E16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0478848B22686FD600F28E16 /* Assets.xcassets */; };
 		0478848F22686FD600F28E16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478848D22686FD600F28E16 /* LaunchScreen.storyboard */; };
+		B500463522697E5F001FE3D6 /* FeelingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500463422697E5F001FE3D6 /* FeelingsViewController.swift */; };
+		B500463722698EB6001FE3D6 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500463622698EB6001FE3D6 /* Common.swift */; };
+		B50046392269945E001FE3D6 /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50046382269945E001FE3D6 /* MediaManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		0478848B22686FD600F28E16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0478848E22686FD600F28E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0478849022686FD600F28E16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B500463422697E5F001FE3D6 /* FeelingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsViewController.swift; sourceTree = "<group>"; };
+		B500463622698EB6001FE3D6 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		B50046382269945E001FE3D6 /* MediaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +60,11 @@
 		0478848322686FD500F28E16 /* LittleHappy */ = {
 			isa = PBXGroup;
 			children = (
+				B500463622698EB6001FE3D6 /* Common.swift */,
+				B50046382269945E001FE3D6 /* MediaManager.swift */,
 				0478848422686FD500F28E16 /* AppDelegate.swift */,
 				0478848622686FD500F28E16 /* ViewController.swift */,
+				B500463422697E5F001FE3D6 /* FeelingsViewController.swift */,
 				0478848822686FD500F28E16 /* Main.storyboard */,
 				0478848B22686FD600F28E16 /* Assets.xcassets */,
 				0478848D22686FD600F28E16 /* LaunchScreen.storyboard */,
@@ -135,8 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B500463722698EB6001FE3D6 /* Common.swift in Sources */,
 				0478848722686FD500F28E16 /* ViewController.swift in Sources */,
+				B500463522697E5F001FE3D6 /* FeelingsViewController.swift in Sources */,
 				0478848522686FD500F28E16 /* AppDelegate.swift in Sources */,
+				B50046392269945E001FE3D6 /* MediaManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +295,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9NAU7R3577;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LittleHappy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -292,7 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.littlehappy.LittleHappy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -301,7 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9NAU7R3577;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LittleHappy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -310,7 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.littlehappy.LittleHappy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
