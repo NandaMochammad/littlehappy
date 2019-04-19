@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     
     //Membuat fungsi untuk menyiapkan data feeling
     func setFeelData(_ senderTag: Int){
-        var userFeelModel = UserFeelModel()
+        let userFeelModel = UserFeelModel()
 
         //Set model
         userFeelModel.kindOfFeels.append(feels[senderTag])

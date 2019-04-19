@@ -40,11 +40,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Hd-Ys-r5B">
-                                                <rect key="frame" x="27" y="0.0" width="97" height="120"/>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Hd-Ys-r5B">
+                                                <rect key="frame" x="25" y="13" width="100" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="90"/>
-                                                <state key="normal" title="😡"/>
+                                                <state key="normal" image="Angry"/>
                                                 <connections>
                                                     <action selector="feelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z09-6O-Hlr"/>
                                                 </connections>
@@ -56,15 +55,6 @@
                                         <rect key="frame" x="600" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iI-F1-W64">
-                                                <rect key="frame" x="27" y="0.0" width="97" height="120"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="90"/>
-                                                <state key="normal" title="🤢"/>
-                                                <connections>
-                                                    <action selector="feelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YYW-Mb-NU3"/>
-                                                </connections>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Disgust" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kq3-h0-DDr">
                                                 <rect key="frame" x="35" y="121" width="80" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -72,6 +62,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iI-F1-W64">
+                                                <rect key="frame" x="25" y="13" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="Disgust"/>
+                                                <connections>
+                                                    <action selector="feelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YYW-Mb-NU3"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -86,11 +84,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bE-mE-ZXf">
-                                                <rect key="frame" x="27" y="0.0" width="97" height="120"/>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bE-mE-ZXf">
+                                                <rect key="frame" x="25" y="13" width="100" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="90"/>
-                                                <state key="normal" title="😰"/>
+                                                <state key="normal" image="Fear"/>
                                                 <connections>
                                                     <action selector="feelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UBa-bs-r9b"/>
                                                 </connections>
@@ -109,11 +106,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLm-5U-nMh">
-                                                <rect key="frame" x="27" y="0.0" width="97" height="120"/>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLm-5U-nMh">
+                                                <rect key="frame" x="25" y="13" width="100" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="90"/>
-                                                <state key="normal" title="😭"/>
+                                                <state key="normal" image="Sad"/>
                                                 <connections>
                                                     <action selector="feelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rGd-iI-8kw"/>
                                                 </connections>
@@ -132,11 +128,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUl-vT-juL">
-                                                <rect key="frame" x="27" y="0.0" width="97" height="120"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUl-vT-juL">
+                                                <rect key="frame" x="25" y="13" width="100" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="90"/>
-                                                <state key="normal" title="😄"/>
+                                                <state key="normal" image="Happy"/>
                                                 <connections>
                                                     <action selector="feelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e7T-PP-iIL"/>
                                                 </connections>
@@ -152,8 +147,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="LET'S PLAY"/>
                                 <connections>
-                                    <action selector="setFeelData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A6b-1r-ZeZ"/>
-                                    <segue destination="9Mi-LI-jM5" kind="show" identifier="goToHome" id="aDA-UH-L2C"/>
+                                    <action selector="letsPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wbm-SS-2fw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How do you feel today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qo8-Sa-Cef">
@@ -167,10 +161,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="9Mi-LI-jM5" kind="show" identifier="goToHome" id="qmF-Gb-iJG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22.767857142857142" y="44.927536231884062"/>
+            <point key="canvasLocation" x="-52" y="45"/>
         </scene>
         <!--Home-->
         <scene sceneID="hOy-Fx-OYf">
@@ -258,4 +255,11 @@
             <point key="canvasLocation" x="651.5625" y="44.927536231884062"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Angry" width="128" height="128"/>
+        <image name="Disgust" width="128" height="128"/>
+        <image name="Fear" width="128" height="128"/>
+        <image name="Happy" width="128" height="128"/>
+        <image name="Sad" width="128" height="128"/>
+    </resources>
 </document>
