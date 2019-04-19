@@ -13,11 +13,9 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     @IBOutlet weak var diaryTableView: UITableView!
     
-    var feelsDictionary : [String:[String]] = [:]
-    
-    var kindOfFeels = [String]()
-    var dateOfFeels = [String]()
-    var timeOfFeels = [String]()
+    var diaryKindOfFeels = [String]()
+    var diaryDateOfFeels = [String]()
+    var diaryTimeOfFeels = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +23,12 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //Declare the table view to be a delegate for UITableViewDelegate, UITableViewDataSource
         diaryTableView.delegate = self
         diaryTableView.dataSource = self
+        
+        //Register your MessageCell.xib file here:
+        diaryTableView.register(UINib(nibName: "diaryCustomCell", bundle: nil), forCellReuseIdentifier: "diaryCustomCell")
+        
+        configureTableView()
+        retriveFeelData()
 
     }
     
@@ -36,35 +40,39 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //Set custom cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "diaryCustomCell", for: indexPath) as! DiaryCustomTableViewCell
         
-        cell.feelDiary.text = kindOfFeels[indexPath.row]
-        cell.dateDiary.text = dateOfFeels[indexPath.row]
-        cell.timeDiary.text = timeOfFeels[indexPath.row]
+        cell.feelDiary.text = diaryKindOfFeels[indexPath.row]
+        cell.dateDiary.text = diaryDateOfFeels[indexPath.row]
+        cell.timeDiary.text = diaryTimeOfFeels[indexPath.row]
         cell.iconDiary.image = UIImage(named: cell.feelDiary.text ?? "Happy")
         
-        
-        
         return cell
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return kindOfFeels.count
+        return diaryKindOfFeels.count
     }
     
     //Configure Table View
     func configureTableView(){
-        diaryTableView.rowHeight = UITableView.automaticDimension
         diaryTableView.estimatedRowHeight = 120.0
+        diaryTableView.rowHeight = UITableView.automaticDimension
     }
     
     //GET DATA FROM MODEL
     
-    //Method untuk mengambil data dr Model
-    func retriveFeel(){
-        let userFeelModel = UserFeelModel()
-        kindOfFeels = userFeelModel.kindOfFeels
-        dateOfFeels = userFeelModel.dateOfFeels
-        timeOfFeels = userFeelModel.timeOfFeels
+    //Method untuk mengambil data dr UserDefault
+    func retriveFeelData(){
+        let defaults = UserDefaults.standard
         
+        diaryKindOfFeels = defaults.array(forKey: "SavedFeelsAray") as? [String] ?? [String]()
+        diaryDateOfFeels = defaults.array(forKey: "SavedDateArray") as? [String] ?? [String]()
+        diaryTimeOfFeels = defaults.array(forKey: "SavedTimeArray") as? [String] ?? [String]()
+        
+        print(diaryKindOfFeels)
+        print(diaryDateOfFeels)
+        print(diaryTimeOfFeels)
+
         configureTableView()
         diaryTableView.reloadData()
         

@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func diaryButton(_ sender: Any) {
-        performSegue(withIdentifier: "goToDiary", sender: self)
+//        performSegue(withIdentifier: "goToDiary", sender: self)
     }
     
     /*

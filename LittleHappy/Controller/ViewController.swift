@@ -64,6 +64,7 @@ class ViewController: UIViewController {
         print(dateOfFeels[0])
         print(timeOfFeels[0])
         
+        //Save data to userDefault
         defaults.set(kindOfFeels, forKey: "SavedFeelsAray")
         defaults.set(dateOfFeels, forKey: "SavedDateArray")
         defaults.set(timeOfFeels, forKey: "SavedTimeArray")
