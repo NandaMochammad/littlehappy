@@ -73,6 +73,7 @@
 		4D476C022269F58B00271C6E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4D476C002269698000271C6E /* CollectionViewCell.swift */,
 				4D476C08226A1B0A00271C6E /* CoreData.xcdatamodeld */,
 			);
 			path = Model;
@@ -82,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				4D476BFE2269695600271C6E /* MainVC.swift */,
-				4D476C002269698000271C6E /* CollectionViewCell.swift */,
 				0478848622686FD500F28E16 /* ItemViewController.swift */,
 			);
 			path = Controller;

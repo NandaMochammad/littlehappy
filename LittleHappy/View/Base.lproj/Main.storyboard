@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Family-->
+        <!--Item-->
         <scene sceneID="jwe-Rh-lhf">
             <objects>
                 <tableViewController id="cYt-d1-d1U" customClass="ItemViewController" customModule="LittleHappy" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                             <outlet property="delegate" destination="cYt-d1-d1U" id="wl4-Gz-m8U"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Family" id="XXF-wV-HKm">
+                    <navigationItem key="navigationItem" title="Item" id="XXF-wV-HKm">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="T7W-fD-2hn">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -54,6 +54,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HGq-GJ-sym">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.22549212439999999" green="0.60524592560000001" blue="0.61805990420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

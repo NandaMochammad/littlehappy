@@ -1,10 +1,9 @@
-//
+
 //  MainVC.swift
 //  LittleHappy
 //
 //  Created by I Putu Krisna on 19/04/19.
 //  Copyright © 2019 littlehappy. All rights reserved.
-//
 
 import UIKit
 import CoreData
@@ -37,7 +36,6 @@ class MainVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         
         //return A configured cell object.
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        print(indexPath)
         cell.cellLabel.text = categoryArray[indexPath.row].name
         
         return cell
@@ -45,23 +43,20 @@ class MainVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         performSegue(withIdentifier: "categoryToItem", sender: self)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let destination = segue.destination as? ItemViewController{
-//            let cell = sender as! UICollectionViewCell
-//            let indexPath = collectionView.indexPath(for: cell)
-//            let selectedData = categoryArray[(indexPath?.row)!]
-//
-//            // postedData is the variable that will be sent, make sure to declare it in YourDestinationViewController
-//            destination.selectedCategory = selectedData
-//        }
+        
         let destinationVC = segue.destination as! ItemViewController
+        
         if let indexPath = collectionView.indexPathsForSelectedItems {
             let index: NSIndexPath = indexPath[0] as NSIndexPath
             destinationVC.selectedCategory = categoryArray[index.row]
         }
+        
     }
     
     //MARK - Create New Category
@@ -69,19 +64,19 @@ class MainVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     
         var textField = UITextField()
         let alert = UIAlertController(title: "Add New Category", message: "", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Add Category", style: .default) { (action) in
-            let newCategory = Category(context: self.context)
-            newCategory.name = textField.text!
-            self.categoryArray.append(newCategory)
-            self.saveCategory()
-        }
 
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Create new category"
             textField = alertTextField
         }
-
-        alert.addAction(action)
+        alert.addAction(UIAlertAction(title: "Add Category", style: .default) { (action) in
+            let newCategory = Category(context: self.context)
+            newCategory.name = textField.text!
+            self.categoryArray.append(newCategory)
+            self.saveCategory()
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
         present(alert, animated: true, completion: nil)
 
     }
@@ -112,14 +107,4 @@ class MainVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         
     }
   
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
