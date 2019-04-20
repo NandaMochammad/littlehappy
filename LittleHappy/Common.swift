@@ -53,3 +53,10 @@ enum Feeling {
         }
     }
 }
+
+enum Gender: String {
+    case male = "MALE"
+    case female = "FEMALE"
+    case unspecified = "UNSPECIFIED"
+}
+

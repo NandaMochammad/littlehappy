@@ -21,6 +21,19 @@ class ViewController: UIViewController {
         
         img.layer.cornerRadius = 40
         img.layer.masksToBounds = true
+        
+        // Set and save data
+//        DataManager.shared.printData()
+//        DataManager.shared.name = "Will"
+//        DataManager.shared.age = 41
+//        DataManager.shared.gender = .male
+//        DataManager.shared.initialized = true
+//        DataManager.shared.saveDataToUserDefaults()
+        
+        // Load and print out data
+        DataManager.shared.loadDataFromUserDefaults()
+        DataManager.shared.printData()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

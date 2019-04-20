@@ -15,6 +15,7 @@
 		B500463522697E5F001FE3D6 /* FeelingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500463422697E5F001FE3D6 /* FeelingsViewController.swift */; };
 		B500463722698EB6001FE3D6 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500463622698EB6001FE3D6 /* Common.swift */; };
 		B50046392269945E001FE3D6 /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50046382269945E001FE3D6 /* MediaManager.swift */; };
+		B500463B226B1B74001FE3D6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500463A226B1B74001FE3D6 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B500463422697E5F001FE3D6 /* FeelingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsViewController.swift; sourceTree = "<group>"; };
 		B500463622698EB6001FE3D6 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		B50046382269945E001FE3D6 /* MediaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
+		B500463A226B1B74001FE3D6 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				B500463622698EB6001FE3D6 /* Common.swift */,
+				B500463A226B1B74001FE3D6 /* DataManager.swift */,
 				B50046382269945E001FE3D6 /* MediaManager.swift */,
 				0478848422686FD500F28E16 /* AppDelegate.swift */,
 				0478848622686FD500F28E16 /* ViewController.swift */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B500463722698EB6001FE3D6 /* Common.swift in Sources */,
+				B500463B226B1B74001FE3D6 /* DataManager.swift in Sources */,
 				0478848722686FD500F28E16 /* ViewController.swift in Sources */,
 				B500463522697E5F001FE3D6 /* FeelingsViewController.swift in Sources */,
 				0478848522686FD500F28E16 /* AppDelegate.swift in Sources */,
