@@ -16,6 +16,7 @@
 		B500463722698EB6001FE3D6 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500463622698EB6001FE3D6 /* Common.swift */; };
 		B50046392269945E001FE3D6 /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50046382269945E001FE3D6 /* MediaManager.swift */; };
 		B500463B226B1B74001FE3D6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500463A226B1B74001FE3D6 /* DataManager.swift */; };
+		B500463F226B20C1001FE3D6 /* button-down.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B500463E226B20C1001FE3D6 /* button-down.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B500463622698EB6001FE3D6 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		B50046382269945E001FE3D6 /* MediaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
 		B500463A226B1B74001FE3D6 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		B500463E226B20C1001FE3D6 /* button-down.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "button-down.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,11 +71,28 @@
 				0478848622686FD500F28E16 /* ViewController.swift */,
 				B500463422697E5F001FE3D6 /* FeelingsViewController.swift */,
 				0478848822686FD500F28E16 /* Main.storyboard */,
+				B500463C226B20C1001FE3D6 /* Resources */,
 				0478848B22686FD600F28E16 /* Assets.xcassets */,
 				0478848D22686FD600F28E16 /* LaunchScreen.storyboard */,
 				0478849022686FD600F28E16 /* Info.plist */,
 			);
 			path = LittleHappy;
+			sourceTree = "<group>";
+		};
+		B500463C226B20C1001FE3D6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B500463D226B20C1001FE3D6 /* audio */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B500463D226B20C1001FE3D6 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				B500463E226B20C1001FE3D6 /* button-down.mp3 */,
+			);
+			path = audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +155,7 @@
 			files = (
 				0478848F22686FD600F28E16 /* LaunchScreen.storyboard in Resources */,
 				0478848C22686FD600F28E16 /* Assets.xcassets in Resources */,
+				B500463F226B20C1001FE3D6 /* button-down.mp3 in Resources */,
 				0478848A22686FD500F28E16 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

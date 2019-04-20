@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class FeelingsViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     var currPerson: Person = .me
     var currFeeling: Feeling = .joy
+    
+    var audioPlayer: AVAudioPlayer?
     
     @IBOutlet weak var personLbl: UILabel!
     
@@ -78,6 +81,8 @@ class FeelingsViewController: UIViewController, UINavigationControllerDelegate, 
     @IBAction func btnTapped(_ sender: Any) {
         print(#function)
     
+        playSound()
+        
         let btn = sender as! UIButton
         
         if btn == btn1 {
@@ -153,6 +158,22 @@ class FeelingsViewController: UIViewController, UINavigationControllerDelegate, 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         print(#function)
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - Sound Effects
+    
+    func playSound() {
+        if audioPlayer == nil {
+            guard let url = Bundle.main.url(forResource: "button-down",
+                                            withExtension: "mp3") else { return }
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+        audioPlayer?.stop()
+        audioPlayer?.play()
     }
     
 }
