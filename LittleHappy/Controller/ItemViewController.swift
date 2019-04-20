@@ -42,6 +42,8 @@ class ItemViewController: UITableViewController {
         let item = itemArray[indexPath.row]
         
         cell.textLabel?.text = item.title
+        print(item.title!)
+        cell.imageView?.image = UIImage(named: "\(item.title!.lowercased() )")
         cell.accessoryType = item.done ? .checkmark : .none
        
         return cell
