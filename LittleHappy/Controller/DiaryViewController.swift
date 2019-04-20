@@ -10,8 +10,10 @@ import UIKit
 
 //inherit ke UITableViewDelegate, UITableViewDataSource
 class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet weak var diaryTableView: UITableView!
+    
+    let defaults = UserDefaults.standard
+    
+    @IBOutlet var diaryTableView: UITableView!
     
     var diaryKindOfFeels = [String]()
     var diaryDateOfFeels = [String]()
@@ -45,6 +47,10 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.timeDiary.text = diaryTimeOfFeels[indexPath.row]
         cell.iconDiary.image = UIImage(named: cell.feelDiary.text ?? "Happy")
         
+        print(diaryKindOfFeels)
+        print(diaryDateOfFeels)
+        print(diaryTimeOfFeels)
+
         return cell
         
     }
@@ -55,24 +61,19 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     //Configure Table View
     func configureTableView(){
-        diaryTableView.estimatedRowHeight = 120.0
         diaryTableView.rowHeight = UITableView.automaticDimension
+        diaryTableView.estimatedRowHeight = 120.0
     }
     
     //GET DATA FROM MODEL
     
     //Method untuk mengambil data dr UserDefault
     func retriveFeelData(){
-        let defaults = UserDefaults.standard
         
         diaryKindOfFeels = defaults.array(forKey: "SavedFeelsAray") as? [String] ?? [String]()
         diaryDateOfFeels = defaults.array(forKey: "SavedDateArray") as? [String] ?? [String]()
         diaryTimeOfFeels = defaults.array(forKey: "SavedTimeArray") as? [String] ?? [String]()
         
-        print(diaryKindOfFeels)
-        print(diaryDateOfFeels)
-        print(diaryTimeOfFeels)
-
         configureTableView()
         diaryTableView.reloadData()
         

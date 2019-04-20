@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     //Membuat fungsi untuk Button Lets Play
     @IBAction func letsPlay(_ sender: Any) {
         setFeelData(senderTag)
-        print("LetsPlay Button \(senderTag)")
+//        print("LetsPlay Button \(senderTag)")
         
         performSegue(withIdentifier: "goToHome", sender: self)
     }
@@ -59,10 +59,10 @@ class ViewController: UIViewController {
         kindOfFeels.append(feels[senderTags])
         dateOfFeels.append(getDateTime()[0])
         timeOfFeels.append(getDateTime()[1])
-        
-        print(kindOfFeels[0])
-        print(dateOfFeels[0])
-        print(timeOfFeels[0])
+//        
+//        print(kindOfFeels[0])
+//        print(dateOfFeels[0])
+//        print(timeOfFeels[0])
         
         //Save data to userDefault
         defaults.set(kindOfFeels, forKey: "SavedFeelsAray")
