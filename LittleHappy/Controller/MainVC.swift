@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class MainVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-
-    var categoryArray = ["Family", "Friends", "Teammates", "Classmates"]
     
     var defaults = UserDefaults.standard
-    
+    var categoryArray = [Category]()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -22,10 +22,8 @@ class MainVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        if let categories = defaults.array(forKey: "categoryArray") as? [String] {
-            categoryArray = categories
-        }
-        // Do any additional setup after loading the view.
+        loadCategory()
+    
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -39,23 +37,43 @@ class MainVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         
         //return A configured cell object.
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        print(indexPath)
+        cell.cellLabel.text = categoryArray[indexPath.row].name
         
-        cell.CellLabel.text = categoryArray[indexPath.row]
-
         return cell
         
     }
     
-    //MARK - Create New Category
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "categoryToItem", sender: self)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let destination = segue.destination as? ItemViewController{
+//            let cell = sender as! UICollectionViewCell
+//            let indexPath = collectionView.indexPath(for: cell)
+//            let selectedData = categoryArray[(indexPath?.row)!]
+//
+//            // postedData is the variable that will be sent, make sure to declare it in YourDestinationViewController
+//            destination.selectedCategory = selectedData
+//        }
+        let destinationVC = segue.destination as! ItemViewController
+        if let indexPath = collectionView.indexPathsForSelectedItems {
+            let index: NSIndexPath = indexPath[0] as NSIndexPath
+            destinationVC.selectedCategory = categoryArray[index.row]
+        }
+    }
+    
+    //MARK - Create New Category
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        
+    
         var textField = UITextField()
         let alert = UIAlertController(title: "Add New Category", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add Category", style: .default) { (action) in
-            self.categoryArray.append(textField.text ?? "New Category")
-            self.defaults.set(self.categoryArray, forKey: "categoryArray")
-            self.collectionView.reloadData()
+            let newCategory = Category(context: self.context)
+            newCategory.name = textField.text!
+            self.categoryArray.append(newCategory)
+            self.saveCategory()
         }
 
         alert.addTextField { (alertTextField) in
@@ -66,6 +84,32 @@ class MainVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
 
+    }
+    
+    func saveCategory() {
+        
+        do {
+            try context.save()
+        } catch {
+            print("Error saving context \(error)")
+        }
+        
+        collectionView.reloadData()
+        
+    }
+    
+    func loadCategory() {
+        
+        let request: NSFetchRequest<Category> = Category.fetchRequest()
+        
+        do {
+            categoryArray = try context.fetch(request)
+        } catch {
+            print("Error fetching data from context \(error)")
+        }
+        
+        collectionView.reloadData()
+        
     }
   
     /*
