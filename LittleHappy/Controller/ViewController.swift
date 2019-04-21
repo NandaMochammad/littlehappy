@@ -16,9 +16,13 @@ class ViewController: UIViewController {
     //Menyimpan nilai feeling pada array
     var feels = ["Happy", "Sad", "Angry", "Fear", "Disgust"]
     
-    var kindOfFeels : [String] = []
-    var dateOfFeels : [String] = []
-    var timeOfFeels : [String] = []
+    var kindOfFeels : [String] = ["Angry", "Sad", "Happy"]
+    var dateOfFeels : [String] = ["21.04.2019", "21.04.2019", "21.04.2019"]
+    var timeOfFeels : [String] = ["17:22:28", "17:22:27", "17:22:26"]
+    
+    //Membuat User Default untuk menyimpan data array
+    let defaults = UserDefaults.standard
+
     
     //Membuat variabel untuk menyimpan senderTag
     var senderTag : Int = 0
@@ -28,6 +32,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        if let feels = defaults.array(forKey: "SavedFeelsAray") as? [String]{
+            kindOfFeels = feels
+        }
+        if let feels1 = defaults.array(forKey: "SavedDateArray") as? [String]{
+            dateOfFeels = feels1
+            
+        }
+        if let feels2 = defaults.array(forKey: "SavedTimeArray") as? [String]{
+            timeOfFeels = feels2
+        }
         
     }
 
@@ -36,14 +50,12 @@ class ViewController: UIViewController {
     @IBAction func feelButton(_ sender: UIButton) {
         
         senderTag = sender.tag
-        print(senderTag)
+        
     }
     
     //Membuat fungsi untuk Button Lets Play
     @IBAction func letsPlay(_ sender: Any) {
         setFeelData(senderTag)
-//        print("LetsPlay Button \(senderTag)")
-        
         performSegue(withIdentifier: "goToHome", sender: self)
     }
     
@@ -52,24 +64,18 @@ class ViewController: UIViewController {
     //Membuat fungsi untuk menyiapkan data feeling
     func setFeelData(_ senderTags: Int){
         
-        
-        //Membuat User Default untuk menyimpan data array
-        let defaults = UserDefaults.standard
-
         kindOfFeels.append(feels[senderTags])
         dateOfFeels.append(getDateTime()[0])
         timeOfFeels.append(getDateTime()[1])
-//        
-//        print(kindOfFeels[0])
-//        print(dateOfFeels[0])
-//        print(timeOfFeels[0])
+        
         
         //Save data to userDefault
         defaults.set(kindOfFeels, forKey: "SavedFeelsAray")
         defaults.set(dateOfFeels, forKey: "SavedDateArray")
         defaults.set(timeOfFeels, forKey: "SavedTimeArray")
 
-    } //func letsPlay
+        
+    }
 
     //Membuat fungsi untuk mengambil waktu feeling
     func getDateTime()->[String]{

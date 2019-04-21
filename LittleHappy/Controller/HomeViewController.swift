@@ -16,9 +16,6 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func diaryButton(_ sender: Any) {
-//        performSegue(withIdentifier: "goToDiary", sender: self)
-    }
     
     /*
     // MARK: - Navigation

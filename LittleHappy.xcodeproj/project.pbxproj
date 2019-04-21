@@ -64,8 +64,8 @@
 		0478848322686FD500F28E16 /* LittleHappy */ = {
 			isa = PBXGroup;
 			children = (
-				04AF45FC2268B9D000C1C508 /* Model */,
 				04AF45FD2268B9E500C1C508 /* View */,
+				04AF45FC2268B9D000C1C508 /* Model */,
 				04AF45FF2268B9F300C1C508 /* Controller */,
 				0478848B22686FD600F28E16 /* Assets.xcassets */,
 				0478849022686FD600F28E16 /* Info.plist */,

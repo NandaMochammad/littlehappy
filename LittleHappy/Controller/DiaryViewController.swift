@@ -22,6 +22,22 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        diaryTableView.reloadData()
+        
+        //Get Data from UserDefaults
+        //Membuat User Default untuk menyimpan data array
+        if let feels = defaults.array(forKey: "SavedFeelsAray") as? [String]{
+            diaryKindOfFeels = feels
+        }
+        if let feels1 = defaults.array(forKey: "SavedDateArray") as? [String]{
+            diaryDateOfFeels = feels1
+            
+        }
+        if let feels2 = defaults.array(forKey: "SavedTimeArray") as? [String]{
+            diaryTimeOfFeels = feels2
+        }
+        
+        
         //Declare the table view to be a delegate for UITableViewDelegate, UITableViewDataSource
         diaryTableView.delegate = self
         diaryTableView.dataSource = self
@@ -40,8 +56,9 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Set custom cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "diaryCustomCell", for: indexPath) as! DiaryCustomTableViewCell
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "diaryCustomCell", for: indexPath) as! DiaryCustomTableViewCell
+        print(indexPath.row)
         cell.feelDiary.text = diaryKindOfFeels[indexPath.row]
         cell.dateDiary.text = diaryDateOfFeels[indexPath.row]
         cell.timeDiary.text = diaryTimeOfFeels[indexPath.row]
@@ -69,10 +86,6 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     //Method untuk mengambil data dr UserDefault
     func retriveFeelData(){
-        
-        diaryKindOfFeels = defaults.array(forKey: "SavedFeelsAray") as? [String] ?? [String]()
-        diaryDateOfFeels = defaults.array(forKey: "SavedDateArray") as? [String] ?? [String]()
-        diaryTimeOfFeels = defaults.array(forKey: "SavedTimeArray") as? [String] ?? [String]()
         
         configureTableView()
         diaryTableView.reloadData()
