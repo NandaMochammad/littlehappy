@@ -57,6 +57,18 @@ class ViewController: UIViewController {
         img.startAnimating()
         
     }
-
+    
 }
 
+
+extension ViewController {
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        return .landscapeRight
+    }
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscape
+    }
+    override var shouldAutorotate: Bool {
+        return UIDevice.current.orientation != .portrait
+    }
+}

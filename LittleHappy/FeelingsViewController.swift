@@ -99,7 +99,8 @@ class FeelingsViewController: UIViewController, UINavigationControllerDelegate, 
         
         // Get Photo
         // Tutorial: https://hackernoon.com/swift-access-ios-camera-and-photo-library-dc1dbe0cdd76
-        showActionSheet()
+        //showActionSheet()
+        camera()
     }
     
     func showActionSheet() {
@@ -131,7 +132,6 @@ class FeelingsViewController: UIViewController, UINavigationControllerDelegate, 
             let myPickerController = UIImagePickerController()
             myPickerController.delegate = self;
             myPickerController.sourceType = .photoLibrary
-            myPickerController.modalPresentationStyle = .overCurrentContext // for Landscape
             present(myPickerController, animated: true, completion: nil)
         }
     }
@@ -177,3 +177,56 @@ class FeelingsViewController: UIViewController, UINavigationControllerDelegate, 
     }
     
 }
+
+// Force Landscape only, for Camera purposes
+// The app supports Portrait in Info.plist, but we programmatically force it to be landscape only
+// https://stackoverflow.com/questions/27037839/force-landscape-mode-in-one-viewcontroller-using-swift
+
+extension UINavigationController {
+    
+    override open var shouldAutorotate: Bool {
+        get {
+            if let visibleVC = visibleViewController {
+                return visibleVC.shouldAutorotate
+            }
+            return super.shouldAutorotate
+        }
+    }
+    
+    override open var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
+        get {
+            if let visibleVC = visibleViewController {
+                return visibleVC.preferredInterfaceOrientationForPresentation
+            }
+            return super.preferredInterfaceOrientationForPresentation
+        }
+    }
+    
+    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        get {
+            if let visibleVC = visibleViewController {
+                return visibleVC.supportedInterfaceOrientations
+            }
+            return super.supportedInterfaceOrientations
+        }
+    }
+}
+
+extension FeelingsViewController {
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscape
+    }
+    override var shouldAutorotate: Bool {
+        return UIDevice.current.orientation != .portrait
+    }
+}
+
+extension UIImagePickerController {
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscape
+    }
+    open override var shouldAutorotate: Bool {
+        return UIDevice.current.orientation != .portrait
+    }
+}
+
