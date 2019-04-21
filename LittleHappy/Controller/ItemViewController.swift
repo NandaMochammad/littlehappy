@@ -14,13 +14,13 @@ class ItemViewController: UIViewController, UICollectionViewDataSource, UICollec
     var itemArray = [Item]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     @IBOutlet weak var collectionView: UICollectionView!
-    
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
-        
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         loadItem()
         
     }
