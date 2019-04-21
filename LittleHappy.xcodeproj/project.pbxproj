@@ -12,7 +12,6 @@
 		0478848A22686FD500F28E16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478848822686FD500F28E16 /* Main.storyboard */; };
 		0478848C22686FD600F28E16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0478848B22686FD600F28E16 /* Assets.xcassets */; };
 		0478848F22686FD600F28E16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478848D22686FD600F28E16 /* LaunchScreen.storyboard */; };
-		4D476BFF2269695600271C6E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D476BFE2269695600271C6E /* MainVC.swift */; };
 		4D476C012269698000271C6E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D476C002269698000271C6E /* CollectionViewCell.swift */; };
 		4D476C0A226A1B0A00271C6E /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D476C08226A1B0A00271C6E /* CoreData.xcdatamodeld */; };
 /* End PBXBuildFile section */
@@ -25,7 +24,6 @@
 		0478848B22686FD600F28E16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0478848E22686FD600F28E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0478849022686FD600F28E16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D476BFE2269695600271C6E /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		4D476C002269698000271C6E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		4D476C09226A1B0A00271C6E /* Core Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Core Data.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,7 +80,6 @@
 		4D476C042269F5D400271C6E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4D476BFE2269695600271C6E /* MainVC.swift */,
 				0478848622686FD500F28E16 /* ItemViewController.swift */,
 			);
 			path = Controller;
@@ -170,7 +167,6 @@
 			files = (
 				4D476C0A226A1B0A00271C6E /* CoreData.xcdatamodeld in Sources */,
 				0478848722686FD500F28E16 /* ItemViewController.swift in Sources */,
-				4D476BFF2269695600271C6E /* MainVC.swift in Sources */,
 				4D476C012269698000271C6E /* CollectionViewCell.swift in Sources */,
 				0478848522686FD500F28E16 /* AppDelegate.swift in Sources */,
 			);
