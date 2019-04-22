@@ -10,7 +10,7 @@
 		042A6F81226DD476005A450F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A6F80226DD476005A450F /* DataManager.swift */; };
 		042A6F83226DD4EF005A450F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A6F82226DD4EF005A450F /* Common.swift */; };
 		0478848522686FD500F28E16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478848422686FD500F28E16 /* AppDelegate.swift */; };
-		0478848722686FD500F28E16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478848622686FD500F28E16 /* ViewController.swift */; };
+		0478848722686FD500F28E16 /* DailyFeelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478848622686FD500F28E16 /* DailyFeelViewController.swift */; };
 		0478848A22686FD500F28E16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478848822686FD500F28E16 /* Main.storyboard */; };
 		0478848C22686FD600F28E16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0478848B22686FD600F28E16 /* Assets.xcassets */; };
 		0478848F22686FD600F28E16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478848D22686FD600F28E16 /* LaunchScreen.storyboard */; };
@@ -19,6 +19,8 @@
 		04AF46052268DC8900C1C508 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF46042268DC8900C1C508 /* DiaryViewController.swift */; };
 		04AF460C2268E02700C1C508 /* diaryCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AF460B2268E02700C1C508 /* diaryCustomCell.xib */; };
 		04AF46102268E13600C1C508 /* DiaryCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF460F2268E13600C1C508 /* DiaryCustomTableViewCell.swift */; };
+		04B1E04A226E36C400AC1C01 /* dateCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B1E049226E36C400AC1C01 /* dateCustomTableViewCell.xib */; };
+		04B1E050226E378A00AC1C01 /* DateCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E04F226E378A00AC1C01 /* DateCustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +28,7 @@
 		042A6F82226DD4EF005A450F /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Common.swift; path = ../../../../../Downloads/Common.swift; sourceTree = "<group>"; };
 		0478848122686FD500F28E16 /* LittleHappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleHappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0478848422686FD500F28E16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0478848622686FD500F28E16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0478848622686FD500F28E16 /* DailyFeelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFeelViewController.swift; sourceTree = "<group>"; };
 		0478848922686FD500F28E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0478848B22686FD600F28E16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0478848E22686FD600F28E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		04AF46042268DC8900C1C508 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		04AF460B2268E02700C1C508 /* diaryCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = diaryCustomCell.xib; sourceTree = "<group>"; };
 		04AF460F2268E13600C1C508 /* DiaryCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCustomTableViewCell.swift; sourceTree = "<group>"; };
+		04B1E049226E36C400AC1C01 /* dateCustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = dateCustomTableViewCell.xib; sourceTree = "<group>"; };
+		04B1E04F226E378A00AC1C01 /* DateCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 		04AF45FD2268B9E500C1C508 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04B1E048226E36A400AC1C01 /* CustomDate */,
 				04AF46062268DF6B00C1C508 /* CustomCell */,
 				0478848D22686FD600F28E16 /* LaunchScreen.storyboard */,
 				0478848822686FD500F28E16 /* Main.storyboard */,
@@ -101,7 +106,7 @@
 				042A6F82226DD4EF005A450F /* Common.swift */,
 				042A6F80226DD476005A450F /* DataManager.swift */,
 				0478848422686FD500F28E16 /* AppDelegate.swift */,
-				0478848622686FD500F28E16 /* ViewController.swift */,
+				0478848622686FD500F28E16 /* DailyFeelViewController.swift */,
 				04AF46022268DC7600C1C508 /* HomeViewController.swift */,
 				04AF46042268DC8900C1C508 /* DiaryViewController.swift */,
 			);
@@ -115,6 +120,15 @@
 				04AF460F2268E13600C1C508 /* DiaryCustomTableViewCell.swift */,
 			);
 			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		04B1E048226E36A400AC1C01 /* CustomDate */ = {
+			isa = PBXGroup;
+			children = (
+				04B1E049226E36C400AC1C01 /* dateCustomTableViewCell.xib */,
+				04B1E04F226E378A00AC1C01 /* DateCustomTableViewCell.swift */,
+			);
+			path = CustomDate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04AF460C2268E02700C1C508 /* diaryCustomCell.xib in Resources */,
+				04B1E04A226E36C400AC1C01 /* dateCustomTableViewCell.xib in Resources */,
 				0478848F22686FD600F28E16 /* LaunchScreen.storyboard in Resources */,
 				0478848C22686FD600F28E16 /* Assets.xcassets in Resources */,
 				0478848A22686FD500F28E16 /* Main.storyboard in Resources */,
@@ -190,7 +205,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				042A6F83226DD4EF005A450F /* Common.swift in Sources */,
-				0478848722686FD500F28E16 /* ViewController.swift in Sources */,
+				04B1E050226E378A00AC1C01 /* DateCustomTableViewCell.swift in Sources */,
+				0478848722686FD500F28E16 /* DailyFeelViewController.swift in Sources */,
 				04AF46052268DC8900C1C508 /* DiaryViewController.swift in Sources */,
 				04AF46102268E13600C1C508 /* DiaryCustomTableViewCell.swift in Sources */,
 				042A6F81226DD476005A450F /* DataManager.swift in Sources */,

@@ -16,9 +16,9 @@ class ViewController: UIViewController {
     //Menyimpan nilai feeling pada array
     var feels = ["Happy", "Sad", "Angry", "Fear", "Disgust"]
     
-    var kindOfFeels : [String] = ["Angry", "Sad", "Happy"]
-    var dateOfFeels : [String] = ["21.04.2019", "21.04.2019", "21.04.2019"]
-    var timeOfFeels : [String] = ["17:22:28", "17:22:27", "17:22:26"]
+//    var kindOfFeels : [String] = ["Angry", "Sad", "Happy"]
+//    var dateOfFeels : [String] = ["21.04.2019", "21.04.2019", "21.04.2019"]
+//    var timeOfFeels : [String] = ["17:22:28", "17:22:27", "17:22:26"]
     
     //Membuat User Default untuk menyimpan data array
     let defaults = UserDefaults.standard
@@ -32,16 +32,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if let feels = defaults.array(forKey: "SavedFeelsAray") as? [String]{
-            kindOfFeels = feels
-        }
-        if let feels1 = defaults.array(forKey: "SavedDateArray") as? [String]{
-            dateOfFeels = feels1
-            
-        }
-        if let feels2 = defaults.array(forKey: "SavedTimeArray") as? [String]{
-            timeOfFeels = feels2
-        }
+        
+        DataManager.shared.loadDataFromUserDefaults()
+        
+        print("Kind Of Feels : \(DataManager.shared.kindOfFeels) \nDate of Feels \(DataManager.shared.dateOfFeels) \nTime of Feels \(DataManager.shared.timeOfFeels)")
+
         
     }
 
@@ -50,6 +45,7 @@ class ViewController: UIViewController {
     @IBAction func feelButton(_ sender: UIButton) {
         
         senderTag = sender.tag
+        print(senderTag)
         
     }
     
@@ -64,16 +60,12 @@ class ViewController: UIViewController {
     //Membuat fungsi untuk menyiapkan data feeling
     func setFeelData(_ senderTags: Int){
         
-        kindOfFeels.append(feels[senderTags])
-        dateOfFeels.append(getDateTime()[0])
-        timeOfFeels.append(getDateTime()[1])
+        DataManager.shared.kindOfFeels.append(feels[senderTags])
+        DataManager.shared.dateOfFeels.append(getDateTime()[0])
+        DataManager.shared.timeOfFeels.append(getDateTime()[1])
         
         
-        //Save data to userDefault
-        defaults.set(kindOfFeels, forKey: "SavedFeelsAray")
-        defaults.set(dateOfFeels, forKey: "SavedDateArray")
-        defaults.set(timeOfFeels, forKey: "SavedTimeArray")
-
+        DataManager.shared.saveDataToUserDefaults()
         
     }
 
@@ -93,4 +85,3 @@ class ViewController: UIViewController {
         return result
     } //func getDateTime
 }
-
