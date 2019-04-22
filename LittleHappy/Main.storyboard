@@ -60,7 +60,6 @@
                                 <state key="normal" title="EMOTION 1"/>
                                 <connections>
                                     <action selector="choice1Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dpB-1H-MzC"/>
-                                    <segue destination="CdD-g9-ktS" kind="presentation" modalPresentationStyle="overCurrentContext" id="pv0-Ke-CLy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuU-Lz-rJy">
@@ -89,16 +88,17 @@
                         <outlet property="emotionLabel" destination="QPO-pt-A00" id="h2L-d3-crz"/>
                         <outlet property="familyLabel" destination="5o3-M5-Rlk" id="RaD-O0-uIr"/>
                         <outlet property="scoreLabel" destination="nWD-3A-7b7" id="auf-xL-Tjn"/>
+                        <segue destination="CdD-g9-ktS" kind="presentation" identifier="tips_segue" modalPresentationStyle="overCurrentContext" id="1yU-3d-F5v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="70" y="0.0"/>
         </scene>
-        <!--View Controller-->
+        <!--Tips Controller-->
         <scene sceneID="4i8-CS-Xgl">
             <objects>
-                <viewController id="CdD-g9-ktS" sceneMemberID="viewController">
+                <viewController id="CdD-g9-ktS" customClass="Tips_Controller" customModule="LittleHappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bq-KH-q8W">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,7 +115,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correct!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7K-EB-Hls">
-                                        <rect key="frame" x="135" y="85" width="100" height="30"/>
+                                        <rect key="frame" x="17" y="85" width="336" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
@@ -125,6 +125,9 @@
                                         <rect key="frame" x="8" y="163" width="355" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="OK"/>
+                                        <connections>
+                                            <action selector="okClick:" destination="CdD-g9-ktS" eventType="touchUpInside" id="eHX-oH-oMU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -133,6 +136,9 @@
                         <viewLayoutGuide key="safeArea" id="9xN-OU-sT1"/>
                     </view>
                     <navigationItem key="navigationItem" id="qoi-K7-qFj"/>
+                    <connections>
+                        <outlet property="tipsLabel" destination="m7K-EB-Hls" id="8rQ-Wg-Gpi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9WG-oF-4Pu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

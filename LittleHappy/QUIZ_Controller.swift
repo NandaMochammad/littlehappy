@@ -22,7 +22,9 @@ class QUIZ_Controller: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     
-    var questionsArray: [String] = ["HAPPY", "SAD", "ANGRY", "FEAR", "DISGUST"]
+    //var questionsArray: [String] = ["HAPPY", "SAD", "ANGRY", "FEAR", "DISGUST"]
+    
+    var questionsArray: [Feeling] = [Feeling.joy, Feeling.sadness, Feeling.anger, Feeling.fear, Feeling.disgust]
     
     var questionNumber = 0
     
@@ -36,8 +38,13 @@ class QUIZ_Controller: UIViewController {
         generateEmotions()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let targetViewController = segue.destination as! Tips_Controller
+            targetViewController.tipsText = questionsArray[questionNumber].tips
+    }
+    
     //This function will generate a random number based on the count of the array
-    func generateRandomNumber(array: [String]) ->  Int
+    func generateRandomNumber(array: [Feeling]) ->  Int
     {
         return Int(arc4random_uniform(UInt32(array.count)))
     }
@@ -47,9 +54,9 @@ class QUIZ_Controller: UIViewController {
     //This function will loop through the emotions and set the result using probability
     func generateEmotions()
     {
-        emotionLabel.text = questionsArray[questionNumber]
+        emotionLabel.text = questionsArray[questionNumber].text
         var probabilityArray = questionsArray
-        var answerArray: [String] = []
+        var answerArray: [Feeling] = []
         
         for numberCount in 0...2
         {
@@ -65,9 +72,9 @@ class QUIZ_Controller: UIViewController {
             }
         }
         answerArray.shuffle()
-        emotionChoice1.setTitle(answerArray[0], for: .normal)
-        emotionChoice2.setTitle(answerArray[1], for: .normal)
-        emotionChoice3.setTitle(answerArray[2], for: .normal)
+        emotionChoice1.setTitle(answerArray[0].text, for: .normal)
+        emotionChoice2.setTitle(answerArray[1].text, for: .normal)
+        emotionChoice3.setTitle(answerArray[2].text, for: .normal)
     }
     
     func buttonChoose()
@@ -85,7 +92,8 @@ class QUIZ_Controller: UIViewController {
     }
     
     @IBAction func choice1Click(_ sender: UIButton) {
-        if emotionChoice1.titleLabel?.text == questionsArray[questionNumber]
+        self.performSegue(withIdentifier: "tips_segue", sender: Any?.self)
+        if emotionChoice1.titleLabel?.text == questionsArray[questionNumber].text
         {
             score = score + 1
         }
@@ -93,7 +101,8 @@ class QUIZ_Controller: UIViewController {
     }
     
     @IBAction func choice2Click(_ sender: UIButton) {
-        if emotionChoice2.titleLabel?.text == questionsArray[questionNumber]
+        self.performSegue(withIdentifier: "tips_segue", sender: Any?.self)
+        if emotionChoice2.titleLabel?.text == questionsArray[questionNumber].text
         {
             score = score + 1
         }
@@ -101,7 +110,8 @@ class QUIZ_Controller: UIViewController {
     }
     
     @IBAction func choice3Click(_ sender: UIButton) {
-        if emotionChoice3.titleLabel?.text == questionsArray[questionNumber]
+        self.performSegue(withIdentifier: "tips_segue", sender: Any?.self)
+        if emotionChoice3.titleLabel?.text == questionsArray[questionNumber].text
         {
             score = score + 1
         }

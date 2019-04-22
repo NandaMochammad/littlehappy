@@ -7,23 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0478848522686FD500F28E16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478848422686FD500F28E16 /* AppDelegate.swift */; };
-		0478848722686FD500F28E16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478848622686FD500F28E16 /* ViewController.swift */; };
-		0478848A22686FD500F28E16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478848822686FD500F28E16 /* Main.storyboard */; };
 		0478848C22686FD600F28E16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0478848B22686FD600F28E16 /* Assets.xcassets */; };
 		0478848F22686FD600F28E16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478848D22686FD600F28E16 /* LaunchScreen.storyboard */; };
-		4389B5A3226D66A3000E5B6F /* QUIZ_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5A2226D66A3000E5B6F /* QUIZ_Controller.swift */; };
+		4389B5B9226DEF47000E5B6F /* QUIZ_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5B8226DEF47000E5B6F /* QUIZ_Controller.swift */; };
+		4389B5BB226DEF54000E5B6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5BA226DEF54000E5B6F /* ViewController.swift */; };
+		4389B5BD226DEF7B000E5B6F /* Selling_See_All_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5BC226DEF7B000E5B6F /* Selling_See_All_Cell.swift */; };
+		4389B5C3226DEFB8000E5B6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4389B5C2226DEFB8000E5B6F /* Main.storyboard */; };
+		4389B5C8226DF14B000E5B6F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5C5226DF14A000E5B6F /* DataManager.swift */; };
+		4389B5C9226DF14B000E5B6F /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5C6226DF14B000E5B6F /* MediaManager.swift */; };
+		4389B5CB226DF150000E5B6F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5CA226DF14F000E5B6F /* Common.swift */; };
+		4389B5CD226DF5AE000E5B6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5CC226DF5AE000E5B6F /* AppDelegate.swift */; };
+		4389B5CF226DFB9B000E5B6F /* Tips_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5CE226DFB9B000E5B6F /* Tips_Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0478848122686FD500F28E16 /* LittleHappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleHappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0478848422686FD500F28E16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0478848622686FD500F28E16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0478848922686FD500F28E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0478848B22686FD600F28E16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0478848E22686FD600F28E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0478849022686FD600F28E16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4389B5A2226D66A3000E5B6F /* QUIZ_Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QUIZ_Controller.swift; sourceTree = "<group>"; };
+		4389B5B8226DEF47000E5B6F /* QUIZ_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QUIZ_Controller.swift; sourceTree = "<group>"; };
+		4389B5BA226DEF54000E5B6F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4389B5BC226DEF7B000E5B6F /* Selling_See_All_Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Selling_See_All_Cell.swift; sourceTree = "<group>"; };
+		4389B5C2226DEFB8000E5B6F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4389B5C5226DF14A000E5B6F /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		4389B5C6226DF14B000E5B6F /* MediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
+		4389B5CA226DF14F000E5B6F /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		4389B5CC226DF5AE000E5B6F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4389B5CE226DFB9B000E5B6F /* Tips_Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips_Controller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +66,17 @@
 		0478848322686FD500F28E16 /* LittleHappy */ = {
 			isa = PBXGroup;
 			children = (
-				0478848422686FD500F28E16 /* AppDelegate.swift */,
-				0478848622686FD500F28E16 /* ViewController.swift */,
-				0478848822686FD500F28E16 /* Main.storyboard */,
-				4389B5A2226D66A3000E5B6F /* QUIZ_Controller.swift */,
 				0478848B22686FD600F28E16 /* Assets.xcassets */,
+				4389B5CA226DF14F000E5B6F /* Common.swift */,
+				4389B5C5226DF14A000E5B6F /* DataManager.swift */,
+				4389B5C6226DF14B000E5B6F /* MediaManager.swift */,
+				4389B5CC226DF5AE000E5B6F /* AppDelegate.swift */,
 				0478848D22686FD600F28E16 /* LaunchScreen.storyboard */,
+				4389B5C2226DEFB8000E5B6F /* Main.storyboard */,
+				4389B5CE226DFB9B000E5B6F /* Tips_Controller.swift */,
+				4389B5B8226DEF47000E5B6F /* QUIZ_Controller.swift */,
+				4389B5BA226DEF54000E5B6F /* ViewController.swift */,
+				4389B5BC226DEF7B000E5B6F /* Selling_See_All_Cell.swift */,
 				0478849022686FD600F28E16 /* Info.plist */,
 			);
 			path = LittleHappy;
@@ -99,6 +114,7 @@
 				TargetAttributes = {
 					0478848022686FD500F28E16 = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -125,9 +141,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4389B5C3226DEFB8000E5B6F /* Main.storyboard in Resources */,
 				0478848F22686FD600F28E16 /* LaunchScreen.storyboard in Resources */,
 				0478848C22686FD600F28E16 /* Assets.xcassets in Resources */,
-				0478848A22686FD500F28E16 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +154,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4389B5A3226D66A3000E5B6F /* QUIZ_Controller.swift in Sources */,
-				0478848722686FD500F28E16 /* ViewController.swift in Sources */,
-				0478848522686FD500F28E16 /* AppDelegate.swift in Sources */,
+				4389B5C8226DF14B000E5B6F /* DataManager.swift in Sources */,
+				4389B5BB226DEF54000E5B6F /* ViewController.swift in Sources */,
+				4389B5BD226DEF7B000E5B6F /* Selling_See_All_Cell.swift in Sources */,
+				4389B5CF226DFB9B000E5B6F /* Tips_Controller.swift in Sources */,
+				4389B5C9226DF14B000E5B6F /* MediaManager.swift in Sources */,
+				4389B5CD226DF5AE000E5B6F /* AppDelegate.swift in Sources */,
+				4389B5B9226DEF47000E5B6F /* QUIZ_Controller.swift in Sources */,
+				4389B5CB226DF150000E5B6F /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0478848822686FD500F28E16 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0478848922686FD500F28E16 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0478848D22686FD600F28E16 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -286,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LittleHappy/Info.plist;
@@ -295,6 +309,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.littlehappy.LittleHappy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,6 +319,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LittleHappy/Info.plist;
