@@ -76,10 +76,17 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return diaryKindOfFeels.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Give an Action when button tapped
+        tableView.deselectRow(at: indexPath, animated: true)
+
+    }
+    
     //Configure Table View
     func configureTableView(){
-        diaryTableView.rowHeight = UITableView.automaticDimension
         diaryTableView.estimatedRowHeight = 120.0
+        diaryTableView.rowHeight = UITableView.automaticDimension
+
     }
     
     //GET DATA FROM MODEL

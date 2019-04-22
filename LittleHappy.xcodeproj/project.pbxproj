@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042A6F81226DD476005A450F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A6F80226DD476005A450F /* DataManager.swift */; };
+		042A6F83226DD4EF005A450F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A6F82226DD4EF005A450F /* Common.swift */; };
 		0478848522686FD500F28E16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478848422686FD500F28E16 /* AppDelegate.swift */; };
 		0478848722686FD500F28E16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478848622686FD500F28E16 /* ViewController.swift */; };
 		0478848A22686FD500F28E16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478848822686FD500F28E16 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042A6F80226DD476005A450F /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = ../../../../../Downloads/DataManager.swift; sourceTree = "<group>"; };
+		042A6F82226DD4EF005A450F /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Common.swift; path = ../../../../../Downloads/Common.swift; sourceTree = "<group>"; };
 		0478848122686FD500F28E16 /* LittleHappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleHappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0478848422686FD500F28E16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0478848622686FD500F28E16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 		04AF45FF2268B9F300C1C508 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				042A6F82226DD4EF005A450F /* Common.swift */,
+				042A6F80226DD476005A450F /* DataManager.swift */,
 				0478848422686FD500F28E16 /* AppDelegate.swift */,
 				0478848622686FD500F28E16 /* ViewController.swift */,
 				04AF46022268DC7600C1C508 /* HomeViewController.swift */,
@@ -183,9 +189,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042A6F83226DD4EF005A450F /* Common.swift in Sources */,
 				0478848722686FD500F28E16 /* ViewController.swift in Sources */,
 				04AF46052268DC8900C1C508 /* DiaryViewController.swift in Sources */,
 				04AF46102268E13600C1C508 /* DiaryCustomTableViewCell.swift in Sources */,
+				042A6F81226DD476005A450F /* DataManager.swift in Sources */,
 				04AF46012268BA4600C1C508 /* UserFeelModel.swift in Sources */,
 				0478848522686FD500F28E16 /* AppDelegate.swift in Sources */,
 				04AF46032268DC7600C1C508 /* HomeViewController.swift in Sources */,
