@@ -29,6 +29,22 @@ enum Person {
             return "Brother"
         }
     }
+    
+    var text: String
+    {
+        switch  self {
+        case .me:
+            return "I"
+        case .mother:
+            return "MOTHER"
+        case .father:
+            return "FATHER"
+        case .sister:
+            return "SISTER"
+        case .brother:
+            return "BROTHER"
+        }
+    }
 }
 
 enum Feeling {
@@ -50,6 +66,38 @@ enum Feeling {
             return "Disgust"
         case .anger:
             return "Anger"
+        }
+    }
+    
+    var tips: String {
+        switch self
+        {
+        case .joy:
+            return "The person is happy"
+        case .sadness:
+            return "The person is sad"
+        case .fear:
+            return "The person is scared"
+        case .disgust:
+            return "The person is disgusted"
+        case .anger:
+            return "The person is angry"
+        }
+    }
+    
+    var text: String{
+        switch self
+        {
+        case .joy:
+            return "HAPPY"
+        case .sadness:
+            return "SAD"
+        case .fear:
+            return "SCARED"
+        case .disgust:
+            return "DISGUSTED"
+        case .anger:
+            return "ANGRY"
         }
     }
 }

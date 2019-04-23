@@ -15,6 +15,10 @@
 		B5565497226DD46000889B20 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5565494226DD46000889B20 /* Common.swift */; };
 		B5565498226DD46000889B20 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5565495226DD46000889B20 /* DataManager.swift */; };
 		B5565499226DD46000889B20 /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5565496226DD46000889B20 /* MediaManager.swift */; };
+		B5C76CE0226F29B900C742CB /* QUIZ_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C76CDD226F29B900C742CB /* QUIZ_Controller.swift */; };
+		B5C76CE1226F29B900C742CB /* Score_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C76CDE226F29B900C742CB /* Score_Controller.swift */; };
+		B5C76CE2226F29B900C742CB /* Tips_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C76CDF226F29B900C742CB /* Tips_Controller.swift */; };
+		B5C76CE5226F2E0D00C742CB /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C76CE3226F2E0D00C742CB /* Quiz.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		B5565494226DD46000889B20 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		B5565495226DD46000889B20 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B5565496226DD46000889B20 /* MediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
+		B5C76CDD226F29B900C742CB /* QUIZ_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QUIZ_Controller.swift; sourceTree = "<group>"; };
+		B5C76CDE226F29B900C742CB /* Score_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score_Controller.swift; sourceTree = "<group>"; };
+		B5C76CDF226F29B900C742CB /* Tips_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tips_Controller.swift; sourceTree = "<group>"; };
+		B5C76CE4226F2E0D00C742CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Quiz.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,11 +74,23 @@
 				B5565496226DD46000889B20 /* MediaManager.swift */,
 				0478848622686FD500F28E16 /* ViewController.swift */,
 				0478848822686FD500F28E16 /* Main.storyboard */,
+				B5C76CE6226F2E1600C742CB /* Quiz */,
 				0478848B22686FD600F28E16 /* Assets.xcassets */,
 				0478848D22686FD600F28E16 /* LaunchScreen.storyboard */,
 				0478849022686FD600F28E16 /* Info.plist */,
 			);
 			path = LittleHappy;
+			sourceTree = "<group>";
+		};
+		B5C76CE6226F2E1600C742CB /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				B5C76CDD226F29B900C742CB /* QUIZ_Controller.swift */,
+				B5C76CDE226F29B900C742CB /* Score_Controller.swift */,
+				B5C76CDF226F29B900C742CB /* Tips_Controller.swift */,
+				B5C76CE3226F2E0D00C742CB /* Quiz.storyboard */,
+			);
+			path = Quiz;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +154,7 @@
 				0478848F22686FD600F28E16 /* LaunchScreen.storyboard in Resources */,
 				0478848C22686FD600F28E16 /* Assets.xcassets in Resources */,
 				0478848A22686FD500F28E16 /* Main.storyboard in Resources */,
+				B5C76CE5226F2E0D00C742CB /* Quiz.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C76CE0226F29B900C742CB /* QUIZ_Controller.swift in Sources */,
+				B5C76CE1226F29B900C742CB /* Score_Controller.swift in Sources */,
 				0478848722686FD500F28E16 /* ViewController.swift in Sources */,
+				B5C76CE2226F29B900C742CB /* Tips_Controller.swift in Sources */,
 				B5565498226DD46000889B20 /* DataManager.swift in Sources */,
 				B5565497226DD46000889B20 /* Common.swift in Sources */,
 				0478848522686FD500F28E16 /* AppDelegate.swift in Sources */,
@@ -169,6 +193,14 @@
 				0478848E22686FD600F28E16 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B5C76CE3226F2E0D00C742CB /* Quiz.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5C76CE4226F2E0D00C742CB /* Base */,
+			);
+			name = Quiz.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -304,7 +336,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.littlehappy.LittleHappy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,7 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.littlehappy.LittleHappy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
