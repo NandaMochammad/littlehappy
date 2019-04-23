@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         
         DataManager.shared.loadDataFromUserDefaults()
         
-        print("Kind Of Feels : \(DataManager.shared.kindOfFeels) \nDate of Feels \(DataManager.shared.dateOfFeels) \nTime of Feels \(DataManager.shared.timeOfFeels)")
+//        print("Kind Of Feels : \(DataManager.shared.kindOfFeels) \nDate of Feels \(DataManager.shared.dateOfFeels) \nTime of Feels \(DataManager.shared.timeOfFeels)")
 
         
     }
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     @IBAction func feelButton(_ sender: UIButton) {
         
         senderTag = sender.tag
-        print(senderTag)
+//        print(senderTag)
         
     }
     

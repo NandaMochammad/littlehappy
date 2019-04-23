@@ -13,7 +13,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     //Declare Feeling Percentage
     
-    @IBOutlet weak var dateOfFeels: UILabel!
+//    @IBOutlet weak var dateOfFeels: UILabel!
     
     @IBOutlet weak var vHappy: UIView!
     @IBOutlet weak var vSad: UIView!
@@ -36,10 +36,15 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet var diaryTableView: UITableView!
     
+    var totalSection : Int = 1
+    var arrayOfIndex : [Int] = [0]
+    var dateFeelsArray : [String] = []
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        diaryTableView.reloadData()
+//        diaryTableView.reloadData()
         
         //Get Data from UserDefaults
         //Membuat User Default untuk menyimpan data array
@@ -53,6 +58,20 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //Register your MessageCell.xib file here:
         diaryTableView.register(UINib(nibName: "diaryCustomCell", bundle: nil), forCellReuseIdentifier: "diaryCustomCell")
         
+        if let a : [String] = DataManager.shared.dateOfFeels.reversed(){
+            dateFeelsArray = a
+        }
+        
+        for j in 1 ... dateFeelsArray.count - 1{
+            if dateFeelsArray[j] != dateFeelsArray[j-1]{
+                arrayOfIndex.append(j)
+                totalSection += 1
+            }
+//            print(dateFeelsArray[j], totalSection, j)
+        }
+//        print(arrayOfIndex)
+//        print(dateFeelsArray)
+        
         
         feelingPercentage()
     }
@@ -65,15 +84,29 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let diaryDateOfFeels : [String] = DataManager.shared.dateOfFeels.reversed()
         let diaryTimeOfFeels : [String] = DataManager.shared.timeOfFeels.reversed()
         
-//        var bc : String = diaryDateOfFeels[0]
-        
 //        if diaryDateOfFeels[indexPath.row] == bc{
             let cell = tableView.dequeueReusableCell(withIdentifier: "diaryCustomCell", for: indexPath) as! DiaryCustomTableViewCell
-            
-            cell.feelDiary.text = diaryKindOfFeels[indexPath.row]
-            cell.dateDiary.text = diaryDateOfFeels[indexPath.row]
-            cell.timeDiary.text = diaryTimeOfFeels[indexPath.row]
+//        var a = arrayOfIndex [1] - arrayOfIndex[0]
+//
+//        if indexPath.section != totalSection - 1{
+////            a =
+//        }
+//        if indexPath.section == 0 {
+//            a = 0
+            cell.feelDiary.text = diaryKindOfFeels[indexPath.row+arrayOfIndex[indexPath.section]]
+            cell.dateDiary.text = diaryDateOfFeels[indexPath.row+arrayOfIndex[indexPath.section]]
+            cell.timeDiary.text = diaryTimeOfFeels[indexPath.row+arrayOfIndex[indexPath.section]]
             cell.iconDiary.image = UIImage(named: cell.feelDiary.text ?? "Happy")
+//        }else{
+//            cell.feelDiary.text = diaryKindOfFeels[indexPath.row+a]
+//            cell.dateDiary.text = diaryDateOfFeels[indexPath.row+a]
+//            cell.timeDiary.text = diaryTimeOfFeels[indexPath.row+a]
+//            cell.iconDiary.image = UIImage(named: cell.feelDiary.text ?? "Happy")
+//        }
+       // for i in 0 ... indexPath.section {
+            print("section ",indexPath.section)
+       // }
+        
         
 //        var newView = UIView(frame: CGRectMake(200, 10, 100, 50))
 //        cell.contentView.addSubview(newView)
@@ -92,9 +125,25 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //            return cell
 //        }
     }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return totalSection
+    }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return dateFeelsArray[arrayOfIndex[section]]
+        
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DataManager.shared.kindOfFeels.count
+
+        if section != totalSection - 1{
+            print("numSection \(section)",arrayOfIndex [section+1] - arrayOfIndex[section])
+            return arrayOfIndex [section+1] - arrayOfIndex[section]
+        }else{
+            print("numSection \(section)",dateFeelsArray.count-arrayOfIndex[section])
+            return dateFeelsArray.count-arrayOfIndex[section]
+        }
+        
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -145,14 +194,15 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         fearPercentage.text = "\(Int(feelingTotal[3]))%"
         disgustPercentage.text = "\(Int(feelingTotal[4]))%"
         
-        print(feelingTotal)
+//        print(feelingTotal)
         
         for i in 0 ... views.count - 1{
             if feelingTotal[i] != 0{
             icons[i].bounds.size = CGSize(width: feelingTotal[i]*2+10, height: feelingTotal[i]*2+10)
-            }else{
-                icons[i].bounds.size = CGSize(width: 30, height: 30)
-            }//Else
+            }
+//            else{
+//                icons[i].bounds.size = CGSize(width: 10, height: 10)
+//            }//Else
         }//For
     }//Func
 }//Class
