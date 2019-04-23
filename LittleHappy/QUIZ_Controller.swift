@@ -83,7 +83,7 @@ class QUIZ_Controller: UIViewController {
                 targetViewController_2.fifthImage = UIImage(named: "Star-Filled.png")!
             default:
                 targetViewController_2.firstImage = UIImage(named: "Star-Unfilled.png")!
-                targetViewController_2.secondImage = UIImage(named: "Star-unfilled.png")!
+                targetViewController_2.secondImage = UIImage(named: "Star-Unfilled.png")!
                 targetViewController_2.thirdImage = UIImage(named: "Star-Unfilled.png")!
                 targetViewController_2.fourthImage = UIImage(named: "Star-Unfilled.png")!
                 targetViewController_2.fifthImage = UIImage(named: "Star-Unfilled.png")!
@@ -149,6 +149,10 @@ class QUIZ_Controller: UIViewController {
         emotionChoice1.setTitle(answerArray[0].text, for: .normal)
         emotionChoice2.setTitle(answerArray[1].text, for: .normal)
         emotionChoice3.setTitle(answerArray[2].text, for: .normal)
+        
+       // emotionChoice1.setImage(MediaManager.shared.getPhoto(person: familyArray[randomNumberPick_1], feeling: answerArray[0]), for: .normal)
+     //   emotionChoice2.setImage(MediaManager.shared.getPhoto(person: familyArray[randomNumberPick_1], feeling: answerArray[1]), for: .normal)
+    //    emotionChoice3.setImage(MediaManager.shared.getPhoto(person: familyArray[randomNumberPick_1], feeling: answerArray[2]), for: .normal)
         
         answerChoiceArray[0] = answerArray[0]
         answerChoiceArray[1] = answerArray[1]
