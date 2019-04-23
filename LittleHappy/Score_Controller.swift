@@ -20,13 +20,21 @@ class Score_Controller: UIViewController {
     
     @IBOutlet weak var star5: UIImageView!
     
+    var firstImage = UIImage()
+    var secondImage = UIImage()
+    var thirdImage = UIImage()
+    var fourthImage = UIImage()
+    var fifthImage = UIImage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        star1.image = firstImage
+        star2.image = secondImage
+        star3.image = thirdImage
+        star4.image = fourthImage
+        star5.image = fifthImage
         // Do any additional setup after loading the view.
     }
-    
 
     /*
     // MARK: - Navigation

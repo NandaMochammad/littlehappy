@@ -20,11 +20,11 @@ class QUIZ_Controller: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     
-    //var questionsArray: [String] = ["HAPPY", "SAD", "ANGRY", "FEAR", "DISGUST"]
-    
     var familyArray: [Person] = [Person.me, Person.father, Person.mother, Person.brother, Person.sister]
     
     var questionsArray: [Feeling] = [Feeling.joy, Feeling.sadness, Feeling.anger, Feeling.fear, Feeling.disgust]
+    
+    var answerChoiceArray: [Feeling] = [Feeling.joy, Feeling.joy, Feeling.joy]
     
     var questionNumber = 0
     
@@ -40,8 +40,55 @@ class QUIZ_Controller: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let targetViewController = segue.destination as! Tips_Controller
-            targetViewController.tipsText = questionsArray[questionNumber].tips
+        if questionNumber < 4
+        {
+            let targetViewController_1 = segue.destination as! Tips_Controller
+            targetViewController_1.tipsText = questionsArray[questionNumber].tips
+        }
+        else
+        {
+            let targetViewController_2 = segue.destination as! Score_Controller
+            
+            switch score
+            {
+            case 1:
+                targetViewController_2.firstImage = UIImage(named: "Star-Filled.png")!
+                targetViewController_2.secondImage = UIImage(named: "Star-Unfilled.png")!
+                targetViewController_2.thirdImage = UIImage(named: "Star-Unfilled.png")!
+                targetViewController_2.fourthImage = UIImage(named: "Star-Unfilled.png")!
+                targetViewController_2.fifthImage = UIImage(named: "Star-Unfilled.png")!
+            case 2:
+                targetViewController_2.firstImage = UIImage(named: "Star-Filled.png")!
+                targetViewController_2.secondImage = UIImage(named: "Star-Filled.png")!
+                targetViewController_2.thirdImage = UIImage(named: "Star-Unfilled.png")!
+                targetViewController_2.fourthImage = UIImage(named: "Star-Unfilled.png")!
+                targetViewController_2.fifthImage = UIImage(named: "Star-Unfilled.png")!
+            case 3:
+                targetViewController_2.firstImage = UIImage(named: "Star-Filled.png")!
+                targetViewController_2.secondImage = UIImage(named: "Star-Filled.png")!
+                targetViewController_2.thirdImage = UIImage(named: "Star-Filled.png")!
+                targetViewController_2.fourthImage = UIImage(named: "Star-Unfilled.png")!
+                targetViewController_2.fifthImage = UIImage(named: "Star-Unfilled.png")!
+            case 4:
+                targetViewController_2.firstImage = UIImage(named: "Star-Filled.png")!
+                targetViewController_2.secondImage = UIImage(named: "Star-Filled.png")!
+                targetViewController_2.thirdImage = UIImage(named: "Star-Filled.png")!
+                targetViewController_2.fourthImage = UIImage(named: "Star-Filled.png")!
+                targetViewController_2.fifthImage = UIImage(named: "Star-Unfilled.png")!
+            case 5:
+                targetViewController_2.firstImage = UIImage(named: "Star-Filled.png")!
+                targetViewController_2.secondImage = UIImage(named: "Star-Filled.png")!
+                targetViewController_2.thirdImage = UIImage(named: "Star-Filled.png")!
+                targetViewController_2.fourthImage = UIImage(named: "Star-Filled.png")!
+                targetViewController_2.fifthImage = UIImage(named: "Star-Filled.png")!
+            default:
+                targetViewController_2.firstImage = UIImage(named: "Star-Unfilled.png")!
+                targetViewController_2.secondImage = UIImage(named: "Star-unfilled.png")!
+                targetViewController_2.thirdImage = UIImage(named: "Star-Unfilled.png")!
+                targetViewController_2.fourthImage = UIImage(named: "Star-Unfilled.png")!
+                targetViewController_2.fifthImage = UIImage(named: "Star-Unfilled.png")!
+            }
+        }
     }
     
     //This function will generate a random number based on the count of the array
@@ -96,29 +143,36 @@ class QUIZ_Controller: UIViewController {
                     probabilityArray.remove(at: randomNumberPick_2)
             }
         }
+        
         answerArray.shuffle()
+        
         emotionChoice1.setTitle(answerArray[0].text, for: .normal)
         emotionChoice2.setTitle(answerArray[1].text, for: .normal)
         emotionChoice3.setTitle(answerArray[2].text, for: .normal)
+        
+        answerChoiceArray[0] = answerArray[0]
+        answerChoiceArray[1] = answerArray[1]
+        answerChoiceArray[2] = answerArray[2]
     }
     
     func buttonChoose()
     {
         if questionNumber < 4
         {
+            self.performSegue(withIdentifier: "tips_segue", sender: Any?.self)
             questionNumber = questionNumber + 1
             generateEmotions()
             scoreLabel.text = "Current Score: \(score)/5"
         }
         else
         {
-            scoreLabel.text = "Quiz Finished"
+            self.performSegue(withIdentifier: "score_segue", sender: Any?.self)
+           // scoreLabel.text = "Quiz Finished"
         }
     }
     
     @IBAction func choice1Click(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "tips_segue", sender: Any?.self)
-        if emotionChoice1.titleLabel?.text == questionsArray[questionNumber].text
+        if answerChoiceArray[0].text == questionsArray[questionNumber].text
         {
             score = score + 1
         }
@@ -126,8 +180,8 @@ class QUIZ_Controller: UIViewController {
     }
     
     @IBAction func choice2Click(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "tips_segue", sender: Any?.self)
-        if emotionChoice2.titleLabel?.text == questionsArray[questionNumber].text
+
+        if answerChoiceArray[1].text == questionsArray[questionNumber].text
         {
             score = score + 1
         }
@@ -135,11 +189,11 @@ class QUIZ_Controller: UIViewController {
     }
     
     @IBAction func choice3Click(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "tips_segue", sender: Any?.self)
-        if emotionChoice3.titleLabel?.text == questionsArray[questionNumber].text
+        if answerChoiceArray[2].text == questionsArray[questionNumber].text
         {
             score = score + 1
         }
+        
         buttonChoose()
     }
     
