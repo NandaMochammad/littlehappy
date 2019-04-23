@@ -45,5 +45,13 @@ class Score_Controller: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    @IBAction func againBtnTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func finishBtnTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

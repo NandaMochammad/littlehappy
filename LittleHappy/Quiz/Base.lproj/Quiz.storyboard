@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YWp-4A-9dt">
     <device id="retina6_1" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -72,10 +72,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlS-we-zfM">
+                                <rect key="frame" x="69" y="20" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="QUIT"/>
+                                <connections>
+                                    <action selector="quitBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mp6-5K-0f9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xVu-vQ-meJ"/>
                     <connections>
                         <outlet property="emotionChoice1" destination="9aq-mi-oPw" id="c1H-Yk-6hm"/>
                         <outlet property="emotionChoice2" destination="1Ue-aa-Ec9" id="XDG-tg-Rno"/>
@@ -88,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="69.642857142857139" y="0.0"/>
+            <point key="canvasLocation" x="812.94642857142856" y="0.0"/>
         </scene>
         <!--Score Controller-->
         <scene sceneID="Kg0-od-gbh">
@@ -131,7 +140,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Again"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="wqR-lm-w4Z"/>
+                                    <action selector="againBtnTapped:" destination="g1f-IS-FmO" eventType="touchUpInside" id="bAn-ef-1va"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caN-sM-lmB">
@@ -139,6 +148,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Finish"/>
+                                <connections>
+                                    <action selector="finishBtnTapped:" destination="g1f-IS-FmO" eventType="touchUpInside" id="Obc-F3-QDP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -203,7 +215,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9WG-oF-4Pu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="829.6875" y="0.0"/>
+            <point key="canvasLocation" x="1572.9910714285713" y="0.0"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4w5-6Y-Ady">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="YWp-4A-9dt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mrJ-Go-Cwp">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DKj-VJ-DrT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pTX-00-Kfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.642857142857139" y="0.0"/>
         </scene>
     </scenes>
     <resources>

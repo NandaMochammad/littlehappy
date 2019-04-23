@@ -32,6 +32,13 @@ class QUIZ_Controller: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        questionNumber = 0
+        score = 0
         
         scoreLabel.text = "Current Score: \(score)/5"
         questionsArray.shuffle()
@@ -211,4 +218,7 @@ class QUIZ_Controller: UIViewController {
     }
     */
 
+    @IBAction func quitBtnTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }

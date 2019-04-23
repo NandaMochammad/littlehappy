@@ -19,6 +19,9 @@
 		B5C76CE1226F29B900C742CB /* Score_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C76CDE226F29B900C742CB /* Score_Controller.swift */; };
 		B5C76CE2226F29B900C742CB /* Tips_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C76CDF226F29B900C742CB /* Tips_Controller.swift */; };
 		B5C76CE5226F2E0D00C742CB /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C76CE3226F2E0D00C742CB /* Quiz.storyboard */; };
+		B5C76CF0226F314500C742CB /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C76CEE226F314500C742CB /* PhotosViewController.swift */; };
+		B5C76CF1226F314500C742CB /* Photos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C76CEF226F314500C742CB /* Photos.storyboard */; };
+		B5C76CF3226F31AE00C742CB /* PhotosTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C76CF2226F31AE00C742CB /* PhotosTestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		B5C76CDE226F29B900C742CB /* Score_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score_Controller.swift; sourceTree = "<group>"; };
 		B5C76CDF226F29B900C742CB /* Tips_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tips_Controller.swift; sourceTree = "<group>"; };
 		B5C76CE4226F2E0D00C742CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Quiz.storyboard; sourceTree = "<group>"; };
+		B5C76CEE226F314500C742CB /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		B5C76CEF226F314500C742CB /* Photos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Photos.storyboard; sourceTree = "<group>"; };
+		B5C76CF2226F31AE00C742CB /* PhotosTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosTestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 				B5565496226DD46000889B20 /* MediaManager.swift */,
 				0478848622686FD500F28E16 /* ViewController.swift */,
 				0478848822686FD500F28E16 /* Main.storyboard */,
+				B5C76CED226F314500C742CB /* Photos */,
 				B5C76CE6226F2E1600C742CB /* Quiz */,
 				0478848B22686FD600F28E16 /* Assets.xcassets */,
 				0478848D22686FD600F28E16 /* LaunchScreen.storyboard */,
@@ -91,6 +98,16 @@
 				B5C76CE3226F2E0D00C742CB /* Quiz.storyboard */,
 			);
 			path = Quiz;
+			sourceTree = "<group>";
+		};
+		B5C76CED226F314500C742CB /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				B5C76CF2226F31AE00C742CB /* PhotosTestViewController.swift */,
+				B5C76CEE226F314500C742CB /* PhotosViewController.swift */,
+				B5C76CEF226F314500C742CB /* Photos.storyboard */,
+			);
+			path = Photos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +170,7 @@
 			files = (
 				0478848F22686FD600F28E16 /* LaunchScreen.storyboard in Resources */,
 				0478848C22686FD600F28E16 /* Assets.xcassets in Resources */,
+				B5C76CF1226F314500C742CB /* Photos.storyboard in Resources */,
 				0478848A22686FD500F28E16 /* Main.storyboard in Resources */,
 				B5C76CE5226F2E0D00C742CB /* Quiz.storyboard in Resources */,
 			);
@@ -165,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C76CF0226F314500C742CB /* PhotosViewController.swift in Sources */,
 				B5C76CE0226F29B900C742CB /* QUIZ_Controller.swift in Sources */,
 				B5C76CE1226F29B900C742CB /* Score_Controller.swift in Sources */,
 				0478848722686FD500F28E16 /* ViewController.swift in Sources */,
@@ -173,6 +192,7 @@
 				B5565497226DD46000889B20 /* Common.swift in Sources */,
 				0478848522686FD500F28E16 /* AppDelegate.swift in Sources */,
 				B5565499226DD46000889B20 /* MediaManager.swift in Sources */,
+				B5C76CF3226F31AE00C742CB /* PhotosTestViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
