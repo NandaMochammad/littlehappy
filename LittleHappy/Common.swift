@@ -15,7 +15,8 @@ enum Person {
     case sister
     case brother
     
-    var description: String {
+    var description: String
+    {
         switch self {
         case .me:
             return "Me"
@@ -27,6 +28,22 @@ enum Person {
             return "Sister"
         case .brother:
             return "Brother"
+        }
+    }
+    
+    var text: String
+    {
+        switch  self {
+        case .me:
+            return "I"
+        case .mother:
+            return "MOTHER"
+        case .father:
+            return "FATHER"
+        case .sister:
+            return "SISTER"
+        case .brother:
+            return "BROTHER"
         }
     }
 }

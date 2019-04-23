@@ -16,13 +16,13 @@ class QUIZ_Controller: UIViewController {
     
     @IBOutlet weak var emotionChoice3: UIButton!
     
-    @IBOutlet weak var emotionLabel: UILabel!
-    
-    @IBOutlet weak var familyLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet weak var scoreLabel: UILabel!
     
     //var questionsArray: [String] = ["HAPPY", "SAD", "ANGRY", "FEAR", "DISGUST"]
+    
+    var familyArray: [Person] = [Person.me, Person.father, Person.mother, Person.brother, Person.sister]
     
     var questionsArray: [Feeling] = [Feeling.joy, Feeling.sadness, Feeling.anger, Feeling.fear, Feeling.disgust]
     
@@ -32,9 +32,10 @@ class QUIZ_Controller: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         scoreLabel.text = "Current Score: \(score)/5"
         questionsArray.shuffle()
-        familyLabel.text = "MAMA"
+        
         generateEmotions()
     }
     
@@ -49,12 +50,36 @@ class QUIZ_Controller: UIViewController {
         return Int(arc4random_uniform(UInt32(array.count)))
     }
     
-//    }
+    func generateRandomNumber(array: [Person]) -> Int
+    {
+        return Int(arc4random_uniform(UInt32(array.count)))
+    }
     
     //This function will loop through the emotions and set the result using probability
     func generateEmotions()
     {
-        emotionLabel.text = questionsArray[questionNumber].text
+        let randomNumberPick_1 = generateRandomNumber(array: familyArray)
+       // familyLabel.text = familyArray[randomNumberPick_1].text
+        
+       // emotionLabel.text = questionsArray[questionNumber].text
+        
+        let personChosen = familyArray[randomNumberPick_1].text
+        
+        let emotionQuestion = questionsArray[questionNumber].text
+        
+        var verbToBe: String
+        
+        if personChosen == "I"
+        {
+            verbToBe = "'M  "
+        }
+        else
+        {
+            verbToBe = "  IS  "
+        }
+        
+        questionLabel.text = personChosen + verbToBe + emotionQuestion
+        
         var probabilityArray = questionsArray
         var answerArray: [Feeling] = []
         
@@ -66,9 +91,9 @@ class QUIZ_Controller: UIViewController {
                     answerArray.append(questionsArray[questionNumber])
                     probabilityArray.remove(at: questionNumber)
                 default:
-                    let randomNumberPick = generateRandomNumber(array: probabilityArray)
-                    answerArray.append(probabilityArray[randomNumberPick])
-                    probabilityArray.remove(at: randomNumberPick)
+                    let randomNumberPick_2 = generateRandomNumber(array: probabilityArray)
+                    answerArray.append(probabilityArray[randomNumberPick_2])
+                    probabilityArray.remove(at: randomNumberPick_2)
             }
         }
         answerArray.shuffle()
@@ -117,9 +142,6 @@ class QUIZ_Controller: UIViewController {
         }
         buttonChoose()
     }
-    
-    
-    
     
     /*
     // MARK: - Navigation
