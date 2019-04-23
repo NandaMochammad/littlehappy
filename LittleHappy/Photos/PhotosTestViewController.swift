@@ -53,14 +53,22 @@ class PhotosTestViewController: UIViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        refreshImages()
+        loadImages()
+        startAnimating()
         
     }
     
-    func refreshImages() {
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        stopAnimating()
+        
+    }
+    
+    func loadImages() {
         
         // Me
         
@@ -73,7 +81,6 @@ class PhotosTestViewController: UIViewController {
         
         img1.animationImages = imgArray1
         img1.animationDuration = 2
-        img1.startAnimating()
         
         // Mother
         
@@ -86,7 +93,6 @@ class PhotosTestViewController: UIViewController {
         
         img2.animationImages = imgArray2
         img2.animationDuration = 2
-        img2.startAnimating()
         
         // Father
         
@@ -99,7 +105,22 @@ class PhotosTestViewController: UIViewController {
         
         img3.animationImages = imgArray3
         img3.animationDuration = 2
+        
+    }
+    
+    func startAnimating() {
+        
+        img1.startAnimating()
+        img2.startAnimating()
         img3.startAnimating()
+        
+    }
+    
+    func stopAnimating() {
+        
+        img1.stopAnimating()
+        img2.stopAnimating()
+        img3.stopAnimating()
         
     }
     

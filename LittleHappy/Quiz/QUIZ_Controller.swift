@@ -32,6 +32,14 @@ class QUIZ_Controller: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emotionChoice1.layer.cornerRadius = 62.5
+        emotionChoice1.layer.masksToBounds = true
+        emotionChoice2.layer.cornerRadius = 62.5
+        emotionChoice2.layer.masksToBounds = true
+        emotionChoice3.layer.cornerRadius = 62.5
+        emotionChoice3.layer.masksToBounds = true
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
