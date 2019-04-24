@@ -13,6 +13,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var cellLabel: UILabel!
+    @IBOutlet weak var cellButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,4 +27,7 @@ class CollectionViewCell: UICollectionViewCell {
         }
     }
 
+//    @IBAction func cellButton(_ sender: UIButton) {
+//
+//    }
 }

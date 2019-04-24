@@ -12,13 +12,12 @@
 		0478848A22686FD500F28E16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478848822686FD500F28E16 /* Main.storyboard */; };
 		0478848C22686FD600F28E16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0478848B22686FD600F28E16 /* Assets.xcassets */; };
 		0478848F22686FD600F28E16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478848D22686FD600F28E16 /* LaunchScreen.storyboard */; };
-		4D669720226DD1AB002B24FC /* FamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D66971F226DD1AB002B24FC /* FamilyViewController.swift */; };
 		4D669726226DD4DB002B24FC /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D669723226DD4DB002B24FC /* MediaManager.swift */; };
 		4D669727226DD4DB002B24FC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D669724226DD4DB002B24FC /* DataManager.swift */; };
 		4D669728226DD4DB002B24FC /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D669725226DD4DB002B24FC /* Common.swift */; };
-		4DE62DA222707C0300C68994 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE62DA022707C0300C68994 /* CollectionViewCell.swift */; };
-		4DE62DA322707C0300C68994 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DE62DA122707C0300C68994 /* CollectionViewCell.xib */; };
 		4DE62DA5227080A300C68994 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE62DA4227080A300C68994 /* UPCarouselFlowLayout.swift */; };
+		4DE62DA72270C42700C68994 /* CollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE62DA62270C42700C68994 /* CollectionVC.swift */; };
+		4DE62DA92270C45D00C68994 /* FamilyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE62DA82270C45D00C68994 /* FamilyVC.swift */; };
 		EB44659EB83B9F364E8330A5 /* Pods_LittleHappy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86B2D33381BD2132EB74609 /* Pods_LittleHappy.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,13 +29,12 @@
 		0478848B22686FD600F28E16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0478848E22686FD600F28E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0478849022686FD600F28E16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D66971F226DD1AB002B24FC /* FamilyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewController.swift; sourceTree = "<group>"; };
 		4D669723226DD4DB002B24FC /* MediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
 		4D669724226DD4DB002B24FC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		4D669725226DD4DB002B24FC /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		4DE62DA022707C0300C68994 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		4DE62DA122707C0300C68994 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		4DE62DA4227080A300C68994 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
+		4DE62DA62270C42700C68994 /* CollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionVC.swift; sourceTree = "<group>"; };
+		4DE62DA82270C45D00C68994 /* FamilyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyVC.swift; sourceTree = "<group>"; };
 		76DFE2219356FAC747A0B869 /* Pods-LittleHappy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleHappy.release.xcconfig"; path = "Target Support Files/Pods-LittleHappy/Pods-LittleHappy.release.xcconfig"; sourceTree = "<group>"; };
 		BCA0B29C8C80312CB8C5A84A /* Pods-LittleHappy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleHappy.debug.xcconfig"; path = "Target Support Files/Pods-LittleHappy/Pods-LittleHappy.debug.xcconfig"; sourceTree = "<group>"; };
 		C86B2D33381BD2132EB74609 /* Pods_LittleHappy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LittleHappy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,9 +83,8 @@
 				0478848B22686FD600F28E16 /* Assets.xcassets */,
 				0478848D22686FD600F28E16 /* LaunchScreen.storyboard */,
 				0478849022686FD600F28E16 /* Info.plist */,
-				4D66971F226DD1AB002B24FC /* FamilyViewController.swift */,
-				4DE62DA022707C0300C68994 /* CollectionViewCell.swift */,
-				4DE62DA122707C0300C68994 /* CollectionViewCell.xib */,
+				4DE62DA62270C42700C68994 /* CollectionVC.swift */,
+				4DE62DA82270C45D00C68994 /* FamilyVC.swift */,
 			);
 			path = LittleHappy;
 			sourceTree = "<group>";
@@ -171,7 +168,6 @@
 			files = (
 				0478848F22686FD600F28E16 /* LaunchScreen.storyboard in Resources */,
 				0478848C22686FD600F28E16 /* Assets.xcassets in Resources */,
-				4DE62DA322707C0300C68994 /* CollectionViewCell.xib in Resources */,
 				0478848A22686FD500F28E16 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,13 +226,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D669720226DD1AB002B24FC /* FamilyViewController.swift in Sources */,
+				4DE62DA72270C42700C68994 /* CollectionVC.swift in Sources */,
 				4D669727226DD4DB002B24FC /* DataManager.swift in Sources */,
 				0478848722686FD500F28E16 /* ViewController.swift in Sources */,
-				4DE62DA222707C0300C68994 /* CollectionViewCell.swift in Sources */,
 				0478848522686FD500F28E16 /* AppDelegate.swift in Sources */,
 				4D669726226DD4DB002B24FC /* MediaManager.swift in Sources */,
 				4DE62DA5227080A300C68994 /* UPCarouselFlowLayout.swift in Sources */,
+				4DE62DA92270C45D00C68994 /* FamilyVC.swift in Sources */,
 				4D669728226DD4DB002B24FC /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

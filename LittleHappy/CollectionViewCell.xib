@@ -35,11 +35,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckO-AU-fnO">
-                                <rect key="frame" x="252" y="134" width="406" height="52"/>
+                                <rect key="frame" x="562" y="134" width="96" height="52"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button" image="default">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="FhO-ge-YcT"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="camera">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cellButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="R9e-n2-xrj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.87274271250000002" green="0.66174256799999998" blue="0.34894752499999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -48,7 +54,6 @@
                             <constraint firstAttribute="trailing" secondItem="ckO-AU-fnO" secondAttribute="trailing" constant="30" id="MfD-se-Ncu"/>
                             <constraint firstItem="Xjj-Vr-LHZ" firstAttribute="leading" secondItem="cmY-8V-cez" secondAttribute="trailing" constant="30" id="Nwb-sw-4jZ"/>
                             <constraint firstItem="ckO-AU-fnO" firstAttribute="top" secondItem="Xjj-Vr-LHZ" secondAttribute="bottom" constant="50" id="Pva-be-fml"/>
-                            <constraint firstItem="ckO-AU-fnO" firstAttribute="leading" secondItem="cmY-8V-cez" secondAttribute="trailing" constant="30" id="apD-xL-ovM"/>
                             <constraint firstAttribute="bottom" secondItem="cmY-8V-cez" secondAttribute="bottom" constant="50" id="hOg-q1-8lM"/>
                             <constraint firstItem="Xjj-Vr-LHZ" firstAttribute="top" secondItem="3eA-bP-9KC" secondAttribute="top" constant="50" id="q0n-BK-MuD"/>
                             <constraint firstItem="cmY-8V-cez" firstAttribute="leading" secondItem="3eA-bP-9KC" secondAttribute="leading" constant="30" id="sfr-no-Pl6"/>
@@ -67,6 +72,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="708" height="256"/>
             <connections>
+                <outlet property="cellButton" destination="ckO-AU-fnO" id="yLa-R6-x2S"/>
                 <outlet property="cellImage" destination="cmY-8V-cez" id="WOp-dM-DhK"/>
                 <outlet property="cellLabel" destination="Xjj-Vr-LHZ" id="kOU-e2-8zf"/>
                 <outlet property="cellView" destination="3eA-bP-9KC" id="GkP-O8-DzI"/>
@@ -75,6 +81,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="default" width="135" height="148.5"/>
+        <image name="camera" width="300" height="201"/>
     </resources>
 </document>

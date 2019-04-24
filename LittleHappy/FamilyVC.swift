@@ -8,7 +8,8 @@
 
 import UIKit
 
-class FamilyViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class FamilyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
     
     @IBOutlet weak var collectionView: UICollectionView!
     let familyArray = [Person.me, Person.father, Person.mother, Person.brother, Person.sister]
@@ -16,15 +17,16 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        collectionView.register(UINib.init(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "collectionCell")
+//        collectionView.register(UINib.init(nibName: "CollectionVC", bundle: nil), forCellWithReuseIdentifier: "collectionCell")
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CollectionVC")
         let flowLayout = UPCarouselFlowLayout()
         flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 400, height: collectionView.frame.size.height)
-        print(UIScreen.main.bounds.size.width - 400)
-        print(collectionView.frame.size.height)
+//        print(UIScreen.main.bounds.size.width - 400)
+//        print(collectionView.frame.size.height)
         flowLayout.scrollDirection = .horizontal
         flowLayout.sideItemScale = 0.8
         flowLayout.sideItemAlpha = 1.0
-        flowLayout.spacingMode = .fixed(spacing: 5.0)
+        flowLayout.spacingMode = .fixed(spacing: 20.0)
         collectionView.collectionViewLayout = flowLayout
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -35,14 +37,14 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         return familyArray.count
     }
     
-//    cell
+    //    cell
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CollectionVC
         
         cell.cellImage.image = UIImage(named: familyArray[indexPath.row].description.lowercased())
         cell.cellLabel.text = familyArray[indexPath.row].description
-        cell.cellView.layer.cornerRadius = 120
+        cell.layer.cornerRadius = 120
         //        cell.cellImage.image =
         
         return cell
