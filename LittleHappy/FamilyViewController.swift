@@ -24,7 +24,7 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         flowLayout.sideItemAlpha = 1.0
         flowLayout.spacingMode = .fixed(spacing: 5.0)
         collectionView.collectionViewLayout = flowLayout
-        
+        collectionView.layer.cornerRadius = 10
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -39,20 +39,12 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         cell.cellImage.image = UIImage(named: familyArray[indexPath.row].description.lowercased())
         cell.cellLabel.text = familyArray[indexPath.row].description
+        cell.layer.cornerRadius = 10
+        cell.layer.masksToBounds = true
         //        cell.cellImage.image =
         
         return cell
         
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
