@@ -85,3 +85,12 @@ class DailyFeelViewController: UIViewController {
         return result
     } //func getDateTime
 }
+
+extension DailyFeelViewController {
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscape
+    }
+    override var shouldAutorotate: Bool {
+        return UIDevice.current.orientation != .portrait
+    }
+}

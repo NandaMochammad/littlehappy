@@ -28,3 +28,12 @@ class HomeViewController: UIViewController {
     */
 
 }
+
+extension HomeViewController {
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscape
+    }
+    override var shouldAutorotate: Bool {
+        return UIDevice.current.orientation != .portrait
+    }
+}

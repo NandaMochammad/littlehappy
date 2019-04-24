@@ -180,3 +180,12 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
 }//Class
 
+
+extension DiaryTestViewController {
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscape
+    }
+    override var shouldAutorotate: Bool {
+        return UIDevice.current.orientation != .portrait
+    }
+}
