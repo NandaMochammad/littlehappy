@@ -140,6 +140,10 @@ class PhotosTestViewController: UIViewController {
         performSegue(withIdentifier: "QuizSegue", sender: nil)
     }
     
+    @IBAction func diaryBtnTapped(_ sender: Any) {
+        performSegue(withIdentifier: "DiarySegue", sender: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PhotosSegue" {
             let currPerson = sender as! Person

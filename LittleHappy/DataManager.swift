@@ -16,6 +16,9 @@ class DataManager: NSObject {
     var name: String = ""
     var age: Int = 0
     var gender: Gender = .unspecified
+    var kindOfFeels : [String] = []
+    var dateOfFeels : [String] = []
+    var timeOfFeels : [String] = []
     
     private override init(){}
     
@@ -26,6 +29,9 @@ class DataManager: NSObject {
         defaults.set(name, forKey: "name")
         defaults.set(age, forKey: "age")
         defaults.set(gender.rawValue, forKey: "gender")
+        defaults.set(kindOfFeels, forKey: "SavedFeelsArray")
+        defaults.set(dateOfFeels, forKey: "SavedDateArray")
+        defaults.set(timeOfFeels, forKey: "SavedTimeArray")
         defaults.synchronize()
         
     }
@@ -38,7 +44,15 @@ class DataManager: NSObject {
         age = defaults.integer(forKey: "age")
         let genderRawValue = defaults.string(forKey: "gender") ?? "UNSPECIFIED"
         gender = Gender(rawValue: genderRawValue) ?? .unspecified
-        
+        if let a = defaults.array(forKey: "SavedFeelsArray"){
+            kindOfFeels = a as! [String]
+        }
+        if let a = defaults.array(forKey: "SavedDateArray"){
+            dateOfFeels = a as! [String]
+        }
+        if let a = defaults.array(forKey: "SavedTimeArray"){
+            timeOfFeels = a as! [String]
+        }
     }
     
     func printData() {
