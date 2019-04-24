@@ -181,7 +181,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
 }//Class
 
 
-extension DiaryTestViewController {
+extension DiaryViewController {
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .landscape
     }
