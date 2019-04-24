@@ -9,15 +9,11 @@
 /* Begin PBXBuildFile section */
 		0478848C22686FD600F28E16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0478848B22686FD600F28E16 /* Assets.xcassets */; };
 		0478848F22686FD600F28E16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478848D22686FD600F28E16 /* LaunchScreen.storyboard */; };
-		4389B5B9226DEF47000E5B6F /* QUIZ_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5B8226DEF47000E5B6F /* QUIZ_Controller.swift */; };
-		4389B5BB226DEF54000E5B6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5BA226DEF54000E5B6F /* ViewController.swift */; };
 		4389B5C3226DEFB8000E5B6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4389B5C2226DEFB8000E5B6F /* Main.storyboard */; };
 		4389B5C8226DF14B000E5B6F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5C5226DF14A000E5B6F /* DataManager.swift */; };
 		4389B5C9226DF14B000E5B6F /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5C6226DF14B000E5B6F /* MediaManager.swift */; };
 		4389B5CB226DF150000E5B6F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5CA226DF14F000E5B6F /* Common.swift */; };
 		4389B5CD226DF5AE000E5B6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5CC226DF5AE000E5B6F /* AppDelegate.swift */; };
-		4389B5CF226DFB9B000E5B6F /* Tips_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5CE226DFB9B000E5B6F /* Tips_Controller.swift */; };
-		4389B5D1226ED4F8000E5B6F /* Score_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5D0226ED4F8000E5B6F /* Score_Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,15 +21,11 @@
 		0478848B22686FD600F28E16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0478848E22686FD600F28E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0478849022686FD600F28E16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4389B5B8226DEF47000E5B6F /* QUIZ_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QUIZ_Controller.swift; sourceTree = "<group>"; };
-		4389B5BA226DEF54000E5B6F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4389B5C2226DEFB8000E5B6F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4389B5C5226DF14A000E5B6F /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		4389B5C6226DF14B000E5B6F /* MediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
 		4389B5CA226DF14F000E5B6F /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		4389B5CC226DF5AE000E5B6F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4389B5CE226DFB9B000E5B6F /* Tips_Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips_Controller.swift; sourceTree = "<group>"; };
-		4389B5D0226ED4F8000E5B6F /* Score_Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score_Controller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +65,6 @@
 				4389B5CC226DF5AE000E5B6F /* AppDelegate.swift */,
 				0478848D22686FD600F28E16 /* LaunchScreen.storyboard */,
 				4389B5C2226DEFB8000E5B6F /* Main.storyboard */,
-				4389B5D0226ED4F8000E5B6F /* Score_Controller.swift */,
-				4389B5CE226DFB9B000E5B6F /* Tips_Controller.swift */,
-				4389B5B8226DEF47000E5B6F /* QUIZ_Controller.swift */,
-				4389B5BA226DEF54000E5B6F /* ViewController.swift */,
 				0478849022686FD600F28E16 /* Info.plist */,
 			);
 			path = LittleHappy;
@@ -155,12 +143,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4389B5C8226DF14B000E5B6F /* DataManager.swift in Sources */,
-				4389B5BB226DEF54000E5B6F /* ViewController.swift in Sources */,
-				4389B5D1226ED4F8000E5B6F /* Score_Controller.swift in Sources */,
-				4389B5CF226DFB9B000E5B6F /* Tips_Controller.swift in Sources */,
 				4389B5C9226DF14B000E5B6F /* MediaManager.swift in Sources */,
 				4389B5CD226DF5AE000E5B6F /* AppDelegate.swift in Sources */,
-				4389B5B9226DEF47000E5B6F /* QUIZ_Controller.swift in Sources */,
 				4389B5CB226DF150000E5B6F /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
