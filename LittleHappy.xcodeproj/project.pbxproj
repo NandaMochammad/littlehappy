@@ -12,6 +12,14 @@
 		0478848A22686FD500F28E16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478848822686FD500F28E16 /* Main.storyboard */; };
 		0478848C22686FD600F28E16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0478848B22686FD600F28E16 /* Assets.xcassets */; };
 		0478848F22686FD600F28E16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478848D22686FD600F28E16 /* LaunchScreen.storyboard */; };
+		4D669720226DD1AB002B24FC /* FamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D66971F226DD1AB002B24FC /* FamilyViewController.swift */; };
+		4D669726226DD4DB002B24FC /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D669723226DD4DB002B24FC /* MediaManager.swift */; };
+		4D669727226DD4DB002B24FC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D669724226DD4DB002B24FC /* DataManager.swift */; };
+		4D669728226DD4DB002B24FC /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D669725226DD4DB002B24FC /* Common.swift */; };
+		4DE62DA222707C0300C68994 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE62DA022707C0300C68994 /* CollectionViewCell.swift */; };
+		4DE62DA322707C0300C68994 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DE62DA122707C0300C68994 /* CollectionViewCell.xib */; };
+		4DE62DA5227080A300C68994 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE62DA4227080A300C68994 /* UPCarouselFlowLayout.swift */; };
+		EB44659EB83B9F364E8330A5 /* Pods_LittleHappy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86B2D33381BD2132EB74609 /* Pods_LittleHappy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,16 @@
 		0478848B22686FD600F28E16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0478848E22686FD600F28E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0478849022686FD600F28E16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D66971F226DD1AB002B24FC /* FamilyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewController.swift; sourceTree = "<group>"; };
+		4D669723226DD4DB002B24FC /* MediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
+		4D669724226DD4DB002B24FC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		4D669725226DD4DB002B24FC /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		4DE62DA022707C0300C68994 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		4DE62DA122707C0300C68994 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		4DE62DA4227080A300C68994 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
+		76DFE2219356FAC747A0B869 /* Pods-LittleHappy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleHappy.release.xcconfig"; path = "Target Support Files/Pods-LittleHappy/Pods-LittleHappy.release.xcconfig"; sourceTree = "<group>"; };
+		BCA0B29C8C80312CB8C5A84A /* Pods-LittleHappy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleHappy.debug.xcconfig"; path = "Target Support Files/Pods-LittleHappy/Pods-LittleHappy.debug.xcconfig"; sourceTree = "<group>"; };
+		C86B2D33381BD2132EB74609 /* Pods_LittleHappy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LittleHappy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB44659EB83B9F364E8330A5 /* Pods_LittleHappy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +59,8 @@
 			children = (
 				0478848322686FD500F28E16 /* LittleHappy */,
 				0478848222686FD500F28E16 /* Products */,
+				2B3896D9D52491DB1B0E3F38 /* Pods */,
+				EE73946E07FEB63E00523401 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +77,36 @@
 			children = (
 				0478848422686FD500F28E16 /* AppDelegate.swift */,
 				0478848622686FD500F28E16 /* ViewController.swift */,
+				4DE62DA4227080A300C68994 /* UPCarouselFlowLayout.swift */,
 				0478848822686FD500F28E16 /* Main.storyboard */,
+				4D669725226DD4DB002B24FC /* Common.swift */,
+				4D669724226DD4DB002B24FC /* DataManager.swift */,
+				4D669723226DD4DB002B24FC /* MediaManager.swift */,
 				0478848B22686FD600F28E16 /* Assets.xcassets */,
 				0478848D22686FD600F28E16 /* LaunchScreen.storyboard */,
 				0478849022686FD600F28E16 /* Info.plist */,
+				4D66971F226DD1AB002B24FC /* FamilyViewController.swift */,
+				4DE62DA022707C0300C68994 /* CollectionViewCell.swift */,
+				4DE62DA122707C0300C68994 /* CollectionViewCell.xib */,
 			);
 			path = LittleHappy;
+			sourceTree = "<group>";
+		};
+		2B3896D9D52491DB1B0E3F38 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCA0B29C8C80312CB8C5A84A /* Pods-LittleHappy.debug.xcconfig */,
+				76DFE2219356FAC747A0B869 /* Pods-LittleHappy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EE73946E07FEB63E00523401 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C86B2D33381BD2132EB74609 /* Pods_LittleHappy.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0478849322686FD600F28E16 /* Build configuration list for PBXNativeTarget "LittleHappy" */;
 			buildPhases = (
+				D9F697EE5FF5E45CA18192D5 /* [CP] Check Pods Manifest.lock */,
 				0478847D22686FD500F28E16 /* Sources */,
 				0478847E22686FD500F28E16 /* Frameworks */,
 				0478847F22686FD500F28E16 /* Resources */,
+				115CBADF383627C3B733868F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,19 +171,73 @@
 			files = (
 				0478848F22686FD600F28E16 /* LaunchScreen.storyboard in Resources */,
 				0478848C22686FD600F28E16 /* Assets.xcassets in Resources */,
+				4DE62DA322707C0300C68994 /* CollectionViewCell.xib in Resources */,
 				0478848A22686FD500F28E16 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		115CBADF383627C3B733868F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LittleHappy/Pods-LittleHappy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LNICoverFlowLayout/LNICoverFlowLayout.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LNICoverFlowLayout.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LittleHappy/Pods-LittleHappy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9F697EE5FF5E45CA18192D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LittleHappy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0478847D22686FD500F28E16 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D669720226DD1AB002B24FC /* FamilyViewController.swift in Sources */,
+				4D669727226DD4DB002B24FC /* DataManager.swift in Sources */,
 				0478848722686FD500F28E16 /* ViewController.swift in Sources */,
+				4DE62DA222707C0300C68994 /* CollectionViewCell.swift in Sources */,
 				0478848522686FD500F28E16 /* AppDelegate.swift in Sources */,
+				4D669726226DD4DB002B24FC /* MediaManager.swift in Sources */,
+				4DE62DA5227080A300C68994 /* UPCarouselFlowLayout.swift in Sources */,
+				4D669728226DD4DB002B24FC /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +381,7 @@
 		};
 		0478849422686FD600F28E16 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCA0B29C8C80312CB8C5A84A /* Pods-LittleHappy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +400,7 @@
 		};
 		0478849522686FD600F28E16 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76DFE2219356FAC747A0B869 /* Pods-LittleHappy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
