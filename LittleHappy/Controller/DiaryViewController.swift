@@ -83,12 +83,13 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
             let cell = tableView.dequeueReusableCell(withIdentifier: "diaryCustomCell", for: indexPath) as! DiaryCustomTableViewCell
 
+            //Set text label with section condition
             cell.feelDiary.text = diaryKindOfFeels[indexPath.row+arrayOfIndex[indexPath.section]]
             cell.dateDiary.text = diaryDateOfFeels[indexPath.row+arrayOfIndex[indexPath.section]]
             cell.timeDiary.text = diaryTimeOfFeels[indexPath.row+arrayOfIndex[indexPath.section]]
             cell.iconDiary.image = UIImage(named: cell.feelDiary.text ?? "Happy")
 
-            print("section ",indexPath.section)
+            //print("section ",indexPath.section)
 
             return cell
     }//func
@@ -97,10 +98,10 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if section != totalSection - 1{
-            print("numSection \(section)",arrayOfIndex [section+1] - arrayOfIndex[section])
+            //print("numSection \(section)",arrayOfIndex [section+1] - arrayOfIndex[section])
             return arrayOfIndex [section+1] - arrayOfIndex[section]
         }else{
-            print("numSection \(section)",dateFeelsArray.count-arrayOfIndex[section])
+            //print("numSection \(section)",dateFeelsArray.count-arrayOfIndex[section])
             return dateFeelsArray.count-arrayOfIndex[section]
         }//else
     }//func

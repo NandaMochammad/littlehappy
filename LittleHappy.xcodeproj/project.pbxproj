@@ -24,8 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		042A6F80226DD476005A450F /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = ../../../../../Downloads/DataManager.swift; sourceTree = "<group>"; };
-		042A6F82226DD4EF005A450F /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Common.swift; path = ../../../../../Downloads/Common.swift; sourceTree = "<group>"; };
+		042A6F80226DD476005A450F /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		042A6F82226DD4EF005A450F /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		0478848122686FD500F28E16 /* LittleHappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleHappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0478848422686FD500F28E16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0478848622686FD500F28E16 /* DailyFeelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFeelViewController.swift; sourceTree = "<group>"; };
