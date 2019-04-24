@@ -150,11 +150,7 @@ class PhotosTestViewController: UIViewController {
     
 }
 
-
-extension ViewController {
-    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
-        return .landscapeRight
-    }
+extension PhotosTestViewController {
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .landscape
     }
