@@ -14,6 +14,7 @@
 		4389B5C9226DF14B000E5B6F /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5C6226DF14B000E5B6F /* MediaManager.swift */; };
 		4389B5CB226DF150000E5B6F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5CA226DF14F000E5B6F /* Common.swift */; };
 		4389B5CD226DF5AE000E5B6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5CC226DF5AE000E5B6F /* AppDelegate.swift */; };
+		4389B5D322700F5D000E5B6F /* Onboarding_Controller_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5D222700F5D000E5B6F /* Onboarding_Controller_1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4389B5C6226DF14B000E5B6F /* MediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
 		4389B5CA226DF14F000E5B6F /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		4389B5CC226DF5AE000E5B6F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4389B5D222700F5D000E5B6F /* Onboarding_Controller_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_Controller_1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				4389B5C5226DF14A000E5B6F /* DataManager.swift */,
 				4389B5C6226DF14B000E5B6F /* MediaManager.swift */,
 				4389B5CC226DF5AE000E5B6F /* AppDelegate.swift */,
+				4389B5D222700F5D000E5B6F /* Onboarding_Controller_1.swift */,
 				0478848D22686FD600F28E16 /* LaunchScreen.storyboard */,
 				4389B5C2226DEFB8000E5B6F /* Main.storyboard */,
 				0478849022686FD600F28E16 /* Info.plist */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4389B5C8226DF14B000E5B6F /* DataManager.swift in Sources */,
+				4389B5D322700F5D000E5B6F /* Onboarding_Controller_1.swift in Sources */,
 				4389B5C9226DF14B000E5B6F /* MediaManager.swift in Sources */,
 				4389B5CD226DF5AE000E5B6F /* AppDelegate.swift in Sources */,
 				4389B5CB226DF150000E5B6F /* Common.swift in Sources */,
