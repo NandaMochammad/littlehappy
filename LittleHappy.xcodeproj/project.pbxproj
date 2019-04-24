@@ -22,6 +22,7 @@
 		B5C76CF0226F314500C742CB /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C76CEE226F314500C742CB /* PhotosViewController.swift */; };
 		B5C76CF1226F314500C742CB /* Photos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C76CEF226F314500C742CB /* Photos.storyboard */; };
 		B5C76CF3226F31AE00C742CB /* PhotosTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C76CF2226F31AE00C742CB /* PhotosTestViewController.swift */; };
+		B5C76CFB2270451400C742CB /* button-down.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B5C76CFA2270451400C742CB /* button-down.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		B5C76CEE226F314500C742CB /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		B5C76CEF226F314500C742CB /* Photos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Photos.storyboard; sourceTree = "<group>"; };
 		B5C76CF2226F31AE00C742CB /* PhotosTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosTestViewController.swift; sourceTree = "<group>"; };
+		B5C76CFA2270451400C742CB /* button-down.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "button-down.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				B5C76CED226F314500C742CB /* Photos */,
 				B5C76CE6226F2E1600C742CB /* Quiz */,
 				0478848B22686FD600F28E16 /* Assets.xcassets */,
+				B5C76CF82270451400C742CB /* Resources */,
 				0478848D22686FD600F28E16 /* LaunchScreen.storyboard */,
 				0478849022686FD600F28E16 /* Info.plist */,
 			);
@@ -108,6 +111,22 @@
 				B5C76CEF226F314500C742CB /* Photos.storyboard */,
 			);
 			path = Photos;
+			sourceTree = "<group>";
+		};
+		B5C76CF82270451400C742CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B5C76CF92270451400C742CB /* audio */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B5C76CF92270451400C742CB /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				B5C76CFA2270451400C742CB /* button-down.mp3 */,
+			);
+			path = audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C76CFB2270451400C742CB /* button-down.mp3 in Resources */,
 				0478848F22686FD600F28E16 /* LaunchScreen.storyboard in Resources */,
 				0478848C22686FD600F28E16 /* Assets.xcassets in Resources */,
 				B5C76CF1226F314500C742CB /* Photos.storyboard in Resources */,
