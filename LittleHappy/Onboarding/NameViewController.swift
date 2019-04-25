@@ -8,14 +8,22 @@
 
 import UIKit
 
-class NameViewController: UIViewController {
+class NameViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var yourNameTextBox: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        yourNameTextBox.delegate = self
         // Do any additional setup after loading the view.
     }
     
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool
+        {
+            textField.resignFirstResponder()
+            return true
+        }
 
     /*
     // MARK: - Navigation
