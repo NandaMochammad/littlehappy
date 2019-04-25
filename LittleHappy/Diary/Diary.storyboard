@@ -178,10 +178,10 @@
             </objects>
             <point key="canvasLocation" x="-52" y="45"/>
         </scene>
-        <!--Photos-->
+        <!--Family-->
         <scene sceneID="TOt-da-TnS">
             <objects>
-                <viewControllerPlaceholder storyboardName="Photos" id="Hi7-6o-3wg" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Family" id="Hi7-6o-3wg" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XwA-Ws-zCJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-71" y="566"/>
