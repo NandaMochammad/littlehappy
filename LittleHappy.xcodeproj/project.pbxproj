@@ -16,6 +16,9 @@
 		B522CC182271B0C4000DA892 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522CC142271B0C4000DA892 /* UPCarouselFlowLayout.swift */; };
 		B522CC192271B0C4000DA892 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522CC152271B0C4000DA892 /* CollectionViewCell.swift */; };
 		B522CC1A2271B0C4000DA892 /* FamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522CC172271B0C4000DA892 /* FamilyViewController.swift */; };
+		B522CC1E2271C830000DA892 /* Onboarding_Controller_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522CC1C2271C82F000DA892 /* Onboarding_Controller_1.swift */; };
+		B522CC1F2271C830000DA892 /* BoyorGirl_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522CC1D2271C82F000DA892 /* BoyorGirl_ViewController.swift */; };
+		B522CC212271C875000DA892 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B522CC202271C874000DA892 /* Onboarding.storyboard */; };
 		B5565497226DD46000889B20 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5565494226DD46000889B20 /* Common.swift */; };
 		B5565498226DD46000889B20 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5565495226DD46000889B20 /* DataManager.swift */; };
 		B5565499226DD46000889B20 /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5565496226DD46000889B20 /* MediaManager.swift */; };
@@ -51,6 +54,9 @@
 		B522CC142271B0C4000DA892 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
 		B522CC152271B0C4000DA892 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		B522CC172271B0C4000DA892 /* FamilyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyViewController.swift; sourceTree = "<group>"; };
+		B522CC1C2271C82F000DA892 /* Onboarding_Controller_1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding_Controller_1.swift; sourceTree = "<group>"; };
+		B522CC1D2271C82F000DA892 /* BoyorGirl_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoyorGirl_ViewController.swift; sourceTree = "<group>"; };
+		B522CC202271C874000DA892 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		B5565494226DD46000889B20 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		B5565495226DD46000889B20 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B5565496226DD46000889B20 /* MediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
@@ -110,6 +116,7 @@
 				B5565496226DD46000889B20 /* MediaManager.swift */,
 				0478848622686FD500F28E16 /* ViewController.swift */,
 				0478848822686FD500F28E16 /* Main.storyboard */,
+				B522CC1B2271C82F000DA892 /* Onboarding */,
 				B522CC102271B06A000DA892 /* Family */,
 				B5C76D1F2270626500C742CB /* Diary */,
 				B5C76CED226F314500C742CB /* Photos */,
@@ -147,6 +154,16 @@
 				B522CC172271B0C4000DA892 /* FamilyViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		B522CC1B2271C82F000DA892 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B522CC1C2271C82F000DA892 /* Onboarding_Controller_1.swift */,
+				B522CC1D2271C82F000DA892 /* BoyorGirl_ViewController.swift */,
+				B522CC202271C874000DA892 /* Onboarding.storyboard */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		B5C76CE6226F2E1600C742CB /* Quiz */ = {
@@ -285,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B522CC212271C875000DA892 /* Onboarding.storyboard in Resources */,
 				B5C76D2F2270626500C742CB /* diaryCustomCell.xib in Resources */,
 				B5C76CFB2270451400C742CB /* button-down.mp3 in Resources */,
 				B5C76D332270629C00C742CB /* Diary.storyboard in Resources */,
@@ -312,12 +330,14 @@
 				B5C76CE1226F29B900C742CB /* Score_Controller.swift in Sources */,
 				0478848722686FD500F28E16 /* ViewController.swift in Sources */,
 				B5C76D2B2270626500C742CB /* DateCustomTableViewCell.swift in Sources */,
+				B522CC1E2271C830000DA892 /* Onboarding_Controller_1.swift in Sources */,
 				B5C76CE2226F29B900C742CB /* Tips_Controller.swift in Sources */,
 				B522CC182271B0C4000DA892 /* UPCarouselFlowLayout.swift in Sources */,
 				B5565498226DD46000889B20 /* DataManager.swift in Sources */,
 				B522CC192271B0C4000DA892 /* CollectionViewCell.swift in Sources */,
 				B5565497226DD46000889B20 /* Common.swift in Sources */,
 				0478848522686FD500F28E16 /* AppDelegate.swift in Sources */,
+				B522CC1F2271C830000DA892 /* BoyorGirl_ViewController.swift in Sources */,
 				B5565499226DD46000889B20 /* MediaManager.swift in Sources */,
 				B522CC1A2271B0C4000DA892 /* FamilyViewController.swift in Sources */,
 				B5C76D2D2270626500C742CB /* DiaryViewController.swift in Sources */,
