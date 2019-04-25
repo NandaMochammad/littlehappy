@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="964.95535714285711" y="-759.4202898550725"/>
         </scene>
-        <!--View Controller-->
+        <!--Intro View Controller-->
         <scene sceneID="KNK-Wq-GWL">
             <objects>
-                <viewController id="omF-eF-PRX" sceneMemberID="viewController">
+                <viewController id="omF-eF-PRX" customClass="IntroViewController" customModule="LittleHappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oGR-24-g20">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="1643" y="-759"/>
         </scene>
-        <!--View Controller-->
+        <!--Name View Controller-->
         <scene sceneID="8qU-ZB-9yW">
             <objects>
-                <viewController id="Di0-94-w33" sceneMemberID="viewController">
+                <viewController id="Di0-94-w33" customClass="NameViewController" customModule="LittleHappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zr6-dY-qMQ">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

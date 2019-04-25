@@ -19,6 +19,8 @@
 		B522CC1E2271C830000DA892 /* Onboarding_Controller_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522CC1C2271C82F000DA892 /* Onboarding_Controller_1.swift */; };
 		B522CC1F2271C830000DA892 /* BoyorGirl_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522CC1D2271C82F000DA892 /* BoyorGirl_ViewController.swift */; };
 		B522CC212271C875000DA892 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B522CC202271C874000DA892 /* Onboarding.storyboard */; };
+		B522CC232271CB80000DA892 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522CC222271CB80000DA892 /* NameViewController.swift */; };
+		B522CC252271CB85000DA892 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522CC242271CB85000DA892 /* IntroViewController.swift */; };
 		B5565497226DD46000889B20 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5565494226DD46000889B20 /* Common.swift */; };
 		B5565498226DD46000889B20 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5565495226DD46000889B20 /* DataManager.swift */; };
 		B5565499226DD46000889B20 /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5565496226DD46000889B20 /* MediaManager.swift */; };
@@ -57,6 +59,8 @@
 		B522CC1C2271C82F000DA892 /* Onboarding_Controller_1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding_Controller_1.swift; sourceTree = "<group>"; };
 		B522CC1D2271C82F000DA892 /* BoyorGirl_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoyorGirl_ViewController.swift; sourceTree = "<group>"; };
 		B522CC202271C874000DA892 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		B522CC222271CB80000DA892 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		B522CC242271CB85000DA892 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		B5565494226DD46000889B20 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		B5565495226DD46000889B20 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B5565496226DD46000889B20 /* MediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				B522CC1C2271C82F000DA892 /* Onboarding_Controller_1.swift */,
+				B522CC222271CB80000DA892 /* NameViewController.swift */,
+				B522CC242271CB85000DA892 /* IntroViewController.swift */,
 				B522CC1D2271C82F000DA892 /* BoyorGirl_ViewController.swift */,
 				B522CC202271C874000DA892 /* Onboarding.storyboard */,
 			);
@@ -327,6 +333,7 @@
 				B5C76D2E2270626500C742CB /* DailyFeelViewController.swift in Sources */,
 				B5C76CF0226F314500C742CB /* PhotosViewController.swift in Sources */,
 				B5C76CE0226F29B900C742CB /* QUIZ_Controller.swift in Sources */,
+				B522CC232271CB80000DA892 /* NameViewController.swift in Sources */,
 				B5C76CE1226F29B900C742CB /* Score_Controller.swift in Sources */,
 				0478848722686FD500F28E16 /* ViewController.swift in Sources */,
 				B5C76D2B2270626500C742CB /* DateCustomTableViewCell.swift in Sources */,
@@ -337,6 +344,7 @@
 				B522CC192271B0C4000DA892 /* CollectionViewCell.swift in Sources */,
 				B5565497226DD46000889B20 /* Common.swift in Sources */,
 				0478848522686FD500F28E16 /* AppDelegate.swift in Sources */,
+				B522CC252271CB85000DA892 /* IntroViewController.swift in Sources */,
 				B522CC1F2271C830000DA892 /* BoyorGirl_ViewController.swift in Sources */,
 				B5565499226DD46000889B20 /* MediaManager.swift in Sources */,
 				B522CC1A2271B0C4000DA892 /* FamilyViewController.swift in Sources */,
