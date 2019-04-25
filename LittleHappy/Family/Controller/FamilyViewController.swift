@@ -17,10 +17,10 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        let value = UIInterfaceOrientation.landscapeLeft.rawValue
+//        let value = UIInterfaceOrientation.lan.rawValue
         let flowLayout = UPCarouselFlowLayout()
         
-        UIDevice.current.setValue(value, forKey: "orientation")
+//        UIDevice.current.setValue(value, forKey: "orientation")
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
         
         flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 400, height: collectionView.frame.size.height)
