@@ -25,6 +25,9 @@ class NameViewController: UIViewController, UITextFieldDelegate {
             return true
         }
 
+    @IBAction func textFieldTapReturn(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
     /*
     // MARK: - Navigation
 

@@ -126,13 +126,22 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="z09-jJ-xjc"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Yme-ie-hgj" appends="YES" id="BaF-Ae-Jnw"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="yourNameTextBox" destination="wKU-r2-O6T" id="Fwg-Bt-iTf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3IS-na-Zm1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Yme-ie-hgj">
+                    <connections>
+                        <action selector="textFieldTapReturn:" destination="Di0-94-w33" id="xZd-04-TZ4"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2383" y="-759"/>
         </scene>
