@@ -44,6 +44,9 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+
+        
         //Load Data from Data ManagerUserDefaults
         DataManager.shared.loadDataFromUserDefaults()
         
@@ -65,14 +68,18 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         dateFeelsArray = DataManager.shared.dateOfFeels.reversed()
         
         //Loop for define the section changed location
-        if dateFeelsArray.count > 1 {
+        if dateFeelsArray.count != 0{
             for j in 1...dateFeelsArray.count - 1 {
                 if dateFeelsArray[j] != dateFeelsArray[j-1]{
                     arrayOfIndex.append(j)
                     totalSection += 1
                 }//if
             }//for
-        }
+        }//if
+        else{
+            arrayOfIndex.append(0)
+            totalSection += 1
+        }//else
     }//func
     
     
@@ -134,9 +141,9 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     //MARK: - SET PERCENTAGE
     func feelingPercentage(){
-        var feelingTotal : [Double] = [0,0,0,0,0]
-        let total : Double = Double(DataManager.shared.kindOfFeels.count)
-        let views : [UIView] = [vHappy, vSad, vAngry, vFear, vDisgust]
+        var totalEachFeeling : [Double] = [0,0,0,0,0]
+        let totalAllOfFeeling : Double = Double(DataManager.shared.kindOfFeels.count)
+        let viewFeeling : [UIView] = [vHappy, vSad, vAngry, vFear, vDisgust]
         let icons : [UIImageView] = [happyIcon, sadIcon, angryIcon, fearIcon, disgustIcon]
         
         let feels = DataManager.shared.kindOfFeels
@@ -144,34 +151,40 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //Get Value each feel
         for i in feels {
             if i == "Happy"{
-                feelingTotal[0] += 1
+                totalEachFeeling[0] += 1
             }else if i == "Sad"{
-                feelingTotal[1] += 1
+                totalEachFeeling[1] += 1
             }else if i == "Angry"{
-                feelingTotal[2] += 1
+                totalEachFeeling[2] += 1
             }else if i == "Fear"{
-                feelingTotal[3] += 1
+                totalEachFeeling[3] += 1
             }else{
-                feelingTotal[4] += 1
+                totalEachFeeling[4] += 1
             }
         }
         
         //Get percentage each feel
-        for i in 0 ... feelingTotal.count - 1{
-            feelingTotal[i] = feelingTotal[i] / total * 100
-            feelingTotal[i] = feelingTotal[i].rounded(.up)
+        for i in 0 ... totalEachFeeling.count - 1{
+            totalEachFeeling[i] = totalEachFeeling[i] / totalAllOfFeeling * 100
+            totalEachFeeling[i] = totalEachFeeling[i].rounded(.up)
           }
         
-        happyPercentage.text = "\(Int(feelingTotal[0]))%"
-        sadPercentage.text = "\(Int(feelingTotal[1]))%"
-        angryPercentage.text = "\(Int(feelingTotal[2]))%"
-        fearPercentage.text = "\(Int(feelingTotal[3]))%"
-        disgustPercentage.text = "\(Int(feelingTotal[4]))%"
+        happyPercentage.text = "\(Int(totalEachFeeling[0]))%"
+        sadPercentage.text = "\(Int(totalEachFeeling[1]))%"
+        angryPercentage.text = "\(Int(totalEachFeeling[2]))%"
+        fearPercentage.text = "\(Int(totalEachFeeling[3]))%"
+        disgustPercentage.text = "\(Int(totalEachFeeling[4]))%"
         
         //Set Size Each Feels
-        for i in 0 ... views.count - 1{
-            if feelingTotal[i] != 0{
-            icons[i].bounds.size = CGSize(width: feelingTotal[i]*2+10, height: feelingTotal[i]*2+10)
+        for i in 0 ... viewFeeling.count - 1{
+            if totalEachFeeling[i] > 50{
+                icons[i].bounds.size = CGSize(width: totalEachFeeling[i], height: totalEachFeeling[i])
+            }else if totalEachFeeling[i] != 0{
+                icons[i].bounds.size = CGSize(width: totalEachFeeling[i]*2+10, height: totalEachFeeling[i]*2+10)
+                print(icons[i].bounds.size)
+            }
+            else{
+                icons[i].bounds.size = CGSize(width: 10, height: 10)
             }//else
         }//For
     }//Func
