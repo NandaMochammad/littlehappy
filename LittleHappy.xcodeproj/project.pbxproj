@@ -12,6 +12,10 @@
 		0478848A22686FD500F28E16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478848822686FD500F28E16 /* Main.storyboard */; };
 		0478848C22686FD600F28E16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0478848B22686FD600F28E16 /* Assets.xcassets */; };
 		0478848F22686FD600F28E16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478848D22686FD600F28E16 /* LaunchScreen.storyboard */; };
+		B522CC122271B06A000DA892 /* Family.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B522CC112271B06A000DA892 /* Family.storyboard */; };
+		B522CC182271B0C4000DA892 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522CC142271B0C4000DA892 /* UPCarouselFlowLayout.swift */; };
+		B522CC192271B0C4000DA892 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522CC152271B0C4000DA892 /* CollectionViewCell.swift */; };
+		B522CC1A2271B0C4000DA892 /* FamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522CC172271B0C4000DA892 /* FamilyViewController.swift */; };
 		B5565497226DD46000889B20 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5565494226DD46000889B20 /* Common.swift */; };
 		B5565498226DD46000889B20 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5565495226DD46000889B20 /* DataManager.swift */; };
 		B5565499226DD46000889B20 /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5565496226DD46000889B20 /* MediaManager.swift */; };
@@ -43,6 +47,10 @@
 		0478848B22686FD600F28E16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0478848E22686FD600F28E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0478849022686FD600F28E16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B522CC112271B06A000DA892 /* Family.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Family.storyboard; sourceTree = "<group>"; };
+		B522CC142271B0C4000DA892 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
+		B522CC152271B0C4000DA892 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		B522CC172271B0C4000DA892 /* FamilyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyViewController.swift; sourceTree = "<group>"; };
 		B5565494226DD46000889B20 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		B5565495226DD46000889B20 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B5565496226DD46000889B20 /* MediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
@@ -102,6 +110,7 @@
 				B5565496226DD46000889B20 /* MediaManager.swift */,
 				0478848622686FD500F28E16 /* ViewController.swift */,
 				0478848822686FD500F28E16 /* Main.storyboard */,
+				B522CC102271B06A000DA892 /* Family */,
 				B5C76D1F2270626500C742CB /* Diary */,
 				B5C76CED226F314500C742CB /* Photos */,
 				B5C76CE6226F2E1600C742CB /* Quiz */,
@@ -111,6 +120,33 @@
 				0478849022686FD600F28E16 /* Info.plist */,
 			);
 			path = LittleHappy;
+			sourceTree = "<group>";
+		};
+		B522CC102271B06A000DA892 /* Family */ = {
+			isa = PBXGroup;
+			children = (
+				B522CC162271B0C4000DA892 /* Controller */,
+				B522CC132271B0C4000DA892 /* Model */,
+				B522CC112271B06A000DA892 /* Family.storyboard */,
+			);
+			path = Family;
+			sourceTree = "<group>";
+		};
+		B522CC132271B0C4000DA892 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B522CC142271B0C4000DA892 /* UPCarouselFlowLayout.swift */,
+				B522CC152271B0C4000DA892 /* CollectionViewCell.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B522CC162271B0C4000DA892 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B522CC172271B0C4000DA892 /* FamilyViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		B5C76CE6226F2E1600C742CB /* Quiz */ = {
@@ -257,6 +293,7 @@
 				B5C76CF1226F314500C742CB /* Photos.storyboard in Resources */,
 				0478848A22686FD500F28E16 /* Main.storyboard in Resources */,
 				B5C76CE5226F2E0D00C742CB /* Quiz.storyboard in Resources */,
+				B522CC122271B06A000DA892 /* Family.storyboard in Resources */,
 				B5C76D2A2270626500C742CB /* dateCustomTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,10 +313,13 @@
 				0478848722686FD500F28E16 /* ViewController.swift in Sources */,
 				B5C76D2B2270626500C742CB /* DateCustomTableViewCell.swift in Sources */,
 				B5C76CE2226F29B900C742CB /* Tips_Controller.swift in Sources */,
+				B522CC182271B0C4000DA892 /* UPCarouselFlowLayout.swift in Sources */,
 				B5565498226DD46000889B20 /* DataManager.swift in Sources */,
+				B522CC192271B0C4000DA892 /* CollectionViewCell.swift in Sources */,
 				B5565497226DD46000889B20 /* Common.swift in Sources */,
 				0478848522686FD500F28E16 /* AppDelegate.swift in Sources */,
 				B5565499226DD46000889B20 /* MediaManager.swift in Sources */,
+				B522CC1A2271B0C4000DA892 /* FamilyViewController.swift in Sources */,
 				B5C76D2D2270626500C742CB /* DiaryViewController.swift in Sources */,
 				B5C76D1E2270622800C742CB /* UserFeelModel.swift in Sources */,
 				B5C76D312270626500C742CB /* diaryCustomCell.swift in Sources */,
