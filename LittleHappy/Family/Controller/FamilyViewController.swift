@@ -67,7 +67,8 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
                 cell.cellImage.frame.origin.y += 20
                 //                cell.cellImage.transform = CGAffineTransform.init(rotationAngle: -45)
             }, completion: nil)
-        } 
+        }
+//        cell.cellImage.layer.add(cell.cellImage.fra, forKey: <#T##String?#>)
         
         return cell
         
@@ -75,7 +76,7 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBAction func cellButton(_ sender: UIButton) {
         
-        print("cellButton \(sender.tag)")
+//        print("cellButton \(sender.tag)")
         
         let person = familyArray[sender.tag]
         
