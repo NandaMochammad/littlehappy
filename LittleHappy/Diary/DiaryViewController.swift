@@ -65,12 +65,14 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         dateFeelsArray = DataManager.shared.dateOfFeels.reversed()
         
         //Loop for define the section changed location
-        for j in 1...dateFeelsArray.count - 1 {
-            if dateFeelsArray[j] != dateFeelsArray[j-1]{
-                arrayOfIndex.append(j)
-                totalSection += 1
-            }//if
-        }//for
+        if dateFeelsArray.count > 1 {
+            for j in 1...dateFeelsArray.count - 1 {
+                if dateFeelsArray[j] != dateFeelsArray[j-1]{
+                    arrayOfIndex.append(j)
+                    totalSection += 1
+                }//if
+            }//for
+        }
     }//func
     
     
