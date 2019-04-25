@@ -16,15 +16,32 @@ class Onboarding_Controller_1: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Do the basic appear and disappear animation
         UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [.repeat, .autoreverse], animations: {
-            
             self.touchToStartLabel.alpha = 0
-            
         }, completion: nil)
+        
         // Do any additional setup after loading the view.
+        
+        
     }
     
-
+    @IBAction func skip_onboarding(_ sender: UIButton) {
+        
+        //Prints the value of the app
+        let name = UserDefaults.standard.string(forKey: "user_first_time")
+        
+        //This checks the name, and do condition if the onboarding should be skipped.
+        if name == nil
+        {
+            // Do the segue to the onboarding here
+        }
+        else
+        {
+            //Do the segue to skip onboarding here
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

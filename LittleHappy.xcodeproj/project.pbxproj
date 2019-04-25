@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0478848C22686FD600F28E16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0478848B22686FD600F28E16 /* Assets.xcassets */; };
 		0478848F22686FD600F28E16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478848D22686FD600F28E16 /* LaunchScreen.storyboard */; };
+		4354CD632271BC6000E9BC4E /* BoyorGirl_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354CD622271BC6000E9BC4E /* BoyorGirl_ViewController.swift */; };
 		4389B5C3226DEFB8000E5B6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4389B5C2226DEFB8000E5B6F /* Main.storyboard */; };
 		4389B5C8226DF14B000E5B6F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5C5226DF14A000E5B6F /* DataManager.swift */; };
 		4389B5C9226DF14B000E5B6F /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389B5C6226DF14B000E5B6F /* MediaManager.swift */; };
@@ -22,6 +23,7 @@
 		0478848B22686FD600F28E16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0478848E22686FD600F28E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0478849022686FD600F28E16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4354CD622271BC6000E9BC4E /* BoyorGirl_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoyorGirl_ViewController.swift; sourceTree = "<group>"; };
 		4389B5C2226DEFB8000E5B6F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4389B5C5226DF14A000E5B6F /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		4389B5C6226DF14B000E5B6F /* MediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				4389B5D222700F5D000E5B6F /* Onboarding_Controller_1.swift */,
 				0478848D22686FD600F28E16 /* LaunchScreen.storyboard */,
 				4389B5C2226DEFB8000E5B6F /* Main.storyboard */,
+				4354CD622271BC6000E9BC4E /* BoyorGirl_ViewController.swift */,
 				0478849022686FD600F28E16 /* Info.plist */,
 			);
 			path = LittleHappy;
@@ -149,6 +152,7 @@
 				4389B5D322700F5D000E5B6F /* Onboarding_Controller_1.swift in Sources */,
 				4389B5C9226DF14B000E5B6F /* MediaManager.swift in Sources */,
 				4389B5CD226DF5AE000E5B6F /* AppDelegate.swift in Sources */,
+				4354CD632271BC6000E9BC4E /* BoyorGirl_ViewController.swift in Sources */,
 				4389B5CB226DF150000E5B6F /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

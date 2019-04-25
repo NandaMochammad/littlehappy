@@ -36,6 +36,7 @@
                                 <rect key="frame" x="4" y="0.0" width="888" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
+                                    <action selector="skip_onboarding:" destination="1ah-Ot-XFp" eventType="touchUpInside" id="mbY-tZ-gNF"/>
                                     <segue destination="omF-eF-PRX" kind="show" id="0Vb-gv-cjF"/>
                                 </connections>
                             </button>
@@ -129,10 +130,10 @@
             </objects>
             <point key="canvasLocation" x="2383" y="-759"/>
         </scene>
-        <!--View Controller-->
+        <!--Boyor Girl View Controller-->
         <scene sceneID="hWd-ag-0CL">
             <objects>
-                <viewController id="HhF-7X-igE" sceneMemberID="viewController">
+                <viewController id="HhF-7X-igE" customClass="BoyorGirl_ViewController" customModule="LittleHappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fB3-ax-n5z">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,6 +159,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6E-u5-H3R">
+                                <rect key="frame" x="215" y="135" width="107" height="173"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Boy Image"/>
+                                <connections>
+                                    <action selector="Boy_Click:" destination="HhF-7X-igE" eventType="touchUpInside" id="JvG-rh-EON"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7A-ny-LPK">
+                                <rect key="frame" x="597" y="135" width="107" height="173"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Girl Image"/>
+                                <connections>
+                                    <action selector="Girl_Click:" destination="HhF-7X-igE" eventType="touchUpInside" id="KHs-AR-1Lg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kEv-ZJ-pjd"/>
