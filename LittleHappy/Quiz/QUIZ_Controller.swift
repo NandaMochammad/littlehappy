@@ -180,9 +180,9 @@ class QUIZ_Controller: UIViewController {
 //        emotionChoice2.setImage(UIImage(named: "Default-Joy"), for: .normal)
 //        emotionChoice3.setImage(UIImage(named: "Default-Disgust"), for: .normal)
         
-        emotionChoice1.setBackgroundImage(MediaManager.shared.getPhoto(person: familyArray[randomNumberPick_1], feeling: answerArray[0]), for: .normal)
-        emotionChoice2.setBackgroundImage(MediaManager.shared.getPhoto(person: familyArray[randomNumberPick_1], feeling: answerArray[1]), for: .normal)
-        emotionChoice3.setBackgroundImage(MediaManager.shared.getPhoto(person: familyArray[randomNumberPick_1], feeling: answerArray[2]), for: .normal)
+        emotionChoice1.setBackgroundImage(MediaManager.shared.getPhotoAssets(person: familyArray[randomNumberPick_1], feeling: answerArray[0]), for: .normal)
+        emotionChoice2.setBackgroundImage(MediaManager.shared.getPhotoAssets(person: familyArray[randomNumberPick_1], feeling: answerArray[1]), for: .normal)
+        emotionChoice3.setBackgroundImage(MediaManager.shared.getPhotoAssets(person: familyArray[randomNumberPick_1], feeling: answerArray[2]), for: .normal)
         
         answerChoiceArray[0] = answerArray[0]
         answerChoiceArray[1] = answerArray[1]
