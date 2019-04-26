@@ -31,6 +31,7 @@ class DailyFeelViewController: UIViewController {
     
     //Membuat variabel untuk menyimpan senderTag
     var senderTag : Int = 0
+    var gender = DataManager.shared.gender
     
     
     
@@ -39,6 +40,8 @@ class DailyFeelViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        
+        print(gender)
 
         
         viewHappy.isHidden = true
