@@ -14,8 +14,7 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var collectionView: UICollectionView!
     let familyArray = [Person.me, Person.father, Person.mother, Person.brother, Person.sister]
     let feelingArray = [Feeling.anger, Feeling.disgust, Feeling.fear, Feeling.joy, Feeling.sadness]
-    var imgArray1boy: [UIImage] = []
-    var imgArray1girl: [UIImage] = []
+    var imgArray1: [UIImage] = []
     var imgArray2: [UIImage] = []
     var imgArray3: [UIImage] = []
     var imgArray4: [UIImage] = []
@@ -66,30 +65,30 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         cell.cellLabel.text = familyArray[indexPath.row].description
         cell.layer.cornerRadius = 120
         cell.cellButton.tag = indexPath.row
-        print(indexPath.row)
+//        print(indexPath.row)
         
         switch indexPath.row {
             
         case 0:
-            if UserDefaults.standard.string(forKey: "gender") == "MALE" {
-                cell.cellImage.animationImages = imgArray1boy
-                print(imgArray1boy)
-            } else if UserDefaults.standard.string(forKey: "gender") == "FEMALE" {
-                cell.cellImage.animationImages = imgArray1girl
-                print(imgArray1girl)
-            }
+            cell.cellImage.animationImages = imgArray1
+            cell.cellImage.image = imgArray1[3]
+//            print(imgArray1)
         case 1:
             cell.cellImage.animationImages = imgArray2
-            print(imgArray2)
+            cell.cellImage.image = imgArray2[3]
+//            print(imgArray2)
         case 2:
             cell.cellImage.animationImages = imgArray3
-            print(imgArray3)
+            cell.cellImage.image = imgArray3[3]
+//            print(imgArray3)
         case 3:
             cell.cellImage.animationImages = imgArray4
-            print(imgArray4)
+            cell.cellImage.image = imgArray4[3]
+//            print(imgArray4)
         case 4:
             cell.cellImage.animationImages = imgArray5
-            print(imgArray5)
+            cell.cellImage.image = imgArray5[3]
+//            print(imgArray5)
         default: break
             
         }
@@ -138,18 +137,10 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         for x in familyArray {
             switch x {
             case Person.me:
-                if UserDefaults.standard.string(forKey: "gender") == "MALE" {
-                    imgArray1boy.removeAll()
-                    for y in feelingArray {
-                        imgArray1boy.append(MediaManager.shared.getPhotoAssets(person: x, feeling: y))
-                    }
-                } else if UserDefaults.standard.string(forKey: "gender") == "MALE" {
-                    imgArray1girl.removeAll()
-                    for y in feelingArray {
-                        imgArray1girl.append(MediaManager.shared.getPhotoAssets(person: x, feeling: y))
-                    }
+                imgArray1.removeAll()
+                for y in feelingArray {
+                    imgArray1.append(MediaManager.shared.getPhotoAssets(person: x, feeling: y))
                 }
-
             case Person.father:
                 imgArray2.removeAll()
                 for y in feelingArray {

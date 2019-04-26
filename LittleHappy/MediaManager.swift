@@ -35,12 +35,34 @@ class MediaManager: NSObject {
     }
     
     func getPhotoAssets(person: Person, feeling: Feeling) -> UIImage {
-        let imageName = "\(person.description.lowercased())_\(feeling.description.lowercased()) face"
-        if let image = UIImage(named: imageName) {
-            return image
+        
+        if person != Person.me {
+            let imageName = "\(person.description.lowercased())_\(feeling.description.lowercased()) face"
+            if let image = UIImage(named: imageName) {
+                return image
+            } else {
+                return UIImage(named: "Default-\(feeling.description)")!
+            }
         } else {
-            return UIImage(named: "Default-\(feeling.description)")!
+            if UserDefaults.standard.string(forKey: "gender") == "MALE" {
+                let imageName = "\(person.description.lowercased()) boy \(feeling.description.lowercased())"
+                print(imageName)
+                if let image = UIImage(named: imageName) {
+                    return image
+                } else {
+                    return UIImage(named: "Default-\(feeling.description)")!
+                }
+            } else if UserDefaults.standard.string(forKey: "gender") == "FEMALE" {
+                let imageName = "\(person.description.lowercased()) girl \(feeling.description.lowercased())"
+                print(imageName)
+                if let image = UIImage(named: imageName) {
+                    return image
+                } else {
+                    return UIImage(named: "Default-\(feeling.description)")!
+                }
+            }
         }
+        return UIImage(named: "Default-Joy")!
     }
     
     func getDirectoryPath() -> String {
