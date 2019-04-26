@@ -121,6 +121,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="OK"/>
                                 <connections>
+                                    <action selector="okButton:" destination="Di0-94-w33" eventType="touchUpInside" id="Ven-1y-71E"/>
                                     <segue destination="HhF-7X-igE" kind="show" id="2Pr-gn-11I"/>
                                 </connections>
                             </button>
