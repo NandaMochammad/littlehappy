@@ -15,14 +15,14 @@ class MediaManager: NSObject {
     private override init(){}
     
     func savePhoto(image: UIImage, person: Person, feeling: Feeling) {
-        let imageName = "\(person.description)-\(feeling.description).jpg"
+        let imageName = "\(person.description)_\(feeling.description) face"
         print("saving imageName: \(imageName)")        
         saveImageToDisk(image: image, imageName: imageName)
     }
     
     
     func getPhoto(person: Person, feeling: Feeling) -> UIImage {
-        let imageName = "\(person.description)-\(feeling.description).jpg"
+        let imageName = "\(person.description)_\(feeling.description) face"
         print("imageName: \(imageName)")
         if let image = loadImageFromDisk(imageName: imageName) {
             print("found")
