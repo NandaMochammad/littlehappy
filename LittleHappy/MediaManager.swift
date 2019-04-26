@@ -36,6 +36,7 @@ class MediaManager: NSObject {
     
     func getPhotoAssets(person: Person, feeling: Feeling) -> UIImage {
         
+        print(person, feeling)
         if person != Person.me {
             let imageName = "\(person.description.lowercased())_\(feeling.description.lowercased()) face"
             if let image = UIImage(named: imageName) {
@@ -44,16 +45,17 @@ class MediaManager: NSObject {
                 return UIImage(named: "Default-\(feeling.description)")!
             }
         } else {
-            if UserDefaults.standard.string(forKey: "gender") == "MALE" {
-                let imageName = "\(person.description.lowercased()) boy \(feeling.description.lowercased())"
+            print(DataManager.shared.gender)
+            if DataManager.shared.gender == .male {
+                let imageName = "me boy \(feeling.description.lowercased())"
                 print(imageName)
                 if let image = UIImage(named: imageName) {
                     return image
                 } else {
                     return UIImage(named: "Default-\(feeling.description)")!
                 }
-            } else if UserDefaults.standard.string(forKey: "gender") == "FEMALE" {
-                let imageName = "\(person.description.lowercased()) girl \(feeling.description.lowercased())"
+            } else if DataManager.shared.gender == .female {
+                let imageName = "me girl \(feeling.description.lowercased())"
                 print(imageName)
                 if let image = UIImage(named: imageName) {
                     return image
