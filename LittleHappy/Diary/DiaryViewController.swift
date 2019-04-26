@@ -66,19 +66,22 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func sectionConfig(){
         //set Reversed array, Latest to Oldest
         dateFeelsArray = DataManager.shared.dateOfFeels.reversed()
+        print("Date Feels Array", dateFeelsArray.count)
         
         //Loop for define the section changed location
-        if dateFeelsArray.count != 0{
+        if dateFeelsArray.count > 1{
             for j in 1...dateFeelsArray.count - 1 {
                 if dateFeelsArray[j] != dateFeelsArray[j-1]{
                     arrayOfIndex.append(j)
                     totalSection += 1
+                    print(arrayOfIndex)
                 }//if
             }//for
         }//if
         else{
             arrayOfIndex.append(0)
             totalSection += 1
+            print(arrayOfIndex)
         }//else
     }//func
     
@@ -177,7 +180,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         //Set Size Each Feels
         for i in 0 ... viewFeeling.count - 1{
-            if totalEachFeeling[i] > 50{
+            if totalEachFeeling[i] >= 50{
                 icons[i].bounds.size = CGSize(width: totalEachFeeling[i], height: totalEachFeeling[i])
             }else if totalEachFeeling[i] != 0{
                 icons[i].bounds.size = CGSize(width: totalEachFeeling[i]*2+10, height: totalEachFeeling[i]*2+10)

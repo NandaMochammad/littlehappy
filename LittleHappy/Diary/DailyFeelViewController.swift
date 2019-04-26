@@ -15,6 +15,11 @@ class DailyFeelViewController: UIViewController {
     
     //Menyimpan nilai feeling pada array
     var feels = ["Happy", "Sad", "Angry", "Fear", "Disgust"]
+    @IBOutlet weak var viewHappy: UIView!
+    @IBOutlet weak var viewSad: UIView!
+    @IBOutlet weak var viewAngry: UIView!
+    @IBOutlet weak var viewDisgust: UIView!
+    @IBOutlet weak var viewFear: UIView!
     
 //    var kindOfFeels : [String] = ["Angry", "Sad", "Happy"]
 //    var dateOfFeels : [String] = ["21.04.2019", "21.04.2019", "21.04.2019"]
@@ -33,6 +38,12 @@ class DailyFeelViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        viewHappy.isHidden = true
+        viewSad.isHidden = true
+        viewAngry.isHidden = true
+        viewFear.isHidden = true
+        viewDisgust.isHidden = true
+
         DataManager.shared.loadDataFromUserDefaults()
         
 //        print("Kind Of Feels : \(DataManager.shared.kindOfFeels) \nDate of Feels \(DataManager.shared.dateOfFeels) \nTime of Feels \(DataManager.shared.timeOfFeels)")
@@ -45,14 +56,39 @@ class DailyFeelViewController: UIViewController {
     @IBAction func feelButton(_ sender: UIButton) {
         
         senderTag = sender.tag
-//        print(senderTag)
         
-    }
-    
-    //Membuat fungsi untuk Button Lets Play
-    @IBAction func letsPlay(_ sender: Any) {
-        setFeelData(senderTag)
+        switch sender.tag {
+        case 0:
+            viewHappy.isHidden = !viewHappy.isHidden
+            viewHappy.layer.cornerRadius = 60
+            setFeelData(senderTag)
+
+        case 1:
+            viewSad.isHidden = !viewSad.isHidden
+            viewSad.layer.cornerRadius = 60
+            setFeelData(senderTag)
+
+        case 2:
+            viewAngry.isHidden = !viewAngry.isHidden
+            viewAngry.layer.cornerRadius = 60
+            setFeelData(senderTag)
+
+        case 3:
+            viewFear.isHidden = !viewFear.isHidden
+            viewFear.layer.cornerRadius = 60
+            setFeelData(senderTag)
+
+        case 4:
+            viewDisgust.isHidden = !viewDisgust.isHidden
+            viewDisgust.layer.cornerRadius = 60
+            setFeelData(senderTag)
+
+        default:
+            print("no tap")
+        }
+        
         performSegue(withIdentifier: "goToHome", sender: self)
+        
     }
     
     /////////////////////////////
