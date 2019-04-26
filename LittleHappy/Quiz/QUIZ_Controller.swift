@@ -165,13 +165,24 @@ class QUIZ_Controller: UIViewController {
         
         answerArray.shuffle()
         
-        emotionChoice1.setTitle(answerArray[0].text, for: .normal)
-        emotionChoice2.setTitle(answerArray[1].text, for: .normal)
-        emotionChoice3.setTitle(answerArray[2].text, for: .normal)
+//        emotionChoice1.setTitle(answerArray[0].text, for: .normal)
+//        emotionChoice2.setTitle(answerArray[1].text, for: .normal)
+//        emotionChoice3.setTitle(answerArray[2].text, for: .normal)
         
-       // emotionChoice1.setImage(MediaManager.shared.getPhoto(person: familyArray[randomNumberPick_1], feeling: answerArray[0]), for: .normal)
-     //   emotionChoice2.setImage(MediaManager.shared.getPhoto(person: familyArray[randomNumberPick_1], feeling: answerArray[1]), for: .normal)
-    //    emotionChoice3.setImage(MediaManager.shared.getPhoto(person: familyArray[randomNumberPick_1], feeling: answerArray[2]), for: .normal)
+        print(familyArray[randomNumberPick_1])
+        print(answerArray[0])
+        
+//        emotionChoice1.setImage(MediaManager.shared.getPhoto(person: familyArray[randomNumberPick_1], feeling: answerArray[0]), for: .normal)
+//        emotionChoice2.setImage(MediaManager.shared.getPhoto(person: familyArray[randomNumberPick_1], feeling: answerArray[1]), for: .normal)
+//        emotionChoice3.setImage(MediaManager.shared.getPhoto(person: familyArray[randomNumberPick_1], feeling: answerArray[2]), for: .normal)
+        
+//        emotionChoice1.setImage(UIImage(named: "Default-Disgust"), for: .normal)
+//        emotionChoice2.setImage(UIImage(named: "Default-Joy"), for: .normal)
+//        emotionChoice3.setImage(UIImage(named: "Default-Disgust"), for: .normal)
+        
+        emotionChoice1.setBackgroundImage(MediaManager.shared.getPhoto(person: familyArray[randomNumberPick_1], feeling: answerArray[0]), for: .normal)
+        emotionChoice2.setBackgroundImage(MediaManager.shared.getPhoto(person: familyArray[randomNumberPick_1], feeling: answerArray[1]), for: .normal)
+        emotionChoice3.setBackgroundImage(MediaManager.shared.getPhoto(person: familyArray[randomNumberPick_1], feeling: answerArray[2]), for: .normal)
         
         answerChoiceArray[0] = answerArray[0]
         answerChoiceArray[1] = answerArray[1]

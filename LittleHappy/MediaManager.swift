@@ -29,6 +29,7 @@ class MediaManager: NSObject {
             return image
         } else {
             print("returning default")
+            print("Default-\(feeling.description)")
             return UIImage(named: "Default-\(feeling.description)")!
         }
     }
