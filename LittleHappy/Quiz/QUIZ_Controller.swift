@@ -26,6 +26,10 @@ class QUIZ_Controller: UIViewController {
     
     var answerChoiceArray: [Feeling] = [Feeling.joy, Feeling.joy, Feeling.joy]
     
+    var star_filled = "star.filled.png"
+    
+    var star_unfilled = "star.unfilled.png"
+    
     var questionNumber = 0
     
     var score = 0
@@ -67,41 +71,41 @@ class QUIZ_Controller: UIViewController {
             switch score
             {
             case 1:
-                targetViewController_2.firstImage = UIImage(named: "Star-Filled.png")!
-                targetViewController_2.secondImage = UIImage(named: "Star-Unfilled.png")!
-                targetViewController_2.thirdImage = UIImage(named: "Star-Unfilled.png")!
-                targetViewController_2.fourthImage = UIImage(named: "Star-Unfilled.png")!
-                targetViewController_2.fifthImage = UIImage(named: "Star-Unfilled.png")!
+                targetViewController_2.firstImage = UIImage(named: star_filled)!
+                targetViewController_2.secondImage = UIImage(named: star_unfilled)!
+                targetViewController_2.thirdImage = UIImage(named: star_unfilled)!
+                targetViewController_2.fourthImage = UIImage(named: star_unfilled)!
+                targetViewController_2.fifthImage = UIImage(named: star_unfilled)!
             case 2:
-                targetViewController_2.firstImage = UIImage(named: "Star-Filled.png")!
-                targetViewController_2.secondImage = UIImage(named: "Star-Filled.png")!
-                targetViewController_2.thirdImage = UIImage(named: "Star-Unfilled.png")!
-                targetViewController_2.fourthImage = UIImage(named: "Star-Unfilled.png")!
-                targetViewController_2.fifthImage = UIImage(named: "Star-Unfilled.png")!
+                targetViewController_2.firstImage = UIImage(named: star_filled)!
+                targetViewController_2.secondImage = UIImage(named: star_filled)!
+                targetViewController_2.thirdImage = UIImage(named: star_unfilled)!
+                targetViewController_2.fourthImage = UIImage(named: star_unfilled)!
+                targetViewController_2.fifthImage = UIImage(named: star_unfilled)!
             case 3:
-                targetViewController_2.firstImage = UIImage(named: "Star-Filled.png")!
-                targetViewController_2.secondImage = UIImage(named: "Star-Filled.png")!
-                targetViewController_2.thirdImage = UIImage(named: "Star-Filled.png")!
-                targetViewController_2.fourthImage = UIImage(named: "Star-Unfilled.png")!
-                targetViewController_2.fifthImage = UIImage(named: "Star-Unfilled.png")!
+                targetViewController_2.firstImage = UIImage(named: star_filled)!
+                targetViewController_2.secondImage = UIImage(named: star_filled)!
+                targetViewController_2.thirdImage = UIImage(named: star_filled)!
+                targetViewController_2.fourthImage = UIImage(named: star_unfilled)!
+                targetViewController_2.fifthImage = UIImage(named: star_unfilled)!
             case 4:
-                targetViewController_2.firstImage = UIImage(named: "Star-Filled.png")!
-                targetViewController_2.secondImage = UIImage(named: "Star-Filled.png")!
-                targetViewController_2.thirdImage = UIImage(named: "Star-Filled.png")!
-                targetViewController_2.fourthImage = UIImage(named: "Star-Filled.png")!
-                targetViewController_2.fifthImage = UIImage(named: "Star-Unfilled.png")!
+                targetViewController_2.firstImage = UIImage(named: star_filled)!
+                targetViewController_2.secondImage = UIImage(named: star_filled)!
+                targetViewController_2.thirdImage = UIImage(named: star_filled)!
+                targetViewController_2.fourthImage = UIImage(named: star_filled)!
+                targetViewController_2.fifthImage = UIImage(named: star_unfilled)!
             case 5:
-                targetViewController_2.firstImage = UIImage(named: "Star-Filled.png")!
-                targetViewController_2.secondImage = UIImage(named: "Star-Filled.png")!
-                targetViewController_2.thirdImage = UIImage(named: "Star-Filled.png")!
-                targetViewController_2.fourthImage = UIImage(named: "Star-Filled.png")!
-                targetViewController_2.fifthImage = UIImage(named: "Star-Filled.png")!
+                targetViewController_2.firstImage = UIImage(named: star_filled)!
+                targetViewController_2.secondImage = UIImage(named: star_filled)!
+                targetViewController_2.thirdImage = UIImage(named: star_filled)!
+                targetViewController_2.fourthImage = UIImage(named: star_filled)!
+                targetViewController_2.fifthImage = UIImage(named: star_filled)!
             default:
-                targetViewController_2.firstImage = UIImage(named: "Star-Unfilled.png")!
-                targetViewController_2.secondImage = UIImage(named: "Star-Unfilled.png")!
-                targetViewController_2.thirdImage = UIImage(named: "Star-Unfilled.png")!
-                targetViewController_2.fourthImage = UIImage(named: "Star-Unfilled.png")!
-                targetViewController_2.fifthImage = UIImage(named: "Star-Unfilled.png")!
+                targetViewController_2.firstImage = UIImage(named: star_unfilled)!
+                targetViewController_2.secondImage = UIImage(named: star_unfilled)!
+                targetViewController_2.thirdImage = UIImage(named: star_unfilled)!
+                targetViewController_2.fourthImage = UIImage(named: star_unfilled)!
+                targetViewController_2.fifthImage = UIImage(named: star_unfilled)!
             }
         }
     }
