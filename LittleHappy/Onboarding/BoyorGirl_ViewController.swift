@@ -18,14 +18,21 @@ class BoyorGirl_ViewController: UIViewController {
     
     @IBAction func Boy_Click(_ sender: UIButton) {
         //If boy is clicked, set the data of user defaults to boy
-        UserDefaults.standard.set("Boy", forKey: "user_first_time")
+//        UserDefaults.standard.set(Gender.male, forKey: DataManager.shared.gender)
+        DataManager.shared.gender = .male
         performSegue(withIdentifier: "DailyFeelSegue", sender: nil)
     }
     
     @IBAction func Girl_Click(_ sender: UIButton) {
         //If girl is clicked, set the data of user defaults to girl
-        UserDefaults.standard.set("Girl", forKey: "user_first_time")
+//        UserDefaults.standard.set(Gender.female, forKey: DataManager.shared.gender)
+        DataManager.shared.gender = .female
         performSegue(withIdentifier: "DailyFeelSegue", sender: nil)
+    }
+    
+    func saveData()
+    {
+        DataManager.shared.saveDataToUserDefaults()
     }
     
     

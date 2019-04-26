@@ -28,6 +28,10 @@ class NameViewController: UIViewController, UITextFieldDelegate {
     @IBAction func textFieldTapReturn(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
+    
+    @IBAction func okButton(_ sender: UIButton) {
+        DataManager.shared.name = yourNameTextBox.text!
+    }
     /*
     // MARK: - Navigation
 
