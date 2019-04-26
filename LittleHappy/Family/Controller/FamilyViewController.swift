@@ -52,20 +52,18 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CollectionViewCell
-        
-        cell.cellImage.image = UIImage(named: familyArray[indexPath.row].description.lowercased())
+        let image: String = "\(familyArray[indexPath.row].description.lowercased())_happy face"
+        cell.cellImage.image = UIImage(named: image)
         cell.cellLabel.text = familyArray[indexPath.row].description
         cell.layer.cornerRadius = 120
         cell.cellButton.tag = indexPath.row
         
         UIView.animate(withDuration: 0.2, animations: {
             cell.cellImage.frame.origin.y -= 20
-            //            cell.cellImage.transform = CGAffineTransform.init(rotationAngle: 45)
             
         }){_ in
             UIView.animateKeyframes(withDuration: 0.5, delay: 0.25, options: [.autoreverse, .repeat], animations: {
                 cell.cellImage.frame.origin.y += 20
-                //                cell.cellImage.transform = CGAffineTransform.init(rotationAngle: -45)
             }, completion: nil)
         } 
         
@@ -80,16 +78,7 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         let person = familyArray[sender.tag]
         
         performSegue(withIdentifier: "PhotosSegue", sender: person)
-        
-        
-        
-        //        UIView.animate(withDuration: 1, animations: {
-        //            cell.cellImage.frame.origin.y -= 20
-        //            //            cell.cellImage.transform = CGAffineTransform.init(rotationAngle: 45)
-        //
-        //        }){_ in
-        //            UIView.animateKeyframes(withDuration: 1, delay: 0.25, options: [.autoreverse, .repeat], animations: {
-        //                cell.cellImage.frame.origin.y += 20
+  
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

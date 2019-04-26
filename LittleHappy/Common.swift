@@ -30,6 +30,7 @@ enum Person {
         }
     }
     
+    
     var text: String
     {
         switch  self {
