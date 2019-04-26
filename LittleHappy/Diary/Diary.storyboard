@@ -281,10 +281,6 @@
                                                 <rect key="frame" x="0.0" y="8" width="100" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Angry" translatesAutoresizingMaskIntoConstraints="NO" id="UK2-1X-HQU">
-                                                <rect key="frame" x="0.0" y="8" width="100" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toR-zH-UNu">
                                                 <rect key="frame" x="21" y="129" width="58" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -299,6 +295,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTX-Lp-CR6">
+                                                <rect key="frame" x="0.0" y="8" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="Angry"/>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="01i-yv-GsO"/>
@@ -309,10 +310,6 @@
                                         <rect key="frame" x="120" y="0.0" width="100" height="150"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sad" translatesAutoresizingMaskIntoConstraints="NO" id="eqt-Np-s3r">
-                                                <rect key="frame" x="0.0" y="8" width="100" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sad" translatesAutoresizingMaskIntoConstraints="NO" id="KxK-nC-nU0">
                                                 <rect key="frame" x="0.0" y="8" width="100" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -330,6 +327,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpU-oU-GH3">
+                                                <rect key="frame" x="0.0" y="8" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="Sad"/>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="GV8-5D-VIN"/>
@@ -356,10 +358,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Happy" translatesAutoresizingMaskIntoConstraints="NO" id="0Z3-c4-1gL">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PcT-gv-fZq">
                                                 <rect key="frame" x="0.0" y="8" width="100" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
+                                                <state key="normal" title="Button" image="Happy"/>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="U17-HZ-3pO"/>
@@ -370,10 +373,6 @@
                                         <rect key="frame" x="360" y="0.0" width="100" height="150"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fear" translatesAutoresizingMaskIntoConstraints="NO" id="VvK-bC-0vK">
-                                                <rect key="frame" x="0.0" y="8" width="100" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fear" translatesAutoresizingMaskIntoConstraints="NO" id="VaP-HZ-bNJ">
                                                 <rect key="frame" x="0.0" y="8" width="100" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -391,6 +390,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3c-ma-kQf">
+                                                <rect key="frame" x="0.0" y="8" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="Fear"/>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="adT-ys-IWU"/>
@@ -418,10 +422,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Disgust" translatesAutoresizingMaskIntoConstraints="NO" id="Imb-po-1ze">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMP-Vs-Y70">
                                                 <rect key="frame" x="0.0" y="8" width="100" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
+                                                <state key="normal" title="Button" image="Disgust"/>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="S4F-HV-drw"/>
@@ -523,17 +528,22 @@
                     </view>
                     <navigationItem key="navigationItem" title="Diary Feeling" id="ulR-xc-bCr"/>
                     <connections>
-                        <outlet property="angryIcon" destination="UK2-1X-HQU" id="ZmV-wv-tUI"/>
+                        <outlet property="angryIcon" destination="yTX-Lp-CR6" id="Jbv-pe-02R"/>
                         <outlet property="angryPercentage" destination="toR-zH-UNu" id="OsV-gq-eim"/>
+                        <outlet property="angryView" destination="gSS-Do-B0t" id="a5k-Ei-Cm6"/>
                         <outlet property="diaryTableView" destination="pQH-nV-fPl" id="wYh-Eg-pme"/>
-                        <outlet property="disgustIcon" destination="Imb-po-1ze" id="1aU-zd-rRz"/>
+                        <outlet property="disgustIcon" destination="YMP-Vs-Y70" id="4np-z8-eE2"/>
                         <outlet property="disgustPercentage" destination="hel-iN-m7o" id="XBH-RF-3ks"/>
-                        <outlet property="fearIcon" destination="VaP-HZ-bNJ" id="6F3-Vy-r9D"/>
+                        <outlet property="disgustView" destination="yNL-cJ-4Nc" id="y49-Pj-kDf"/>
+                        <outlet property="fearIcon" destination="Q3c-ma-kQf" id="Yo8-Fa-70N"/>
                         <outlet property="fearPercentage" destination="YjI-VS-M70" id="SDM-p6-3wT"/>
-                        <outlet property="happyIcon" destination="0Z3-c4-1gL" id="p6O-WG-7Ny"/>
+                        <outlet property="fearView" destination="VvK-bC-0vK" id="mQH-F0-gJg"/>
+                        <outlet property="happyIcon" destination="PcT-gv-fZq" id="JJg-J0-TRR"/>
                         <outlet property="happyPercentage" destination="KBq-h6-rY0" id="Kpv-u1-mN5"/>
-                        <outlet property="sadIcon" destination="KxK-nC-nU0" id="7nl-c4-qFs"/>
+                        <outlet property="happyView" destination="R8H-kM-N31" id="WjK-IE-7ph"/>
+                        <outlet property="sadIcon" destination="tpU-oU-GH3" id="u6t-Ad-9Dx"/>
                         <outlet property="sadPercentage" destination="cm6-KF-waO" id="QsK-8u-7GW"/>
+                        <outlet property="sadView" destination="eqt-Np-s3r" id="WDg-64-3yj"/>
                         <outlet property="vAngry" destination="fKr-ls-4gT" id="R6L-EJ-UAI"/>
                         <outlet property="vDisgust" destination="cfR-am-j5q" id="HvY-KD-Eq6"/>
                         <outlet property="vFear" destination="Zq8-zS-yP9" id="gqm-AI-51u"/>

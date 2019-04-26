@@ -20,6 +20,8 @@ class BoyorGirl_ViewController: UIViewController {
         //If boy is clicked, set the data of user defaults to boy
 //        UserDefaults.standard.set(Gender.male, forKey: DataManager.shared.gender)
         DataManager.shared.gender = .male
+        saveData()
+        
         performSegue(withIdentifier: "DailyFeelSegue", sender: nil)
     }
     
@@ -27,6 +29,8 @@ class BoyorGirl_ViewController: UIViewController {
         //If girl is clicked, set the data of user defaults to girl
 //        UserDefaults.standard.set(Gender.female, forKey: DataManager.shared.gender)
         DataManager.shared.gender = .female
+        saveData()
+        
         performSegue(withIdentifier: "DailyFeelSegue", sender: nil)
     }
     

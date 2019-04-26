@@ -22,19 +22,26 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var vDisgust: UIView!
     
     
-    @IBOutlet weak var happyIcon: UIImageView!
+    @IBOutlet weak var happyIcon: UIButton!
     @IBOutlet weak var happyPercentage: UILabel!
-    @IBOutlet weak var sadIcon: UIImageView!
+    @IBOutlet weak var sadIcon: UIButton!
     @IBOutlet weak var sadPercentage: UILabel!
-    @IBOutlet weak var angryIcon: UIImageView!
+    @IBOutlet weak var angryIcon: UIButton!
     @IBOutlet weak var angryPercentage: UILabel!
-    @IBOutlet weak var fearIcon: UIImageView!
+    @IBOutlet weak var fearIcon: UIButton!
     @IBOutlet weak var fearPercentage: UILabel!
-    @IBOutlet weak var disgustIcon: UIImageView!
+    @IBOutlet weak var disgustIcon: UIButton!
     @IBOutlet weak var disgustPercentage: UILabel!
-    
-    
     @IBOutlet var diaryTableView: UITableView!
+    
+    @IBOutlet weak var angryView: UIImageView!
+    @IBOutlet weak var sadView: UIImageView!
+    @IBOutlet weak var happyView: UIImageView!
+    @IBOutlet weak var fearView: UIImageView!
+    @IBOutlet weak var disgustView: UIImageView!
+    
+    
+    var icons = [UIButton]()
     
     let gender = DataManager.shared.gender
     
@@ -45,6 +52,11 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        icons = [happyIcon, sadIcon, angryIcon, fearIcon, disgustIcon]
+        
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        
         //Load Data from Data ManagerUserDefaults
         DataManager.shared.loadDataFromUserDefaults()
         
@@ -55,27 +67,43 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //Register MessageCell.xib file here:
         diaryTableView.register(UINib(nibName: "diaryCustomCell", bundle: nil), forCellReuseIdentifier: "diaryCustomCell")
         
+        feelButton()
+        
         sectionConfig()
         feelingPercentage()
     }
     
     //MARK: - SET ICON BUTTON
     func feelButton(){
-
+        
+        print(gender)
+        
         if gender == .male{
-//            happyIcon.
-//            setImage(UIImage(named: "me boy happy.png"), for: .normal)
-//            sadIcon.setImage(UIImage(named: "me boy sad.png"), for: .normal)
-//            disgustIcon.setImage(UIImage(named: "me boy disgust.png"), for: .normal)
-//            angryIcon.setImage(UIImage(named: "me boy angry.png"), for: .normal)
-//            fearIcon.setImage(UIImage(named: "me boy fear.png"), for: .normal)
+            happyIcon.setImage(UIImage(named: "me boy happy.png"), for: .normal)
+            sadIcon.setImage(UIImage(named: "me boy sad.png"), for: .normal)
+            disgustIcon.setImage(UIImage(named: "me boy disgust.png"), for: .normal)
+            angryIcon.setImage(UIImage(named: "me boy angry.png"), for: .normal)
+            fearIcon.setImage(UIImage(named: "me boy fear.png"), for: .normal)
+            
+            happyView.image = UIImage(named: "me boy happy.png")
+            sadView.image = UIImage(named: "me boy sad.png")
+            angryView.image = UIImage(named: "me boy angry.png")
+            fearView.image = UIImage(named: "me boy fear.png")
+            disgustView.image = UIImage(named: "me boy disgust.png")
+
 
         }else{
-//            feelHappy.setImage(UIImage(named: "me girl happy.png"), for: .normal)
-//            feelSad.setImage(UIImage(named: "me girl sad.png"), for: .normal)
-//            feelDisgust.setImage(UIImage(named: "me girl disgust.png"), for: .normal)
-//            feelAngry.setImage(UIImage(named: "me girl angry.png"), for: .normal)
-//            feelFear.setImage(UIImage(named: "me girl fear.png"), for: .normal)
+            happyIcon.setImage(UIImage(named: "me girl happy.png"), for: .normal)
+            sadIcon.setImage(UIImage(named: "me girl sad.png"), for: .normal)
+            disgustIcon.setImage(UIImage(named: "me girl disgust.png"), for: .normal)
+            angryIcon.setImage(UIImage(named: "me girl angry.png"), for: .normal)
+            fearIcon.setImage(UIImage(named: "me girl fear.png"), for: .normal)
+            
+            happyView.image = UIImage(named: "me girl happy.png")
+            sadView.image = UIImage(named: "me girl sad.png")
+            angryView.image = UIImage(named: "me girl angry.png")
+            fearView.image = UIImage(named: "me girl fear.png")
+            disgustView.image = UIImage(named: "me girl disgust.png")
         }
 
     }
@@ -112,13 +140,35 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let diaryDateOfFeels : [String] = DataManager.shared.dateOfFeels.reversed()
         let diaryTimeOfFeels : [String] = DataManager.shared.timeOfFeels.reversed()
         
+        var kelamin = ""
+        
             let cell = tableView.dequeueReusableCell(withIdentifier: "diaryCustomCell", for: indexPath) as! DiaryCustomTableViewCell
 
             //Set text label with section condition
-            cell.feelDiary.text = diaryKindOfFeels[indexPath.row+arrayOfIndex[indexPath.section]]
+            var a = diaryKindOfFeels[indexPath.row+arrayOfIndex[indexPath.section]].lowercased()
+        
+        if a == "Happy"{
+            a = "joy"
+        } else if a == "Angry"{
+            a = "anger"
+        } else if a == "Sad"{
+            a = "sadness"
+        }
+        
+            cell.feelDiary.text = a
             cell.dateDiary.text = diaryDateOfFeels[indexPath.row+arrayOfIndex[indexPath.section]]
             cell.timeDiary.text = diaryTimeOfFeels[indexPath.row+arrayOfIndex[indexPath.section]]
             cell.iconDiary.image = UIImage(named: cell.feelDiary.text ?? "Happy")
+        
+        if gender == .male{
+            kelamin = "boy"
+            cell.iconDiary.image = UIImage(named: "me \(kelamin) a")
+
+        }else{
+            kelamin = "girl"
+        }
+        
+        
 
             //print("section ",indexPath.section)
 
@@ -166,7 +216,6 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var totalEachFeeling : [Double] = [0,0,0,0,0]
         let totalAllOfFeeling : Double = Double(DataManager.shared.kindOfFeels.count)
         let viewFeeling : [UIView] = [vHappy, vSad, vAngry, vFear, vDisgust]
-        let icons : [UIImageView] = [happyIcon, sadIcon, angryIcon, fearIcon, disgustIcon]
         
         let feels = DataManager.shared.kindOfFeels
         
