@@ -59,6 +59,8 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         //Load Data from Data ManagerUserDefaults
         DataManager.shared.loadDataFromUserDefaults()
+        print("Data Saved \n", DataManager.shared.kindOfFeels,"\n",DataManager.shared.dateOfFeels, "\n", DataManager.shared.timeOfFeels)
+
         
         //Declare the table view to be a delegate for UITableViewDelegate, UITableViewDataSource
         diaryTableView.delegate = self
@@ -75,35 +77,24 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     //MARK: - SET ICON BUTTON
     func feelButton(){
+        let iconn = [happyIcon, sadIcon, angryIcon, fearIcon, disgustIcon]
+        let vieww = [happyView, sadView, angryView, fearView, disgustView]
+        let feels = ["joy", "sadness", "anger", "fear", "disgust"]
         
         print(gender)
         
+        var kelamin = ""
+        
         if gender == .male{
-            happyIcon.setImage(UIImage(named: "me boy happy.png"), for: .normal)
-            sadIcon.setImage(UIImage(named: "me boy sad.png"), for: .normal)
-            disgustIcon.setImage(UIImage(named: "me boy disgust.png"), for: .normal)
-            angryIcon.setImage(UIImage(named: "me boy angry.png"), for: .normal)
-            fearIcon.setImage(UIImage(named: "me boy fear.png"), for: .normal)
+            kelamin = "boy"
             
-            happyView.image = UIImage(named: "me boy happy.png")
-            sadView.image = UIImage(named: "me boy sad.png")
-            angryView.image = UIImage(named: "me boy angry.png")
-            fearView.image = UIImage(named: "me boy fear.png")
-            disgustView.image = UIImage(named: "me boy disgust.png")
-
-
         }else{
-            happyIcon.setImage(UIImage(named: "me girl happy.png"), for: .normal)
-            sadIcon.setImage(UIImage(named: "me girl sad.png"), for: .normal)
-            disgustIcon.setImage(UIImage(named: "me girl disgust.png"), for: .normal)
-            angryIcon.setImage(UIImage(named: "me girl angry.png"), for: .normal)
-            fearIcon.setImage(UIImage(named: "me girl fear.png"), for: .normal)
-            
-            happyView.image = UIImage(named: "me girl happy.png")
-            sadView.image = UIImage(named: "me girl sad.png")
-            angryView.image = UIImage(named: "me girl angry.png")
-            fearView.image = UIImage(named: "me girl fear.png")
-            disgustView.image = UIImage(named: "me girl disgust.png")
+            kelamin = "girl"
+        }
+        
+        for i in 0 ... iconn.count - 1{
+            iconn[i]?.setImage(UIImage(named: "me \(kelamin) \(feels[i])"), for: .normal)
+            vieww[i]?.image = UIImage(named: "me \(kelamin) \(feels[i]).png")
         }
 
     }
@@ -140,12 +131,12 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let diaryDateOfFeels : [String] = DataManager.shared.dateOfFeels.reversed()
         let diaryTimeOfFeels : [String] = DataManager.shared.timeOfFeels.reversed()
         
-        var kelamin = ""
-        
             let cell = tableView.dequeueReusableCell(withIdentifier: "diaryCustomCell", for: indexPath) as! DiaryCustomTableViewCell
 
             //Set text label with section condition
-            var a = diaryKindOfFeels[indexPath.row+arrayOfIndex[indexPath.section]].lowercased()
+            var a = diaryKindOfFeels[indexPath.row+arrayOfIndex[indexPath.section]]
+        
+        
         
         if a == "Happy"{
             a = "joy"
@@ -153,20 +144,29 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
             a = "anger"
         } else if a == "Sad"{
             a = "sadness"
+        } else if a == "Disgust"{
+            a = "disgust"
+        } else {
+            a = "fear"
+        }
+        
+        var kelamin = ""
+        
+        if gender == .male{
+            kelamin = "boy"
+            
+        }else{
+            kelamin = "girl"
         }
         
             cell.feelDiary.text = a
             cell.dateDiary.text = diaryDateOfFeels[indexPath.row+arrayOfIndex[indexPath.section]]
             cell.timeDiary.text = diaryTimeOfFeels[indexPath.row+arrayOfIndex[indexPath.section]]
             cell.iconDiary.image = UIImage(named: cell.feelDiary.text ?? "Happy")
-        
-        if gender == .male{
-            kelamin = "boy"
-            cell.iconDiary.image = UIImage(named: "me \(kelamin) a")
+            cell.iconDiary.image = UIImage(named: "me \(kelamin) \(a)")
 
-        }else{
-            kelamin = "girl"
-        }
+        
+
         
         
 

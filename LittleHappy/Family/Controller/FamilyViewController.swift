@@ -29,6 +29,7 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         super.viewDidLoad()
 //        let value = UIInterfaceOrientation.lan.rawValue
+        
         let flowLayout = UPCarouselFlowLayout()
         
 //        UIDevice.current.setValue(value, forKey: "orientation")
