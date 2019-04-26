@@ -43,10 +43,6 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
-
-        
         //Load Data from Data ManagerUserDefaults
         DataManager.shared.loadDataFromUserDefaults()
         
@@ -66,7 +62,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func sectionConfig(){
         //set Reversed array, Latest to Oldest
         dateFeelsArray = DataManager.shared.dateOfFeels.reversed()
-        print("Date Feels Array", dateFeelsArray.count)
+        print("Date Feels Array", dateFeelsArray.count, "\nContent ", dateFeelsArray)
         
         //Loop for define the section changed location
         if dateFeelsArray.count > 1{
@@ -74,14 +70,12 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 if dateFeelsArray[j] != dateFeelsArray[j-1]{
                     arrayOfIndex.append(j)
                     totalSection += 1
-                    print(arrayOfIndex)
                 }//if
             }//for
         }//if
         else{
             arrayOfIndex.append(0)
             totalSection += 1
-            print(arrayOfIndex)
         }//else
     }//func
     

@@ -38,6 +38,9 @@ class DailyFeelViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+
+        
         viewHappy.isHidden = true
         viewSad.isHidden = true
         viewAngry.isHidden = true
@@ -45,10 +48,7 @@ class DailyFeelViewController: UIViewController {
         viewDisgust.isHidden = true
 
         DataManager.shared.loadDataFromUserDefaults()
-        
-//        print("Kind Of Feels : \(DataManager.shared.kindOfFeels) \nDate of Feels \(DataManager.shared.dateOfFeels) \nTime of Feels \(DataManager.shared.timeOfFeels)")
 
-        
     }
 
     
