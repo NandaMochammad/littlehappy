@@ -36,6 +36,8 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet var diaryTableView: UITableView!
     
+    let gender = DataManager.shared.gender
+    
     var totalSection : Int = 1
     var arrayOfIndex : [Int] = [0]
     var dateFeelsArray : [String] = []
@@ -56,6 +58,34 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         sectionConfig()
         feelingPercentage()
     }
+    
+    //MARK: - SET ICON BUTTON
+//    func feelButton(){
+//
+//        if gender == .male{
+//            happyIcon.back
+//            setImage(UIImage(named: "me boy happy.png"), for: .normal)
+//            sadIcon.setImage(UIImage(named: "me boy sad.png"), for: .normal)
+//            disgustIcon.setImage(UIImage(named: "me boy disgust.png"), for: .normal)
+//            angryIcon.setImage(UIImage(named: "me boy angry.png"), for: .normal)
+//            fearIcon.setImage(UIImage(named: "me boy fear.png"), for: .normal)
+//
+//        }else{
+//            feelHappy.setImage(UIImage(named: "me girl happy.png"), for: .normal)
+//            feelSad.setImage(UIImage(named: "me girl sad.png"), for: .normal)
+//            feelDisgust.setImage(UIImage(named: "me girl disgust.png"), for: .normal)
+//            feelAngry.setImage(UIImage(named: "me girl angry.png"), for: .normal)
+//            feelFear.setImage(UIImage(named: "me girl fear.png"), for: .normal)
+//        }
+//
+//        viewHappy.isHidden = true
+//        viewSad.isHidden = true
+//        viewAngry.isHidden = true
+//        viewFear.isHidden = true
+//        viewDisgust.isHidden = true
+//    }
+//
+//
     
     //MARK: - SET SECTION
     //Set Section Config
