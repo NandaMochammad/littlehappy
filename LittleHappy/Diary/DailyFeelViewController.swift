@@ -21,9 +21,12 @@ class DailyFeelViewController: UIViewController {
     @IBOutlet weak var viewDisgust: UIView!
     @IBOutlet weak var viewFear: UIView!
     
-//    var kindOfFeels : [String] = ["Angry", "Sad", "Happy"]
-//    var dateOfFeels : [String] = ["21.04.2019", "21.04.2019", "21.04.2019"]
-//    var timeOfFeels : [String] = ["17:22:28", "17:22:27", "17:22:26"]
+    
+    @IBOutlet weak var feelHappy: UIButton!
+    @IBOutlet weak var feelSad: UIButton!
+    @IBOutlet weak var feelAngry: UIButton!
+    @IBOutlet weak var feelFear: UIButton!
+    @IBOutlet weak var feelDisgust: UIButton!
     
     //Membuat User Default untuk menyimpan data array
     let defaults = UserDefaults.standard
@@ -41,17 +44,35 @@ class DailyFeelViewController: UIViewController {
         
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
-        print(gender)
-
+        feelButton()
         
+        DataManager.shared.loadDataFromUserDefaults()
+
+    }
+    
+    //MARK: - SET ICON FEEL
+    func feelButton(){
+        
+        if gender == .male{
+            feelHappy.setImage(UIImage(named: "me boy happy.png"), for: .normal)
+            feelSad.setImage(UIImage(named: "me boy sad.png"), for: .normal)
+            feelDisgust.setImage(UIImage(named: "me boy disgust.png"), for: .normal)
+            feelAngry.setImage(UIImage(named: "me boy angry.png"), for: .normal)
+            feelFear.setImage(UIImage(named: "me boy fear.png"), for: .normal)
+
+        }else{
+            feelHappy.setImage(UIImage(named: "me girl happy.png"), for: .normal)
+            feelSad.setImage(UIImage(named: "me girl sad.png"), for: .normal)
+            feelDisgust.setImage(UIImage(named: "me girl disgust.png"), for: .normal)
+            feelAngry.setImage(UIImage(named: "me girl angry.png"), for: .normal)
+            feelFear.setImage(UIImage(named: "me girl fear.png"), for: .normal)
+        }
+
         viewHappy.isHidden = true
         viewSad.isHidden = true
         viewAngry.isHidden = true
         viewFear.isHidden = true
         viewDisgust.isHidden = true
-
-        DataManager.shared.loadDataFromUserDefaults()
-
     }
 
     
@@ -62,27 +83,22 @@ class DailyFeelViewController: UIViewController {
         
         switch sender.tag {
         case 0:
-            viewHappy.isHidden = !viewHappy.isHidden
             viewHappy.layer.cornerRadius = 60
             setFeelData(senderTag)
 
         case 1:
-            viewSad.isHidden = !viewSad.isHidden
             viewSad.layer.cornerRadius = 60
             setFeelData(senderTag)
 
         case 2:
-            viewAngry.isHidden = !viewAngry.isHidden
             viewAngry.layer.cornerRadius = 60
             setFeelData(senderTag)
 
         case 3:
-            viewFear.isHidden = !viewFear.isHidden
             viewFear.layer.cornerRadius = 60
             setFeelData(senderTag)
 
         case 4:
-            viewDisgust.isHidden = !viewDisgust.isHidden
             viewDisgust.layer.cornerRadius = 60
             setFeelData(senderTag)
 
