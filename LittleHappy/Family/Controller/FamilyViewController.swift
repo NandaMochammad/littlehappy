@@ -69,25 +69,29 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         cell.cellLabel.text = familyArray[indexPath.row].description
         cell.layer.cornerRadius = 120
         cell.cellButton.tag = indexPath.row
+        print(indexPath.row)
+        
         switch indexPath.row {
+            
         case 0:
             cell.cellImage.animationImages = imgArray1
-//            cell.cellImage.animationDuration = 2
+            print(imgArray1)
         case 1:
-            cell.cellImage.animationImages = imgArray1
-//            cell.cellImage.animationDuration = 2
-        case 2:
             cell.cellImage.animationImages = imgArray2
-//            cell.cellImage.animationDuration = 2
-        case 3:
+            print(imgArray2)
+        case 2:
             cell.cellImage.animationImages = imgArray3
-//            cell.cellImage.animationDuration = 2
-        case 4:
+            print(imgArray3)
+        case 3:
             cell.cellImage.animationImages = imgArray4
-//            cell.cellImage.animationDuration = 2
+            print(imgArray4)
+        case 4:
+            cell.cellImage.animationImages = imgArray5
+            print(imgArray5)
         default: break
-//            cell.cellImage.animationImages =
+            
         }
+        
         cell.cellImage.animationDuration = 2
         cell.cellImage.startAnimating()
         
@@ -176,27 +180,6 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         imgArray5.append(MediaManager.shared.getPhoto(person: sister, feeling: .anger))
         
     }
-//
-//    func startAnimating() {
-//
-//        img1.startAnimating()
-//        img2.startAnimating()
-//        img3.startAnimating()
-//        img4.startAnimating()
-//        img5.startAnimating()
-//
-//    }
-//
-//    func stopAnimating() {
-//
-//        img1.stopAnimating()
-//        img2.stopAnimating()
-//        img3.stopAnimating()
-//        img4.stopAnimating()
-//        img5.stopAnimating()
-//
-//    }
-//
     
 }
 /*
