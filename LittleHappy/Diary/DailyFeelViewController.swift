@@ -54,7 +54,7 @@ class DailyFeelViewController: UIViewController {
     func feelButton(){
         
         if gender == .male{
-            feelHappy.setImage(UIImage(named: "me boy happy.png"), for: .normal)
+            feelHappy.setImage(UIImage(named: "artborat _test.png"), for: .normal)
             feelSad.setImage(UIImage(named: "me boy sad.png"), for: .normal)
             feelDisgust.setImage(UIImage(named: "me boy disgust.png"), for: .normal)
             feelAngry.setImage(UIImage(named: "me boy angry.png"), for: .normal)
