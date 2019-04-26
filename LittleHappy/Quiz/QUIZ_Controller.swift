@@ -26,9 +26,9 @@ class QUIZ_Controller: UIViewController {
     
     var answerChoiceArray: [Feeling] = [Feeling.joy, Feeling.joy, Feeling.joy]
     
-    var star_filled = "star.filled.png"
+    var star_filled = "star_filled"
     
-    var star_unfilled = "star.unfilled.png"
+    var star_unfilled = "star_unfilled"
     
     var questionNumber = 0
     

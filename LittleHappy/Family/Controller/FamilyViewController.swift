@@ -29,7 +29,7 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
 //        UIDevice.current.setValue(value, forKey: "orientation")
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
         
-        flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 400, height: collectionView.frame.size.height)
+        flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 500, height: collectionView.frame.size.height)
         flowLayout.scrollDirection = .horizontal
         flowLayout.sideItemScale = 0.8
         flowLayout.sideItemAlpha = 1.0
@@ -93,15 +93,17 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
             
         }
         
-        cell.cellImage.animationDuration = 2
+        cell.cellImage.animationDuration = 8
         cell.cellImage.startAnimating()
         
-        UIView.animate(withDuration: 0.2, animations: {
-            cell.cellImage.frame.origin.y -= 20
+        UIView.animate(withDuration: 0.8, animations: {
+//            cell.cellImage.frame.size.height += 20
+            cell.cellImage.frame.origin.y -= 10
             
         }) {_ in
-            UIView.animateKeyframes(withDuration: 0.5, delay: 0.25, options: [.autoreverse, .repeat], animations: {
-                cell.cellImage.frame.origin.y += 20
+            UIView.animateKeyframes(withDuration: 0.8, delay: 0, options: [.autoreverse, .repeat], animations: {
+//                cell.cellImage.frame.size.height -= 20
+                cell.cellImage.frame.origin.y += 10
             }, completion: nil)
         } 
         

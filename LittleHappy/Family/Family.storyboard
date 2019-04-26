@@ -107,7 +107,7 @@
                                                         <constraint firstAttribute="height" constant="55" id="MfM-Tq-i98"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="36"/>
-                                                    <color key="textColor" red="0.87274271250000002" green="0.66174256799999998" blue="0.34894752499999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLJ-xv-fOa">
@@ -129,7 +129,7 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.87274271250000002" green="0.66174256799999998" blue="0.34894752499999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="bottomMargin" secondItem="dOc-Po-5Z8" secondAttribute="bottom" constant="40" id="4qd-Ut-OzR"/>
                                             <constraint firstItem="dOc-Po-5Z8" firstAttribute="leading" secondItem="QcT-lT-3Go" secondAttribute="leadingMargin" constant="40" id="KpU-kn-6eS"/>
