@@ -34,6 +34,15 @@ class MediaManager: NSObject {
         }
     }
     
+    func getPhotoAssets(person: Person, feeling: Feeling) -> UIImage {
+        let imageName = "\(person.description.lowercased())_\(feeling.description.lowercased()) face"
+        if let image = UIImage(named: imageName) {
+            return image
+        } else {
+            return UIImage(named: "Default-\(feeling.description)")!
+        }
+    }
+    
     func getDirectoryPath() -> String {
         let path = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("LittleHappyPhotos")
         //print("path: \(path)")
@@ -66,4 +75,6 @@ class MediaManager: NSObject {
         let image = UIImage(contentsOfFile: urlString)
         return image
     }
+    
+    
 }

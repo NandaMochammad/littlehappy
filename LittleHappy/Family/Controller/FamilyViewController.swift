@@ -13,16 +13,13 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
 
     @IBOutlet weak var collectionView: UICollectionView!
     let familyArray = [Person.me, Person.father, Person.mother, Person.brother, Person.sister]
-    var imgArray1: [UIImage] = []
+    let feelingArray = [Feeling.anger, Feeling.disgust, Feeling.fear, Feeling.joy, Feeling.sadness]
+    var imgArray1boy: [UIImage] = []
+    var imgArray1girl: [UIImage] = []
     var imgArray2: [UIImage] = []
     var imgArray3: [UIImage] = []
     var imgArray4: [UIImage] = []
     var imgArray5: [UIImage] = []
-    var me: Person = .me
-    var mother: Person = .mother
-    var father: Person = .father
-    var brother: Person = .brother
-    var sister: Person = .sister
     
     override func viewDidLoad() {
         
@@ -74,8 +71,13 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         switch indexPath.row {
             
         case 0:
-            cell.cellImage.animationImages = imgArray1
-            print(imgArray1)
+            if UserDefaults.standard.string(forKey: "gender") == "MALE" {
+                cell.cellImage.animationImages = imgArray1boy
+                print(imgArray1boy)
+            } else if UserDefaults.standard.string(forKey: "gender") == "FEMALE" {
+                cell.cellImage.animationImages = imgArray1girl
+                print(imgArray1girl)
+            }
         case 1:
             cell.cellImage.animationImages = imgArray2
             print(imgArray2)
@@ -133,51 +135,45 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         // Me
         
-        imgArray1.removeAll()
-        imgArray1.append(MediaManager.shared.getPhoto(person: me, feeling: .joy))
-        imgArray1.append(MediaManager.shared.getPhoto(person: me, feeling: .sadness))
-        imgArray1.append(MediaManager.shared.getPhoto(person: me, feeling: .fear))
-        imgArray1.append(MediaManager.shared.getPhoto(person: me, feeling: .disgust))
-        imgArray1.append(MediaManager.shared.getPhoto(person: me, feeling: .anger))
-//
-//        img1.animationImages = imgArray1
-//        img1.animationDuration = 2
-//
-        // Mother
-        
-        imgArray2.removeAll()
-        imgArray2.append(MediaManager.shared.getPhoto(person: mother, feeling: .joy))
-        imgArray2.append(MediaManager.shared.getPhoto(person: mother, feeling: .sadness))
-        imgArray2.append(MediaManager.shared.getPhoto(person: mother, feeling: .fear))
-        imgArray2.append(MediaManager.shared.getPhoto(person: mother, feeling: .disgust))
-        imgArray2.append(MediaManager.shared.getPhoto(person: mother, feeling: .anger))
+        for x in familyArray {
+            switch x {
+            case Person.me:
+                if UserDefaults.standard.string(forKey: "gender") == "MALE" {
+                    imgArray1boy.removeAll()
+                    for y in feelingArray {
+                        imgArray1boy.append(MediaManager.shared.getPhotoAssets(person: x, feeling: y))
+                    }
+                } else if UserDefaults.standard.string(forKey: "gender") == "MALE" {
+                    imgArray1girl.removeAll()
+                    for y in feelingArray {
+                        imgArray1girl.append(MediaManager.shared.getPhotoAssets(person: x, feeling: y))
+                    }
+                }
 
-        // Father
-        
-        imgArray3.removeAll()
-        imgArray3.append(MediaManager.shared.getPhoto(person: father, feeling: .joy))
-        imgArray3.append(MediaManager.shared.getPhoto(person: father, feeling: .sadness))
-        imgArray3.append(MediaManager.shared.getPhoto(person: father, feeling: .fear))
-        imgArray3.append(MediaManager.shared.getPhoto(person: father, feeling: .disgust))
-        imgArray3.append(MediaManager.shared.getPhoto(person: father, feeling: .anger))
-  
-        // Brother
-        
-        imgArray4.removeAll()
-        imgArray4.append(MediaManager.shared.getPhoto(person: brother, feeling: .joy))
-        imgArray4.append(MediaManager.shared.getPhoto(person: brother, feeling: .sadness))
-        imgArray4.append(MediaManager.shared.getPhoto(person: brother, feeling: .fear))
-        imgArray4.append(MediaManager.shared.getPhoto(person: brother, feeling: .disgust))
-        imgArray4.append(MediaManager.shared.getPhoto(person: brother, feeling: .anger))
-     
-        // Sister
-        
-        imgArray5.removeAll()
-        imgArray5.append(MediaManager.shared.getPhoto(person: sister, feeling: .joy))
-        imgArray5.append(MediaManager.shared.getPhoto(person: sister, feeling: .sadness))
-        imgArray5.append(MediaManager.shared.getPhoto(person: sister, feeling: .fear))
-        imgArray5.append(MediaManager.shared.getPhoto(person: sister, feeling: .disgust))
-        imgArray5.append(MediaManager.shared.getPhoto(person: sister, feeling: .anger))
+            case Person.father:
+                imgArray2.removeAll()
+                for y in feelingArray {
+                    imgArray2.append(MediaManager.shared.getPhotoAssets(person: x, feeling: y))
+                }
+            case Person.mother:
+                imgArray3.removeAll()
+                for y in feelingArray {
+                    imgArray3.append(MediaManager.shared.getPhotoAssets(person: x, feeling: y))
+                }
+            case Person.brother:
+                imgArray4.removeAll()
+                for y in feelingArray {
+                    imgArray4.append(MediaManager.shared.getPhotoAssets(person: x, feeling: y))
+                }
+            case Person.sister:
+                imgArray5.removeAll()
+                for y in feelingArray {
+                    imgArray5.append(MediaManager.shared.getPhotoAssets(person: x, feeling: y))
+                }
+                
+            }
+            
+        }
         
     }
     
