@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MediaManager: NSObject {
+final class MediaManager: NSObject {
 
     static let shared = MediaManager()
     

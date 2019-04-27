@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DataManager: NSObject {
+final class DataManager: NSObject {
 
     static let shared = DataManager()
     
