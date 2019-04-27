@@ -19,6 +19,11 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
     var imgArray3: [UIImage] = []
     var imgArray4: [UIImage] = []
     var imgArray5: [UIImage] = []
+    var timer: Timer? {
+        didSet {
+            self.timer?.fire()
+        }
+    }
     
     override func viewDidLoad() {
         
@@ -48,18 +53,20 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(shakeCells), userInfo: nil, repeats: true)
-        timer.fire()
+        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+            self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.shakeCells), userInfo: nil, repeats: true)
+        }
     }
     
     @objc func shakeCells() {
+        let movementConstant: CGFloat = 20
         self.collectionView.visibleCells.forEach { (cell) in
             let cell = cell as! CollectionViewCell
-            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
-                cell.cellImage.frame.origin.y -= 20
+            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+                cell.cellImage.frame.origin.y -= movementConstant
             }) { (_) in
                 UIView.animate(withDuration: 0.3, animations: {
-                    cell.cellImage.frame.origin.y += 20
+                    cell.cellImage.frame.origin.y += movementConstant
                 })
             }
         }
