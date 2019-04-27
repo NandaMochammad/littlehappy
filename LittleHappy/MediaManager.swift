@@ -38,7 +38,7 @@ final class MediaManager: NSObject {
         
 //        print(person, feeling)
         if person != Person.me {
-            let imageName = "\(person.description.lowercased())_\(feeling.description.lowercased()) face"
+            let imageName = "\(person.description.lowercased())\(feeling.description)"
             if let image = UIImage(named: imageName) {
                 return image
             } else {
@@ -47,7 +47,7 @@ final class MediaManager: NSObject {
         } else {
 //            print(DataManager.shared.gender)
             if DataManager.shared.gender == .male {
-                let imageName = "me boy \(feeling.description.lowercased())"
+                let imageName = "meBoy\(feeling.description)"
 //                print(imageName)
                 if let image = UIImage(named: imageName) {
                     return image
@@ -55,7 +55,7 @@ final class MediaManager: NSObject {
                     return UIImage(named: "Default-\(feeling.description)")!
                 }
             } else if DataManager.shared.gender == .female {
-                let imageName = "me girl \(feeling.description.lowercased())"
+                let imageName = "meGirl\(feeling.description)"
 //                print(imageName)
                 if let image = UIImage(named: imageName) {
                     return image

@@ -18,7 +18,7 @@ class CollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.layer.shadowColor = UIColor.lightGray.cgColor
+        self.layer.shadowColor = UIColor.clear.cgColor
         self.layer.shadowOpacity = 0.5
         self.layer.shadowOpacity = 10
         self.layer.shadowOffset = .zero

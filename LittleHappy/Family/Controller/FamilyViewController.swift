@@ -55,18 +55,18 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         super.viewDidAppear(animated)
         
         DispatchQueue.main.asyncAfter(deadline: .now()+1) {
-            self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.shakeCells), userInfo: nil, repeats: true)
+            self.timer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.shakeCells), userInfo: nil, repeats: true)
         }
     }
     
     @objc func shakeCells() {
-        let movementConstant: CGFloat = 20
+        let movementConstant: CGFloat = 10
         self.collectionView.visibleCells.forEach { (cell) in
             let cell = cell as! CollectionViewCell
-            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+            UIView.animate(withDuration: 0.5, delay: 2.4, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
                 cell.cellImage.frame.origin.y -= movementConstant
             }) { (_) in
-                UIView.animate(withDuration: 0.3, animations: {
+                UIView.animate(withDuration: 0.5, animations: {
                     cell.cellImage.frame.origin.y += movementConstant
                 })
             }
@@ -90,7 +90,7 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CollectionViewCell
 //        let image: String = "\(familyArray[indexPath.row].description.lowercased())_happy face"
 //        cell.cellImage.image = UIImage(named: image)
-        cell.cellLabel.text = familyArray[indexPath.row].description
+        cell.cellLabel.text = " \(familyArray[indexPath.row].description)"
         cell.layer.cornerRadius = 120
         cell.cellButton.tag = indexPath.row
 //        print(indexPath.row)
@@ -120,8 +120,12 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         default: break
             
         }
-        
-        cell.cellImage.animationDuration = 8
+        cell.cellLabel.layer.masksToBounds = true
+        cell.cellLabel.layer.cornerRadius = 18
+        cell.cellImage.layer.borderColor = UIColor.gray.cgColor
+        cell.cellImage.layer.borderWidth = 2
+        cell.cellImage.layer.cornerRadius = 72
+        cell.cellImage.animationDuration = 20
         cell.cellImage.startAnimating()
         
 //        UIView.animate(withDuration: 0.02, animations: {

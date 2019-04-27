@@ -101,44 +101,43 @@
                                             <rect key="frame" x="0.0" y="0.0" width="410" height="236"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Family Member" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pR-1o-Cfl">
-                                                    <rect key="frame" x="202" y="50" width="158" height="55"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="55" id="MfM-Tq-i98"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="36"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" Family Member" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pR-1o-Cfl">
+                                                    <rect key="frame" x="61" y="177" width="236" height="36"/>
+                                                    <color key="backgroundColor" red="0.87274271250000002" green="0.66174256799999998" blue="0.34894752499999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="32"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLJ-xv-fOa">
-                                                    <rect key="frame" x="260" y="130" width="72" height="48"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dOc-Po-5Z8">
+                                                    <rect key="frame" x="133" y="20" width="144" height="144"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="48" id="2fI-tm-MxO"/>
-                                                        <constraint firstAttribute="width" constant="72" id="VeG-aU-XnK"/>
+                                                        <constraint firstAttribute="width" constant="144" id="WWC-m4-HMh"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLJ-xv-fOa">
+                                                    <rect key="frame" x="277" y="156" width="72" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="72" id="iyH-gi-bJb"/>
+                                                        <constraint firstAttribute="height" constant="60" id="xnp-dL-XOg"/>
                                                     </constraints>
                                                     <state key="normal" image="camera"/>
                                                     <connections>
                                                         <action selector="cellButton:" destination="acy-vX-RjL" eventType="touchUpInside" id="85M-qx-KW0"/>
                                                     </connections>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dOc-Po-5Z8">
-                                                    <rect key="frame" x="48" y="48" width="144" height="140"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="144" id="8XK-JI-Uub"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.87274271250000002" green="0.66174256799999998" blue="0.34894752499999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottomMargin" secondItem="dOc-Po-5Z8" secondAttribute="bottom" constant="40" id="4qd-Ut-OzR"/>
-                                            <constraint firstItem="dOc-Po-5Z8" firstAttribute="leading" secondItem="QcT-lT-3Go" secondAttribute="leadingMargin" constant="40" id="KpU-kn-6eS"/>
-                                            <constraint firstAttribute="trailing" secondItem="5pR-1o-Cfl" secondAttribute="trailing" constant="50" id="OiW-Y0-kVq"/>
-                                            <constraint firstItem="dOc-Po-5Z8" firstAttribute="top" secondItem="QcT-lT-3Go" secondAttribute="topMargin" constant="40" id="OnL-cl-2sV"/>
-                                            <constraint firstItem="5pR-1o-Cfl" firstAttribute="leading" secondItem="dOc-Po-5Z8" secondAttribute="trailing" constant="10" id="Q8t-e1-sPD"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="OLJ-xv-fOa" secondAttribute="bottom" constant="50" id="f4T-Pd-KE0"/>
-                                            <constraint firstItem="5pR-1o-Cfl" firstAttribute="top" secondItem="QcT-lT-3Go" secondAttribute="top" constant="50" id="ldG-Hd-WkK"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="OLJ-xv-fOa" secondAttribute="trailing" constant="70" id="xt3-G5-a7j"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="5pR-1o-Cfl" secondAttribute="bottom" constant="15" id="2KY-qW-sHN"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="OLJ-xv-fOa" secondAttribute="bottom" constant="12" id="4U7-6i-P0e"/>
+                                            <constraint firstItem="5pR-1o-Cfl" firstAttribute="leading" secondItem="QcT-lT-3Go" secondAttribute="leadingMargin" constant="53" id="Adg-ah-RHl"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="OLJ-xv-fOa" secondAttribute="trailing" constant="53" id="Q4f-vt-1oZ"/>
+                                            <constraint firstItem="OLJ-xv-fOa" firstAttribute="leading" secondItem="dOc-Po-5Z8" secondAttribute="trailing" id="UIi-9W-G2f"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="dOc-Po-5Z8" secondAttribute="bottom" constant="64" id="bXT-wz-Ej5"/>
+                                            <constraint firstItem="5pR-1o-Cfl" firstAttribute="top" secondItem="QcT-lT-3Go" secondAttribute="topMargin" constant="169" id="c2P-Fu-WKw"/>
+                                            <constraint firstItem="dOc-Po-5Z8" firstAttribute="top" secondItem="QcT-lT-3Go" secondAttribute="topMargin" constant="12" id="hcf-ZO-BN5"/>
+                                            <constraint firstItem="dOc-Po-5Z8" firstAttribute="leading" secondItem="5pR-1o-Cfl" secondAttribute="trailing" constant="-164" id="pxr-ZV-I1m"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="cellButton" destination="OLJ-xv-fOa" id="gz9-FR-Jyw"/>
@@ -150,7 +149,7 @@
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEN-5j-LFZ">
                                 <rect key="frame" x="378" y="339" width="140" height="41"/>
-                                <color key="backgroundColor" red="0.18328172309999999" green="0.64740527849999996" blue="0.43893391040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.36518090963363647" green="0.51233154535293579" blue="0.81572562456130981" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="LVO-E0-IHs"/>
                                 </constraints>
