@@ -79,22 +79,22 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func feelButton(){
         let iconn = [happyIcon, sadIcon, angryIcon, fearIcon, disgustIcon]
         let vieww = [happyView, sadView, angryView, fearView, disgustView]
-        let feels = ["joy", "sadness", "anger", "fear", "disgust"]
+        let feels = ["Joy", "Sadness", "Anger", "Fear", "Disgust"]
         
         print(gender)
         
         var kelamin = ""
         
         if gender == .male{
-            kelamin = "boy"
+            kelamin = "Boy"
             
         }else{
-            kelamin = "girl"
+            kelamin = "Girl"
         }
         
         for i in 0 ... iconn.count - 1{
-            iconn[i]?.setImage(UIImage(named: "me \(kelamin) \(feels[i])"), for: .normal)
-            vieww[i]?.image = UIImage(named: "me \(kelamin) \(feels[i]).png")
+            iconn[i]?.setImage(UIImage(named: "me\(kelamin)\(feels[i])"), for: .normal)
+            vieww[i]?.image = UIImage(named: "me\(kelamin)\(feels[i]).png")
         }
 
     }

@@ -50,20 +50,22 @@ class DailyFeelViewController: UIViewController {
     //MARK: - SET ICON FEEL
     func setIconFeelButton(){
         
+        let feeling = [feelHappy, feelSad, feelAngry, feelFear, feelDisgust]
+        let feels = ["Joy", "Sadness", "Anger", "Fear", "Disgust"]
+        
+        var kelamin = ""
+        
         if gender == .male{
-            feelHappy.setImage(UIImage(named: "me boy joy.png"), for: .normal)
-            feelSad.setImage(UIImage(named: "me boy sadness.png"), for: .normal)
-            feelDisgust.setImage(UIImage(named: "me boy disgust.png"), for: .normal)
-            feelAngry.setImage(UIImage(named: "me boy anger.png"), for: .normal)
-            feelFear.setImage(UIImage(named: "me boy fear.png"), for: .normal)
-
+            kelamin = "Boy"
+            
         }else{
-            feelHappy.setImage(UIImage(named: "me girl joy.png"), for: .normal)
-            feelSad.setImage(UIImage(named: "me girl sadness.png"), for: .normal)
-            feelDisgust.setImage(UIImage(named: "me girl disgust.png"), for: .normal)
-            feelAngry.setImage(UIImage(named: "me girl anger.png"), for: .normal)
-            feelFear.setImage(UIImage(named: "me girl fear.png"), for: .normal)
+            kelamin = "Girl"
         }
+        
+        for i in 0 ... feels.count - 1{
+            feeling[i]?.setImage(UIImage(named: "me\(kelamin)\(feels[i])"), for: .normal)
+        }
+        
 
         viewHappy.isHidden = true
         viewSad.isHidden = true

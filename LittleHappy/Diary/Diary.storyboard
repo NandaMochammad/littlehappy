@@ -213,34 +213,6 @@
             </objects>
             <point key="canvasLocation" x="-71" y="566"/>
         </scene>
-        <!--Home-->
-        <scene sceneID="hOy-Fx-OYf">
-            <objects>
-                <viewController id="Rdm-FD-Gep" customClass="HomeViewController" customModule="LittleHappy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Z9r-VJ-K0z">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13Z-Va-kaA">
-                                <rect key="frame" x="714" y="355" width="118" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Diary Feeling"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="ELx-Mh-HFc"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Home" id="YLI-lI-hv7" userLabel="Home">
-                        <attributedString key="userComments">
-                            <fragment content="Home"/>
-                        </attributedString>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PCu-zZ-4BX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1394.8660714285713" y="44.927536231884062"/>
-        </scene>
         <!--Diary Feeling-->
         <scene sceneID="NcN-gL-Nxi">
             <objects>
@@ -554,24 +526,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYF-si-rKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-52" y="1180"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="h4u-6N-KD1">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Mi-LI-jM5" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TLE-k3-g80">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Rdm-FD-Gep" kind="relationship" relationship="rootViewController" id="69D-4w-pUd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="51f-dk-mIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="651.5625" y="44.927536231884062"/>
         </scene>
     </scenes>
     <resources>
