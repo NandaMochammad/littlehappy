@@ -10,64 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="k8K-Af-cKy">
-            <objects>
-                <viewController id="kof-vD-PI0" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4pF-rG-Rmr">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yme-SP-xcO">
-                                <rect key="frame" x="386" y="138" width="125" height="95"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="36"/>
-                                <color key="textColor" red="0.18328172309999999" green="0.64740527849999996" blue="0.43893391040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Yme-SP-xcO" firstAttribute="top" secondItem="0hh-Sd-q5f" secondAttribute="top" constant="138" id="QIW-IW-UaC"/>
-                            <constraint firstItem="Yme-SP-xcO" firstAttribute="leading" secondItem="0hh-Sd-q5f" secondAttribute="leading" constant="342" id="V4l-cG-MDG"/>
-                            <constraint firstItem="0hh-Sd-q5f" firstAttribute="bottom" secondItem="Yme-SP-xcO" secondAttribute="bottom" constant="160" id="qi1-n4-SLi"/>
-                            <constraint firstItem="0hh-Sd-q5f" firstAttribute="trailing" secondItem="Yme-SP-xcO" secondAttribute="trailing" constant="341" id="xzk-25-MgT"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="0hh-Sd-q5f"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0V2-ga-hmp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="218" y="-197"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="H4K-kb-xXH">
-            <objects>
-                <viewController id="3Pu-K2-PeE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Seg-wg-jQW">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C36-iN-SOh">
-                                <rect key="frame" x="359" y="138" width="179" height="95"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="36"/>
-                                <color key="textColor" red="0.18328172309999999" green="0.64740527849999996" blue="0.43893391040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="j12-os-NXS" firstAttribute="trailing" secondItem="C36-iN-SOh" secondAttribute="trailing" constant="314" id="Sdp-Rx-j4Z"/>
-                            <constraint firstItem="C36-iN-SOh" firstAttribute="top" secondItem="j12-os-NXS" secondAttribute="top" constant="138" id="fVp-m0-gh6"/>
-                            <constraint firstItem="C36-iN-SOh" firstAttribute="leading" secondItem="j12-os-NXS" secondAttribute="leading" constant="315" id="jM2-iD-QGu"/>
-                            <constraint firstItem="j12-os-NXS" firstAttribute="bottom" secondItem="C36-iN-SOh" secondAttribute="bottom" constant="160" id="v41-kz-kml"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="j12-os-NXS"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rmh-j9-EFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="218" y="561"/>
-        </scene>
         <!--DiaryViewController-->
         <scene sceneID="B6s-BY-2yA">
             <objects>
@@ -101,8 +43,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="410" height="236"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" Family Member" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pR-1o-Cfl">
-                                                    <rect key="frame" x="61" y="177" width="236" height="36"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Family Member" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pR-1o-Cfl">
+                                                    <rect key="frame" x="105" y="177" width="192" height="36"/>
                                                     <color key="backgroundColor" red="0.36518090959999999" green="0.51233154540000003" blue="0.81572562459999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="32"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
