@@ -44,6 +44,7 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         collectionView.collectionViewLayout = flowLayout
         collectionView.delegate = self
         collectionView.dataSource = self
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "BG")!)
         
         loadImages()
         //        print(UIScreen.main.bounds.size.width - 400)
