@@ -45,6 +45,26 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(shakeCells), userInfo: nil, repeats: true)
+        timer.fire()
+    }
+    
+    @objc func shakeCells() {
+        self.collectionView.visibleCells.forEach { (cell) in
+            let cell = cell as! CollectionViewCell
+            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+                cell.cellImage.frame.origin.y -= 20
+            }) { (_) in
+                UIView.animate(withDuration: 0.3, animations: {
+                    cell.cellImage.frame.origin.y += 20
+                })
+            }
+        }
+    }
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .landscape
     }
@@ -96,19 +116,23 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         cell.cellImage.animationDuration = 8
         cell.cellImage.startAnimating()
         
-        UIView.animate(withDuration: 0.8, animations: {
-//            cell.cellImage.frame.size.height += 20
-            cell.cellImage.frame.origin.y -= 10
-            
-        }) {_ in
-            UIView.animateKeyframes(withDuration: 0.8, delay: 0, options: [.autoreverse, .repeat], animations: {
-//                cell.cellImage.frame.size.height -= 20
-                cell.cellImage.frame.origin.y += 10
-            }, completion: nil)
-        } 
+//        UIView.animate(withDuration: 0.02, animations: {
+////            cell.cellImage.frame.size.height += 20
+//            cell.cellImage.frame.origin.y -= 10
+//
+//        }) {_ in
+//            UIView.animateKeyframes(withDuration: 0.02, delay: 0, options: [.autoreverse, .repeat], animations: {
+////                cell.cellImage.frame.size.height -= 20
+//                cell.cellImage.frame.origin.y += 10
+//            }, completion: nil)
+//        }
+        
+//        let timer = Timer(timeInterval: 0.02, repeats: true) { (timer) in
+//            print("Timer: \(timer)")
+//        }
+//        timer.fire()
         
         return cell
-        
     }
     
     @IBAction func cellButton(_ sender: UIButton) {
