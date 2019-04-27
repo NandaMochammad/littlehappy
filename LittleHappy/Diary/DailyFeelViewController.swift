@@ -33,6 +33,7 @@ class DailyFeelViewController: UIViewController {
     var senderTag : Int = 0
     var gender = DataManager.shared.gender
     
+    @IBOutlet var viewBG: UIView!
     
     
     override func viewDidLoad() {
@@ -43,6 +44,9 @@ class DailyFeelViewController: UIViewController {
         setIconFeelButton()
         
         DataManager.shared.loadDataFromUserDefaults()
+        
+        self.viewBG.backgroundColor = UIColor(patternImage: UIImage(named: "BG.png")!)
+
 
 
     }
@@ -64,6 +68,8 @@ class DailyFeelViewController: UIViewController {
         
         for i in 0 ... feels.count - 1{
             feeling[i]?.setImage(UIImage(named: "me\(kelamin)\(feels[i])"), for: .normal)
+            feeling[i]?.layer.cornerRadius = 50
+            feeling[i]?.clipsToBounds = true
         }
         
 

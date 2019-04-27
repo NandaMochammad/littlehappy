@@ -49,9 +49,15 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var arrayOfIndex : [Int] = [0]
     var dateFeelsArray : [String] = []
 
+    @IBOutlet var viewBG: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        self.viewBG.backgroundColor = UIColor(patternImage: UIImage(named: "BG.png")!)
+
+
         
         icons = [happyIcon, sadIcon, angryIcon, fearIcon, disgustIcon]
         
@@ -93,8 +99,8 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         
         for i in 0 ... iconn.count - 1{
-            iconn[i]?.setImage(UIImage(named: "me\(kelamin)\(feels[i])"), for: .normal)
-            vieww[i]?.image = UIImage(named: "me\(kelamin)\(feels[i]).png")
+            iconn[i]?.setImage(UIImage(named: "me\(kelamin)\(feels[i])_NoBG"), for: .normal)
+            vieww[i]?.image = UIImage(named: "me\(kelamin)\(feels[i])_NoBG.png")
         }
 
     }
@@ -106,7 +112,6 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func sectionConfig(){
         //set Reversed array, Latest to Oldest
         dateFeelsArray = DataManager.shared.dateOfFeels.reversed()
-        print("Date Feels Array", dateFeelsArray.count, "\nContent ", dateFeelsArray)
         
         //Loop for define the section changed location
         if dateFeelsArray.count > 1{
@@ -139,38 +144,31 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         
         if a == "Happy"{
-            a = "joy"
+            a = "Joy"
         } else if a == "Angry"{
-            a = "anger"
+            a = "Anger"
         } else if a == "Sad"{
-            a = "sadness"
+            a = "Sadness"
         } else if a == "Disgust"{
-            a = "disgust"
+            a = "Disgust"
         } else {
-            a = "fear"
+            a = "Fear"
         }
         
         var kelamin = ""
         
         if gender == .male{
-            kelamin = "boy"
+            kelamin = "Boy"
             
         }else{
-            kelamin = "girl"
+            kelamin = "Girl"
         }
         
             cell.feelDiary.text = a
             cell.dateDiary.text = diaryDateOfFeels[indexPath.row+arrayOfIndex[indexPath.section]]
             cell.timeDiary.text = diaryTimeOfFeels[indexPath.row+arrayOfIndex[indexPath.section]]
             cell.iconDiary.image = UIImage(named: cell.feelDiary.text ?? "Happy")
-            cell.iconDiary.image = UIImage(named: "me \(kelamin) \(a)")
-
-        
-
-        
-        
-
-            //print("section ",indexPath.section)
+            cell.iconDiary.image = UIImage(named: "me\(kelamin)\(a)")
 
             return cell
     }//func
