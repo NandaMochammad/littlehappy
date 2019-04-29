@@ -19,7 +19,7 @@ class Diary_TipsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewTips.backgroundColor = UIColor(patternImage: UIImage(named: "Tips Box 2.png")!)
+        self.viewTips.backgroundColor = UIColor(patternImage: UIImage(named: "Tips Box.png")!)
         okButton.setImage(UIImage(named: "ok"), for: .normal)
         tipsLabel.text = tipsText
         // Do any additional setup after loading the view.
