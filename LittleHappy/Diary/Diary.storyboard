@@ -205,7 +205,7 @@
                         <outlet property="viewFear" destination="xew-8B-8bh" id="7rf-2Y-qRX"/>
                         <outlet property="viewHappy" destination="0r9-LR-UuO" id="NjN-tg-6Oz"/>
                         <outlet property="viewSad" destination="KHN-A0-gxo" id="81o-Tk-u5f"/>
-                        <segue destination="Hi7-6o-3wg" kind="presentation" identifier="goToHome" modalTransitionStyle="crossDissolve" id="LbT-Rv-fd9"/>
+                        <segue destination="Hi7-6o-3wg" kind="presentation" identifier="goToHome" modalTransitionStyle="coverVertical" id="LbT-Rv-fd9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

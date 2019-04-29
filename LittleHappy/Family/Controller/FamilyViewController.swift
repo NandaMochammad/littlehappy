@@ -12,12 +12,12 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBOutlet weak var collectionView: UICollectionView!
     let familyArray = [Person.me, Person.father, Person.mother, Person.brother, Person.sister]
-    let feelingArray = [Feeling.anger, Feeling.disgust, Feeling.fear, Feeling.joy, Feeling.sadness]
-    var imgArray1: [UIImage] = []
-    var imgArray2: [UIImage] = []
-    var imgArray3: [UIImage] = []
-    var imgArray4: [UIImage] = []
-    var imgArray5: [UIImage] = []
+//    let feelingArray = [Feeling.anger, Feeling.disgust, Feeling.fear, Feeling.joy, Feeling.sadness]
+//    var imgArray1: [UIImage] = []
+//    var imgArray2: [UIImage] = []
+//    var imgArray3: [UIImage] = []
+//    var imgArray4: [UIImage] = []
+//    var imgArray5: [UIImage] = []
 //    var timer: Timer? {
 //        didSet {
 //            self.timer?.fire()
@@ -122,11 +122,6 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
                 }
             }
         }
-        cell.cellLabel.layer.masksToBounds = true
-        cell.cellLabel.layer.cornerRadius = 18
-        cell.cellImage.layer.cornerRadius = 72
-        cell.cellImage.animationDuration = 20
-        cell.cellImage.startAnimating()
         
         UIView.animate(withDuration: 0, animations: {
             cell.cellImage.frame.origin.y += 10
