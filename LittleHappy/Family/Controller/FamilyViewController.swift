@@ -47,15 +47,13 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//
-//        super.viewDidAppear(animated)
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
-//            self.timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.shakeCells), userInfo: nil, repeats: true)
-//        }
-//
-//    }
+    override func viewDidAppear(_ animated: Bool) {
+
+        super.viewDidAppear(animated)
+
+        collectionView.reloadData()
+
+    }
 //
 //    @objc func shakeCells() {
 //
@@ -123,7 +121,7 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
             }
         }
         
-        UIView.animate(withDuration: 1, animations: {
+        UIView.animate(withDuration: 2, animations: {
             cell.cellImage.frame.origin.y -= 10
             cell.cellImage.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.2)
             
