@@ -13,6 +13,7 @@
 		04C84EAC2276E70E004AEFB1 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84EAB2276E70E004AEFB1 /* Poppins-Medium.ttf */; };
 		04C84EAE2276F898004AEFB1 /* Diary_TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C84EAD2276F898004AEFB1 /* Diary_TipsViewController.swift */; };
 		435292ED2276FD85004BC7DA /* The_Farmer_In_The_Dell_Instrumental.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 435292EC2276FD85004BC7DA /* The_Farmer_In_The_Dell_Instrumental.mp3 */; };
+		435292EF2277188D004BC7DA /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435292EE2277188D004BC7DA /* InfoViewController.swift */; };
 		B509A1642276A8F200D8F241 /* ShadowsIntoLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B509A1632276A8F200D8F241 /* ShadowsIntoLight.ttf */; };
 		B522CC122271B06A000DA892 /* Family.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B522CC112271B06A000DA892 /* Family.storyboard */; };
 		B522CC182271B0C4000DA892 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522CC142271B0C4000DA892 /* UPCarouselFlowLayout.swift */; };
@@ -55,6 +56,7 @@
 		04C84EAB2276E70E004AEFB1 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		04C84EAD2276F898004AEFB1 /* Diary_TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary_TipsViewController.swift; sourceTree = "<group>"; };
 		435292EC2276FD85004BC7DA /* The_Farmer_In_The_Dell_Instrumental.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = The_Farmer_In_The_Dell_Instrumental.mp3; sourceTree = "<group>"; };
+		435292EE2277188D004BC7DA /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		B509A1632276A8F200D8F241 /* ShadowsIntoLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ShadowsIntoLight.ttf; sourceTree = "<group>"; };
 		B522CC112271B06A000DA892 /* Family.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Family.storyboard; sourceTree = "<group>"; };
 		B522CC142271B0C4000DA892 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				B522CC222271CB80000DA892 /* NameViewController.swift */,
 				B522CC242271CB85000DA892 /* IntroViewController.swift */,
 				B522CC1D2271C82F000DA892 /* BoyorGirl_ViewController.swift */,
+				435292EE2277188D004BC7DA /* InfoViewController.swift */,
 				B522CC202271C874000DA892 /* Onboarding.storyboard */,
 			);
 			path = Onboarding;
@@ -349,6 +352,7 @@
 				B5C76D2E2270626500C742CB /* DailyFeelViewController.swift in Sources */,
 				B5C76CF0226F314500C742CB /* PhotosViewController.swift in Sources */,
 				B5C76CE0226F29B900C742CB /* QUIZ_Controller.swift in Sources */,
+				435292EF2277188D004BC7DA /* InfoViewController.swift in Sources */,
 				B522CC232271CB80000DA892 /* NameViewController.swift in Sources */,
 				B5C76CE1226F29B900C742CB /* Score_Controller.swift in Sources */,
 				B5C76D2B2270626500C742CB /* DateCustomTableViewCell.swift in Sources */,
