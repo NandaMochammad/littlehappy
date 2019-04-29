@@ -29,6 +29,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>ShadowsIntoLight.ttf</string>
+		<string>Poppins-Medium.ttf</string>
 	</array>
 	<key>UIInterfaceOrientation</key>
 	<string>UIInterfaceOrientationLandscapeLeft</string>
