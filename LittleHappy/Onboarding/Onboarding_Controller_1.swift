@@ -18,12 +18,12 @@ class Onboarding_Controller_1: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      //  DataManager.shared.loadDataFromUserDefaults()
+        DataManager.shared.loadDataFromUserDefaults()
 
-       // print("Data Saved \n", DataManager.shared.kindOfFeels,"\n",DataManager.shared.dateOfFeels, "\n", DataManager.shared.timeOfFeels)
+        print("Data Saved \n", DataManager.shared.kindOfFeels,"\n",DataManager.shared.dateOfFeels, "\n", DataManager.shared.timeOfFeels)
         
 
-
+        
 
         //Do the basic appear and disappear animation
 
@@ -63,21 +63,28 @@ class Onboarding_Controller_1: UIViewController {
         imageview.layer.add(rotateAnimation, forKey: nil)
     }
     
-    @IBAction func skip_onboarding(_ sender: UIButton) {
+   // @IBAction func skip_onboarding(_ sender: UIButton) {
         
         //Prints the value of the app
-        let name = UserDefaults.standard.string(forKey: "user_first_time")
+
         
         //This checks the name, and do condition if the onboarding should be skipped.
+
+            //Do the segue to skip onboarding here
+      //  }
+    @IBAction func onboardingClick(_
+        sender: UIButton) {
+    let name = UserDefaults.standard.string(forKey: "user_first_time")
         if name == nil
         {
+            performSegue(withIdentifier: "Onboarding", sender: nil)
             // Do the segue to the onboarding here
         }
         else
         {
-            //Do the segue to skip onboarding here
-        }
+            performSegue(withIdentifier: "skipOnboarding", sender: nil)
     }
+    //  }
     
     /*
     // MARK: - Navigation
@@ -89,6 +96,7 @@ class Onboarding_Controller_1: UIViewController {
     }
     */
 
+}
 }
 
 extension Onboarding_Controller_1 {

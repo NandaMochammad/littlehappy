@@ -79,7 +79,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="omF-eF-PRX" kind="show" id="h1t-Zg-Ma9"/>
+                                    <action selector="onboardingClick:" destination="1ah-Ot-XFp" eventType="touchUpInside" id="Dqz-s9-bNu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18s-Ih-464">
@@ -97,6 +97,8 @@
                     <connections>
                         <outlet property="sunPath" destination="p6G-N3-Xlz" id="h66-cV-STs"/>
                         <outlet property="touchToStartLabel" destination="9dN-7d-Bgv" id="NLA-gH-DLk"/>
+                        <segue destination="yYx-0C-Is2" kind="show" identifier="skipOnboarding" id="Ywl-H1-0MV"/>
+                        <segue destination="omF-eF-PRX" kind="show" identifier="Onboarding" id="7oK-pr-ce9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ns6-1Z-fN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -122,15 +124,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuC-uZ-cmC">
-                                <rect key="frame" x="234" y="77" width="432" height="260"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Little Happy
-Ver 1.0</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVN-IO-gqF">
                                 <rect key="frame" x="64" y="18" width="66" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -139,6 +132,19 @@ Ver 1.0</string>
                                     <segue destination="1ah-Ot-XFp" kind="show" id="Tsc-Iz-POg"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InfoBox" translatesAutoresizingMaskIntoConstraints="NO" id="Ggp-Yj-OeQ">
+                                <rect key="frame" x="151" y="20" width="600" height="403"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuC-uZ-cmC">
+                                <rect key="frame" x="189" y="99" width="518" height="217"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Little Happy
+Ver 1.0</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="HPz-rF-0YX"/>
@@ -160,8 +166,24 @@ Ver 1.0</string>
                                 <rect key="frame" x="0.0" y="0.0" width="900" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euW-nu-wCj">
+                                <rect key="frame" x="716" y="303" width="128" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ok"/>
+                                <connections>
+                                    <segue destination="Di0-94-w33" kind="show" id="Jgo-Ln-Fxy"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brother" translatesAutoresizingMaskIntoConstraints="NO" id="9ON-0B-e0z">
+                                <rect key="frame" x="73" y="56" width="156" height="302"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TextBox" translatesAutoresizingMaskIntoConstraints="NO" id="IAd-RM-4vM">
+                                <rect key="frame" x="256" y="77" width="434" height="286"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdW-T5-rfE">
-                                <rect key="frame" x="373" y="52" width="349" height="216"/>
+                                <rect key="frame" x="300" y="120" width="353" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Welcome to Little Happy app!
@@ -172,18 +194,6 @@ Keep track of your daily feelings! Have fun!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euW-nu-wCj">
-                                <rect key="frame" x="716" y="303" width="128" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="ok"/>
-                                <connections>
-                                    <segue destination="Di0-94-w33" kind="show" id="Jgo-Ln-Fxy"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brother" translatesAutoresizingMaskIntoConstraints="NO" id="9ON-0B-e0z">
-                                <rect key="frame" x="141" y="52" width="136" height="262"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eVF-Xa-5Nh"/>
@@ -344,14 +354,16 @@ Keep track of your daily feelings! Have fun!</string>
                 <viewControllerPlaceholder storyboardName="Diary" id="yYx-0C-Is2" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sgv-hJ-MiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3551" y="704"/>
+            <point key="canvasLocation" x="2764" y="651"/>
         </scene>
     </scenes>
     <resources>
         <image name="BACK" width="66" height="66"/>
         <image name="BG" width="896" height="414"/>
+        <image name="InfoBox" width="934.5" height="411"/>
         <image name="Path" width="1808" height="1762"/>
         <image name="Sun" width="1500" height="1500"/>
+        <image name="TextBox" width="694.5" height="415.5"/>
         <image name="brother" width="1251" height="2409"/>
         <image name="brotherJoy" width="120" height="120"/>
         <image name="father" width="1898" height="3177"/>
@@ -360,4 +372,7 @@ Keep track of your daily feelings! Have fun!</string>
         <image name="ok" width="128" height="60"/>
         <image name="sister" width="885" height="1741"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ywl-H1-0MV"/>
+    </inferredMetricsTieBreakers>
 </document>
