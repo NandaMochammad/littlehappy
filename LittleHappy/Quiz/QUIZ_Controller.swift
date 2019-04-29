@@ -61,8 +61,8 @@ class QUIZ_Controller: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if questionNumber < 4
         {
-            let targetViewController_1 = segue.destination as! Tips_Controller
-            targetViewController_1.tipsText = questionsArray[questionNumber].tips
+//            let targetViewController_1 = segue.destination as! Tips_Controller
+//            targetViewController_1.tipsText = questionsArray[questionNumber].tips
         }
         else
         {
@@ -180,9 +180,9 @@ class QUIZ_Controller: UIViewController {
 //        emotionChoice2.setImage(UIImage(named: "Default-Joy"), for: .normal)
 //        emotionChoice3.setImage(UIImage(named: "Default-Disgust"), for: .normal)
         
-        emotionChoice1.setBackgroundImage(MediaManager.shared.getPhotoAssets(person: familyArray[randomNumberPick_1], feeling: answerArray[0]), for: .normal)
-        emotionChoice2.setBackgroundImage(MediaManager.shared.getPhotoAssets(person: familyArray[randomNumberPick_1], feeling: answerArray[1]), for: .normal)
-        emotionChoice3.setBackgroundImage(MediaManager.shared.getPhotoAssets(person: familyArray[randomNumberPick_1], feeling: answerArray[2]), for: .normal)
+        emotionChoice1.setBackgroundImage(MediaManager.shared.getPhoto(person: familyArray[randomNumberPick_1], feeling: answerArray[0]), for: .normal)
+        emotionChoice2.setBackgroundImage(MediaManager.shared.getPhoto(person: familyArray[randomNumberPick_1], feeling: answerArray[1]), for: .normal)
+        emotionChoice3.setBackgroundImage(MediaManager.shared.getPhoto(person: familyArray[randomNumberPick_1], feeling: answerArray[2]), for: .normal)
         
         answerChoiceArray[0] = answerArray[0]
         answerChoiceArray[1] = answerArray[1]
@@ -193,7 +193,7 @@ class QUIZ_Controller: UIViewController {
     {
         if questionNumber < 4
         {
-            self.performSegue(withIdentifier: "tips_segue", sender: Any?.self)
+//            self.performSegue(withIdentifier: "tips_segue", sender: Any?.self)
             questionNumber = questionNumber + 1
             generateEmotions()
             scoreLabel.text = "Current Score: \(score)/5"
