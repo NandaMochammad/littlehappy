@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="964.95535714285711" y="-759.4202898550725"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="fFC-uU-L1j">
             <objects>
-                <viewController id="78n-SJ-zxa" sceneMemberID="viewController">
+                <viewController id="78n-SJ-zxa" customClass="InfoViewController" customModule="LittleHappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ttY-xp-L92">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
