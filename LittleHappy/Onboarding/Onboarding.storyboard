@@ -18,37 +18,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="0vS-Wx-8dP">
+                                <rect key="frame" x="0.0" y="0.0" width="900" height="414"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Path" translatesAutoresizingMaskIntoConstraints="NO" id="p6G-N3-Xlz">
+                                <rect key="frame" x="-450" y="50" width="1800" height="1800"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sun" translatesAutoresizingMaskIntoConstraints="NO" id="l6q-a5-WoK">
+                                <rect key="frame" x="-300" y="200" width="1500" height="1500"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LITTLE HAPPY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEs-pg-1e5">
-                                <rect key="frame" x="289" y="203" width="319" height="60"/>
+                                <rect key="frame" x="289" y="250" width="319" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Touch To Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dN-7d-Bgv">
-                                <rect key="frame" x="339" y="289" width="219" height="40"/>
+                                <rect key="frame" x="339" y="330" width="219" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZS-fW-lyt">
-                                <rect key="frame" x="4" y="0.0" width="888" height="414"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="skip_onboarding:" destination="1ah-Ot-XFp" eventType="touchUpInside" id="mbY-tZ-gNF"/>
-                                    <segue destination="omF-eF-PRX" kind="show" id="0Vb-gv-cjF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKG-1G-Vis">
-                                <rect key="frame" x="798" y="66" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xjc-n2-asJ"/>
                     </view>
                     <connections>
+                        <outlet property="sunImage" destination="p6G-N3-Xlz" id="EaE-Um-Qy1"/>
                         <outlet property="touchToStartLabel" destination="9dN-7d-Bgv" id="NLA-gH-DLk"/>
                     </connections>
                 </viewController>
@@ -88,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKN-tw-6dZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1643" y="-759"/>
+            <point key="canvasLocation" x="1708" y="-767"/>
         </scene>
         <!--Name View Controller-->
         <scene sceneID="8qU-ZB-9yW">
@@ -212,4 +213,9 @@
             <point key="canvasLocation" x="2991" y="-270"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BG" width="896" height="414"/>
+        <image name="Path" width="1808" height="1762"/>
+        <image name="Sun" width="1500" height="1500"/>
+    </resources>
 </document>

@@ -12,18 +12,42 @@ class Onboarding_Controller_1: UIViewController {
     
     @IBOutlet weak var touchToStartLabel: UILabel!
     
+    @IBOutlet weak var sunImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        animateText()
+        rotateAnimation(imageview: sunImage)
         //Do the basic appear and disappear animation
-        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [.repeat, .autoreverse], animations: {
-            self.touchToStartLabel.alpha = 0
-        }, completion: nil)
+
         
         // Do any additional setup after loading the view.
+    }
         
+    func animateText()
+        {
+            UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [.repeat, .autoreverse], animations: {
+                self.touchToStartLabel.alpha = 0
+            }, completion: nil)
+        }
+    
+    func animateSun()
+    {
+        UIView.animate(withDuration: 1000, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0.0001, animations: {
+            self.sunImage.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        }, completion: nil)
+    }
+    
+    func rotateAnimation(imageview: UIImageView, duration: CFTimeInterval = 30)
+    {
+        let rotateAnimation = CABasicAnimation(keyPath:
+            "transform.rotation")
+        rotateAnimation.fromValue = 0.0
+        rotateAnimation.toValue = CGFloat(Float.pi * 2)
+        rotateAnimation.duration = duration
+        rotateAnimation.repeatCount = .greatestFiniteMagnitude
         
+        imageview.layer.add(rotateAnimation, forKey: nil)
     }
     
     @IBAction func skip_onboarding(_ sender: UIButton) {
