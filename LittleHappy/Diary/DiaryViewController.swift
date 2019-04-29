@@ -15,6 +15,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
 //    @IBOutlet weak var dateOfFeels: UILabel!
     
+    @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var vHappy: UIView!
     @IBOutlet weak var vSad: UIView!
     @IBOutlet weak var vAngry: UIView!
@@ -54,6 +55,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        doneButton.setImage(UIImage(named: "BACKCLICKED"), for: .normal)
         
         self.viewBG.backgroundColor = UIColor(patternImage: UIImage(named: "BG.png")!)
 
@@ -260,6 +262,8 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBAction func doneBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+        doneButton.setImage(UIImage(named: "BACK"), for: .normal)
+
     }
     
 }//Class

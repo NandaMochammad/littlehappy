@@ -467,6 +467,7 @@
                         <outlet property="disgustIcon" destination="YMP-Vs-Y70" id="4np-z8-eE2"/>
                         <outlet property="disgustPercentage" destination="hel-iN-m7o" id="XBH-RF-3ks"/>
                         <outlet property="disgustView" destination="yNL-cJ-4Nc" id="y49-Pj-kDf"/>
+                        <outlet property="doneButton" destination="hAB-WJ-qwn" id="so4-fk-J1e"/>
                         <outlet property="fearIcon" destination="Q3c-ma-kQf" id="Yo8-Fa-70N"/>
                         <outlet property="fearPercentage" destination="YjI-VS-M70" id="SDM-p6-3wT"/>
                         <outlet property="fearView" destination="VvK-bC-0vK" id="mQH-F0-gJg"/>
