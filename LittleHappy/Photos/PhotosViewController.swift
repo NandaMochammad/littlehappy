@@ -41,8 +41,11 @@ class PhotosViewController: UIViewController, UINavigationControllerDelegate, UI
 
         title = currPerson.text
         
-        personLbl.font = UIFont(name: "ShadowsIntoLight", size: 32)
-        personLbl.text = "Let's take photos for \(currPerson.text)!"
+        var personText = currPerson.text.lowercased()
+        if currPerson == .me {
+            personText = "you"
+        }
+        personLbl.text = "Let's take photos for \(personText)!"
         
         img1.layer.cornerRadius = 60
         img1.layer.masksToBounds = true
@@ -58,12 +61,7 @@ class PhotosViewController: UIViewController, UINavigationControllerDelegate, UI
 
         img5.layer.cornerRadius = 60
         img5.layer.masksToBounds = true
-        
-        lbl1.font = UIFont(name: "ShadowsIntoLight", size: 28)
-        lbl2.font = UIFont(name: "ShadowsIntoLight", size: 28)
-        lbl3.font = UIFont(name: "ShadowsIntoLight", size: 28)
-        lbl4.font = UIFont(name: "ShadowsIntoLight", size: 28)
-        lbl5.font = UIFont(name: "ShadowsIntoLight", size: 28)
+
         
         refreshPhotos()
         
@@ -71,7 +69,7 @@ class PhotosViewController: UIViewController, UINavigationControllerDelegate, UI
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        startAnimations()
+        //startAnimations()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

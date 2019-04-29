@@ -45,7 +45,7 @@ class NameViewController: UIViewController, UITextFieldDelegate {
             DataManager.shared.name = yourNameTextBox.text!
             DataManager.shared.saveDataToUserDefaults()
         } else {
-            DataManager.shared.name = "there"
+            DataManager.shared.name = ""
             DataManager.shared.saveDataToUserDefaults()
         }
     }

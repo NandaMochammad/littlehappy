@@ -13,7 +13,7 @@ final class DataManager: NSObject {
     static let shared = DataManager()
     
     var initialized: Bool = false
-    var name: String = "there"
+    var name: String = ""
     var age: Int = 0
     var gender: Gender = .unspecified
     var kindOfFeels : [String] = []
