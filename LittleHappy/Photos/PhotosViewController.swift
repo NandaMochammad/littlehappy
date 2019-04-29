@@ -156,6 +156,12 @@ class PhotosViewController: UIViewController, UINavigationControllerDelegate, UI
     
     // MARK: - Actions
 
+    
+    @IBAction func backBtnTapped(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func btnTapped(_ sender: Any) {
         print(#function)
     

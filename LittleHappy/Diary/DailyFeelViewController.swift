@@ -13,6 +13,8 @@ class DailyFeelViewController: UIViewController {
     ///////////////////////////
     //Declare Instance Variable
     
+    @IBOutlet weak var greetingsLabel: UILabel!
+    
     //Menyimpan nilai feeling pada array
     var feels = ["Happy", "Sad", "Angry", "Fear", "Disgust"]
     @IBOutlet weak var viewHappy: UIView!
@@ -47,6 +49,9 @@ class DailyFeelViewController: UIViewController {
         
         self.viewBG.backgroundColor = UIColor(patternImage: UIImage(named: "BG.png")!)
 
+        DataManager.shared.loadDataFromUserDefaults()
+        let name = DataManager.shared.name
+        greetingsLabel.text = "Hello, \(name)!"
 
 
     }

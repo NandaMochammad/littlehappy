@@ -101,10 +101,10 @@
                                     <segue destination="9xt-Di-JES" kind="presentation" id="Wd7-lt-Yas"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfE-Ji-gwW">
-                                <rect key="frame" x="64" y="20" width="120" height="66"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfE-Ji-gwW">
+                                <rect key="frame" x="60" y="20" width="66" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Settings"/>
+                                <state key="normal" image="Settings"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Family" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXf-QW-GcF">
                                 <rect key="frame" x="368" y="32" width="160" height="43"/>
