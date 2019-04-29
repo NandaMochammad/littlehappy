@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
-class Onboarding_Controller_1: UIViewController {
+class Onboarding_Controller_1: UIViewController, AVAudioPlayerDelegate {
+    
+    var player: AVAudioPlayer?
     
     @IBOutlet weak var touchToStartLabel: UILabel!
     
@@ -18,13 +21,11 @@ class Onboarding_Controller_1: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         DataManager.shared.loadDataFromUserDefaults()
 
         print("Data Saved \n", DataManager.shared.kindOfFeels,"\n",DataManager.shared.dateOfFeels, "\n", DataManager.shared.timeOfFeels)
         
-
-        
+        playSound()
 
         //Do the basic appear and disappear animation
 
@@ -38,6 +39,7 @@ class Onboarding_Controller_1: UIViewController {
         animateText()
         
         rotateAnimation(imageview: sunPath)
+        
     }
         
     func animateText()
@@ -46,6 +48,11 @@ class Onboarding_Controller_1: UIViewController {
                 self.touchToStartLabel.alpha = 0
             }, completion: nil)
         }
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool)
+    {
+        print("done")
+    }
     
 //    func animateSun()
 //    {
@@ -65,6 +72,26 @@ class Onboarding_Controller_1: UIViewController {
         
         imageview.layer.add(rotateAnimation, forKey: nil)
     }
+    
+    
+    func playSound() {
+        let url = Bundle.main.url(forResource: "The_Farmer_In_The_Dell_Instrumental", withExtension: "mp3")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.delegate = self
+            player.numberOfLoops = -1
+            player.play()
+            
+        } catch let error as NSError {
+            print(error.description)
+        }
+    }
+    
+    
     
    // @IBAction func skip_onboarding(_ sender: UIButton) {
         
@@ -100,7 +127,10 @@ class Onboarding_Controller_1: UIViewController {
     */
 
 }
+    
+    
 }
+
 
 extension Onboarding_Controller_1 {
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {

@@ -238,7 +238,7 @@ Keep track of your daily feelings! Have fun!</string>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjw-UE-xXo">
                                         <rect key="frame" x="713" y="196" width="128" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="ok"/>
+                                        <state key="normal" image="ok@DEFAULT@DEFAULT"/>
                                         <connections>
                                             <action selector="okButton:" destination="Di0-94-w33" eventType="touchUpInside" id="jtu-Py-1j2"/>
                                             <segue destination="HhF-7X-igE" kind="show" id="DEM-ld-ZWv"/>
@@ -275,6 +275,7 @@ Keep track of your daily feelings! Have fun!</string>
                     </view>
                     <connections>
                         <outlet property="bioDataPicture" destination="UbC-li-K1l" id="dmI-0X-CWK"/>
+                        <outlet property="okButton" destination="rjw-UE-xXo" id="dAK-Dc-SKr"/>
                         <outlet property="scrollView" destination="Gov-R1-xYE" id="adT-wJ-ApD"/>
                         <outlet property="yourNameTextBox" destination="wKU-r2-O6T" id="Fwg-Bt-iTf"/>
                     </connections>
@@ -376,6 +377,7 @@ Keep track of your daily feelings! Have fun!</string>
         <image name="information" width="66" height="66"/>
         <image name="mother" width="1082" height="3033"/>
         <image name="ok" width="128" height="60"/>
+        <image name="ok@DEFAULT@DEFAULT" width="128" height="60"/>
         <image name="sister" width="885" height="1741"/>
     </resources>
     <inferredMetricsTieBreakers>

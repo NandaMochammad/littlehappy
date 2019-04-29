@@ -16,6 +16,8 @@ class NameViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var bioDataPicture: UIImageView!
     
+    @IBOutlet weak var okButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,17 @@ class NameViewController: UIViewController, UITextFieldDelegate {
         scrollView.setContentOffset(CGPoint(x: 0, y: 100), animated: true)
         return true
     }
+    
+
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    {
+        let newLength = textField.text!.count + string.count - range.length
+        
+        updateButtonBasedOnText(length: newLength)
+        
+        return true
+    }
 
     @IBAction func textFieldTapReturn(_ sender: UITapGestureRecognizer) {
         scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
@@ -47,6 +60,19 @@ class NameViewController: UIViewController, UITextFieldDelegate {
         } else {
             DataManager.shared.name = "there"
             DataManager.shared.saveDataToUserDefaults()
+        }
+    }
+    
+    func updateButtonBasedOnText(length: Int)
+    {
+        switch length
+        {
+        case 0:
+            okButton.setImage(UIImage(named:"ok@DEFAULT@DEFAULT"), for: .normal)
+            okButton.isEnabled = false
+        default:
+            okButton.setImage(UIImage(named:"ok"), for: .normal)
+            okButton.isEnabled = true
         }
     }
     /*
