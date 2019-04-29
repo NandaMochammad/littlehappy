@@ -29,6 +29,8 @@ class DailyFeelViewController: UIViewController {
     @IBOutlet weak var feelAngry: UIButton!
     @IBOutlet weak var feelFear: UIButton!
     @IBOutlet weak var feelDisgust: UIButton!
+    
+    var questionsArray: [Feeling] = [Feeling.joy, Feeling.sadness, Feeling.anger, Feeling.fear, Feeling.disgust]
 
     
     //Membuat variabel untuk menyimpan senderTag
@@ -88,6 +90,11 @@ class DailyFeelViewController: UIViewController {
         viewDisgust.isHidden = true
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let targetViewController_1 = segue.destination as! Diary_TipsViewController
+        targetViewController_1.tipsText = questionsArray[senderTag].tips
+    }
+    
     
     //Membuat fungsi untuk menyimpan nilai button dengan "Tag"
     @IBAction func feelButton(_ sender: UIButton) {
@@ -98,31 +105,35 @@ class DailyFeelViewController: UIViewController {
         case 0:
             viewHappy.layer.cornerRadius = 60
             setFeelData(senderTag)
+            self.performSegue(withIdentifier: "tips_segue", sender: Any?.self)
 
         case 1:
             viewSad.layer.cornerRadius = 60
             setFeelData(senderTag)
+            self.performSegue(withIdentifier: "tips_segue", sender: Any?.self)
 
         case 2:
             viewAngry.layer.cornerRadius = 60
             setFeelData(senderTag)
+            self.performSegue(withIdentifier: "tips_segue", sender: Any?.self)
 
         case 3:
             viewFear.layer.cornerRadius = 60
             setFeelData(senderTag)
+            self.performSegue(withIdentifier: "tips_segue", sender: Any?.self)
+
 
         case 4:
             viewDisgust.layer.cornerRadius = 60
             setFeelData(senderTag)
+            self.performSegue(withIdentifier: "tips_segue", sender: Any?.self)
 
         default:
             print("no tap")
         }
         
         print("Sender Tag Daily : \(senderTag). \(feels[sender.tag])")
-        
-        performSegue(withIdentifier: "goToHome", sender: self)
-        
+                
     }
     
     /////////////////////////////

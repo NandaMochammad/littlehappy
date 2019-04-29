@@ -74,15 +74,15 @@ enum Feeling {
         switch self
         {
         case .joy:
-            return "The person is happy"
+            return "When you’re happy, share your happiness with your family and friends."
         case .sadness:
-            return "The person is sad"
+            return "Don’t let your sadness take over your precious day. \nShare stories with your parents or friends, get their support and love to make you feel better!"
         case .fear:
-            return "The person is scared"
+            return "Go to your parents and share your story. Sometimes it is good to challenge yourself,  face your fears and be a brave kid!"
         case .disgust:
-            return "The person is disgusted"
+            return "Notice why you are feeling disgusted. \nTry to use your imagination to think of it in a good way!"
         case .anger:
-            return "The person is angry"
+            return "Oh no! Take a deep breath and try to calm yourself down. Never take action when your feelings are out of control."
         }
     }
     
