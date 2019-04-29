@@ -11,6 +11,7 @@
 		0478848C22686FD600F28E16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0478848B22686FD600F28E16 /* Assets.xcassets */; };
 		0478848F22686FD600F28E16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478848D22686FD600F28E16 /* LaunchScreen.storyboard */; };
 		04C84EAC2276E70E004AEFB1 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04C84EAB2276E70E004AEFB1 /* Poppins-Medium.ttf */; };
+		04C84EAE2276F898004AEFB1 /* Diary_TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C84EAD2276F898004AEFB1 /* Diary_TipsViewController.swift */; };
 		435292ED2276FD85004BC7DA /* The_Farmer_In_The_Dell_Instrumental.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 435292EC2276FD85004BC7DA /* The_Farmer_In_The_Dell_Instrumental.mp3 */; };
 		B509A1642276A8F200D8F241 /* ShadowsIntoLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B509A1632276A8F200D8F241 /* ShadowsIntoLight.ttf */; };
 		B522CC122271B06A000DA892 /* Family.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B522CC112271B06A000DA892 /* Family.storyboard */; };
@@ -52,6 +53,7 @@
 		0478848E22686FD600F28E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0478849022686FD600F28E16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04C84EAB2276E70E004AEFB1 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		04C84EAD2276F898004AEFB1 /* Diary_TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary_TipsViewController.swift; sourceTree = "<group>"; };
 		435292EC2276FD85004BC7DA /* The_Farmer_In_The_Dell_Instrumental.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = The_Farmer_In_The_Dell_Instrumental.mp3; sourceTree = "<group>"; };
 		B509A1632276A8F200D8F241 /* ShadowsIntoLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ShadowsIntoLight.ttf; sourceTree = "<group>"; };
 		B522CC112271B06A000DA892 /* Family.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Family.storyboard; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				B5C76D232270626500C742CB /* HomeViewController.swift */,
 				B5C76D242270626500C742CB /* DiaryViewController.swift */,
 				B5C76D252270626500C742CB /* DailyFeelViewController.swift */,
+				04C84EAD2276F898004AEFB1 /* Diary_TipsViewController.swift */,
 				B5C76D262270626500C742CB /* CustomCell */,
 			);
 			path = Diary;
@@ -358,6 +361,7 @@
 				0478848522686FD500F28E16 /* AppDelegate.swift in Sources */,
 				B522CC252271CB85000DA892 /* IntroViewController.swift in Sources */,
 				B522CC1F2271C830000DA892 /* BoyorGirl_ViewController.swift in Sources */,
+				04C84EAE2276F898004AEFB1 /* Diary_TipsViewController.swift in Sources */,
 				B5565499226DD46000889B20 /* MediaManager.swift in Sources */,
 				B522CC1A2271B0C4000DA892 /* FamilyViewController.swift in Sources */,
 				B5C76D2D2270626500C742CB /* DiaryViewController.swift in Sources */,

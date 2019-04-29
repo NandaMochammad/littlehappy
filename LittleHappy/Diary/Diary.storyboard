@@ -205,7 +205,7 @@
                         <outlet property="viewFear" destination="xew-8B-8bh" id="7rf-2Y-qRX"/>
                         <outlet property="viewHappy" destination="0r9-LR-UuO" id="NjN-tg-6Oz"/>
                         <outlet property="viewSad" destination="KHN-A0-gxo" id="81o-Tk-u5f"/>
-                        <segue destination="Hi7-6o-3wg" kind="presentation" identifier="goToHome" modalTransitionStyle="coverVertical" id="LbT-Rv-fd9"/>
+                        <segue destination="Ovp-Mp-Tiv" kind="presentation" identifier="tips_segue" modalPresentationStyle="overCurrentContext" id="rf5-oJ-86G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -218,7 +218,7 @@
                 <viewControllerPlaceholder storyboardName="Family" id="Hi7-6o-3wg" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XwA-Ws-zCJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-71" y="566"/>
+            <point key="canvasLocation" x="-80" y="612"/>
         </scene>
         <!--Diary Feeling-->
         <scene sceneID="NcN-gL-Nxi">
@@ -494,6 +494,59 @@
             </objects>
             <point key="canvasLocation" x="-52.232142857142854" y="1179.7101449275362"/>
         </scene>
+        <!--Diary Tips View Controller-->
+        <scene sceneID="3ZW-GQ-bYi">
+            <objects>
+                <viewController id="Ovp-Mp-Tiv" customClass="Diary_TipsViewController" customModule="LittleHappy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7r8-Hp-gF2">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dxk-zQ-uMw">
+                                <rect key="frame" x="263" y="91" width="350" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correct!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVA-ug-hgf">
+                                        <rect key="frame" x="21" y="71" width="306" height="77"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins Medium" pointSize="13"/>
+                                        <color key="textColor" red="1" green="0.99998790029999995" blue="0.9999920726" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUs-0H-ASd">
+                                        <rect key="frame" x="132" y="153" width="84" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="ok"/>
+                                        <connections>
+                                            <action selector="okClick:" destination="Ovp-Mp-Tiv" eventType="touchUpInside" id="Xe9-gM-h74"/>
+                                            <segue destination="Hi7-6o-3wg" kind="show" identifier="goToFamily" id="tWU-Gc-17X"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7ja-Pe-206"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="O8h-iD-fZi"/>
+                    <connections>
+                        <outlet property="okButton" destination="DUs-0H-ASd" id="aOg-xA-8Ww"/>
+                        <outlet property="tipsLabel" destination="rVA-ug-hgf" id="S6o-uL-COG"/>
+                        <outlet property="viewTips" destination="dxk-zQ-uMw" id="7Vz-f0-XnT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kVr-yt-yPQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769.41964285714278" y="44.927536231884062"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="G0U-Gj-bxP">
+            <objects>
+                <viewControllerPlaceholder id="Z8P-yB-dJv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1jH-iK-6EZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770" y="565"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Angry" width="128" height="128"/>
@@ -502,5 +555,6 @@
         <image name="Fear" width="128" height="128"/>
         <image name="Happy" width="128" height="128"/>
         <image name="Sad" width="128" height="128"/>
+        <image name="ok" width="128" height="60"/>
     </resources>
 </document>
