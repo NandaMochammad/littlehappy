@@ -95,7 +95,8 @@
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zlf-Xd-P2O" kind="presentation" id="8Mk-yC-DvR"/>
+                                    <action selector="playButton:" destination="acy-vX-RjL" eventType="touchUpInside" id="AGM-h0-K9d"/>
+                                    <segue destination="zlf-Xd-P2O" kind="presentation" identifier="QuizSegue" id="8Mk-yC-DvR"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfE-Ji-gwW">
@@ -108,7 +109,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="diary icon"/>
                                 <connections>
-                                    <segue destination="9xt-Di-JES" kind="presentation" id="Wd7-lt-Yas"/>
+                                    <action selector="diaryButton:" destination="acy-vX-RjL" eventType="touchUpInside" id="z5b-x9-Q4E"/>
+                                    <segue destination="9xt-Di-JES" kind="presentation" identifier="DiarySegue" id="Wd7-lt-Yas"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Family" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXf-QW-GcF">

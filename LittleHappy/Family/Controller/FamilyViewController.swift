@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class FamilyViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    var audioPlayer: AVAudioPlayer?
     let familyArray = [Person.me, Person.father, Person.mother, Person.brother, Person.sister]
 //    let feelingArray = [Feeling.anger, Feeling.disgust, Feeling.fear, Feeling.joy, Feeling.sadness]
 //    var imgArray1: [UIImage] = []
@@ -137,10 +139,21 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         
     }
     
+    @IBAction func playButton(_ sender: UIButton) {
+        playSound()
+        performSegue(withIdentifier: "QuizSegue", sender: self)
+    }
+    
+    @IBAction func diaryButton(_ sender: UIButton) {
+        playSound()
+        performSegue(withIdentifier: "DiarySegue", sender: self)
+    }
+    
+    
     @IBAction func cellButton(_ sender: UIButton) {
         
         let person = familyArray[sender.tag]
-        
+        playSound()
         performSegue(withIdentifier: "PhotosSegue", sender: person)
   
     }
@@ -155,6 +168,20 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         
     }
     
+    func playSound() {
+        if audioPlayer == nil {
+            guard let url = Bundle.main.url(forResource: "button-down",
+                                            withExtension: "mp3") else { return }
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer?.prepareToPlay()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+        audioPlayer?.stop()
+        audioPlayer?.play()
+    }
 //    func loadImages() {
 //
 //        for x in familyArray {
