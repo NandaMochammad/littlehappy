@@ -18,7 +18,7 @@ enum Person {
     var description: String {
         switch self {
         case .me:
-            return "Me"
+            return DataManager.shared.name
         case .mother:
             return "Mother"
         case .father:
