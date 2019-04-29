@@ -12,12 +12,12 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBOutlet weak var collectionView: UICollectionView!
     let familyArray = [Person.me, Person.father, Person.mother, Person.brother, Person.sister]
-    let feelingArray = [Feeling.anger, Feeling.disgust, Feeling.fear, Feeling.joy, Feeling.sadness]
-    var imgArray1: [UIImage] = []
-    var imgArray2: [UIImage] = []
-    var imgArray3: [UIImage] = []
-    var imgArray4: [UIImage] = []
-    var imgArray5: [UIImage] = []
+//    let feelingArray = [Feeling.anger, Feeling.disgust, Feeling.fear, Feeling.joy, Feeling.sadness]
+//    var imgArray1: [UIImage] = []
+//    var imgArray2: [UIImage] = []
+//    var imgArray3: [UIImage] = []
+//    var imgArray4: [UIImage] = []
+//    var imgArray5: [UIImage] = []
 //    var timer: Timer? {
 //        didSet {
 //            self.timer?.fire()
@@ -52,18 +52,18 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
 //        super.viewDidAppear(animated)
 //
 //        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
-//            self.timer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.shakeCells), userInfo: nil, repeats: true)
+//            self.timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.shakeCells), userInfo: nil, repeats: true)
 //        }
 //
 //    }
 //
 //    @objc func shakeCells() {
 //
-//        let movementConstant: CGFloat = 5
+//        let movementConstant: CGFloat = 10
 //
 //        self.collectionView.visibleCells.forEach { (cell) in
 //            let cell = cell as! CollectionViewCell
-//            UIView.animate(withDuration: 0.5, delay: 2.4, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+//            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
 //                cell.cellImage.frame.origin.y -= movementConstant
 //            }) { (_) in
 //                UIView.animate(withDuration: 0.5, animations: {
@@ -122,14 +122,18 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
                 }
             }
         }
-        cell.cellLabel.layer.masksToBounds = true
-        cell.cellLabel.layer.cornerRadius = 18
-//        cell.cellImage.layer.borderColor = UIColor.gray.cgColor
-//        cell.cellImage.layer.borderWidth = 2
-//        cell.cellImage.image = UIImage(named: familyArray[indexPath.row].description.lowercased())
-        cell.cellImage.layer.cornerRadius = 72
-        cell.cellImage.animationDuration = 20
-        cell.cellImage.startAnimating()
+        
+        UIView.animate(withDuration: 1, animations: {
+            cell.cellImage.frame.origin.y -= 10
+            cell.cellImage.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.2)
+            
+        }){_ in
+            UIView.animateKeyframes(withDuration: 1, delay: 0.25, options: [.autoreverse, .repeat], animations: {
+                cell.cellImage.frame.origin.y += 10
+//                cell.cellImage.frame.origin.y -= 10
+//                cell.cellImage.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.2)
+            }, completion: nil)
+        }
         
         return cell
         

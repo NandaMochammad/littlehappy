@@ -50,7 +50,10 @@ class DailyFeelViewController: UIViewController {
         self.viewBG.backgroundColor = UIColor(patternImage: UIImage(named: "BG.png")!)
 
         DataManager.shared.loadDataFromUserDefaults()
-        let name = DataManager.shared.name
+        var name = DataManager.shared.name
+        if name.isEmpty {
+            name = "there"
+        }
         greetingsLabel.text = "Hello, \(name)!"
 
 
