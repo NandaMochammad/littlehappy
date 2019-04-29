@@ -12,6 +12,10 @@ class NameViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var yourNameTextBox: UITextField!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet weak var bioDataPicture: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +23,20 @@ class NameViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
-        func textFieldShouldReturn(_ textField: UITextField) -> Bool
-        {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
             textField.resignFirstResponder()
             return true
-        }
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool
+    {
+        scrollView.setContentOffset(CGPoint(x: 0, y: 100), animated: true)
+        return true
+    }
 
     @IBAction func textFieldTapReturn(_ sender: UITapGestureRecognizer) {
+        scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
         view.endEditing(true)
     }
     

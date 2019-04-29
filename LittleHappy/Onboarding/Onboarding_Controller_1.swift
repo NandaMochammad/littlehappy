@@ -12,19 +12,29 @@ class Onboarding_Controller_1: UIViewController {
     
     @IBOutlet weak var touchToStartLabel: UILabel!
     
-    @IBOutlet weak var sunImage: UIImageView!
+    @IBOutlet weak var sunPath: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DataManager.shared.loadDataFromUserDefaults()
+        
+      //  DataManager.shared.loadDataFromUserDefaults()
 
-        print("Data Saved \n", DataManager.shared.kindOfFeels,"\n",DataManager.shared.dateOfFeels, "\n", DataManager.shared.timeOfFeels)
+       // print("Data Saved \n", DataManager.shared.kindOfFeels,"\n",DataManager.shared.dateOfFeels, "\n", DataManager.shared.timeOfFeels)
+        
+
 
 
         //Do the basic appear and disappear animation
 
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        animateText()
+        
+        rotateAnimation(imageview: sunPath)
     }
         
     func animateText()
@@ -34,12 +44,12 @@ class Onboarding_Controller_1: UIViewController {
             }, completion: nil)
         }
     
-    func animateSun()
-    {
-        UIView.animate(withDuration: 1000, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0.0001, animations: {
-            self.sunImage.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
-        }, completion: nil)
-    }
+//    func animateSun()
+//    {
+//        UIView.animate(withDuration: 1000, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0.0001, animations: {
+//            self..transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+//        }, completion: nil)
+//    }
     
     func rotateAnimation(imageview: UIImageView, duration: CFTimeInterval = 30)
     {
