@@ -28,9 +28,10 @@ final class MediaManager: NSObject {
             print("found")
             return image
         } else {
-            print("returning default")
-            print("Default-\(feeling.description)")
-            return UIImage(named: "Default-\(feeling.description)")!
+            return getPhotoAssets(person: person, feeling: feeling)
+//            print("returning default")
+//            print("Default-\(feeling.description)")
+//            return UIImage(named: "Default-\(feeling.description)")!
         }
     }
     

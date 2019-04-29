@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="452" y="106"/>
+            <point key="canvasLocation" x="458" y="701"/>
         </scene>
         <!--Quiz-->
         <scene sceneID="eFO-XB-Aap">
@@ -122,10 +122,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="n53-cY-lXu">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PERSON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afi-39-CBw">
-                                <rect key="frame" x="44" y="94" width="808" height="13"/>
+                                <rect key="frame" x="44" y="94" width="808" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -135,15 +138,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yKH-AM-yUf">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="200"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default-Joy" translatesAutoresizingMaskIntoConstraints="NO" id="zJZ-MF-uoZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="meBoyJoy" translatesAutoresizingMaskIntoConstraints="NO" id="zJZ-MF-uoZ">
+                                                <rect key="frame" x="20" y="20" width="120" height="120"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDU-wy-fo6">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDU-wy-fo6">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" backgroundImage="btn-feelings"/>
-                                                <state key="highlighted" backgroundImage="btn-feelings-pressed"/>
                                                 <connections>
                                                     <action selector="btnTapped:" destination="ecA-si-H8h" eventType="touchUpInside" id="eGI-oF-cpY"/>
                                                 </connections>
@@ -165,15 +166,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wzb-wQ-Iam">
                                         <rect key="frame" x="162" y="0.0" width="160" height="200"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default-Sadness" translatesAutoresizingMaskIntoConstraints="NO" id="fsB-8y-3cS">
-                                                <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="meBoySadness" translatesAutoresizingMaskIntoConstraints="NO" id="fsB-8y-3cS">
+                                                <rect key="frame" x="20" y="20" width="120" height="120"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ir-eV-5ub">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ir-eV-5ub">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" backgroundImage="btn-feelings"/>
-                                                <state key="highlighted" backgroundImage="btn-feelings-pressed"/>
                                                 <connections>
                                                     <action selector="btnTapped:" destination="ecA-si-H8h" eventType="touchUpInside" id="Y33-DQ-jVh"/>
                                                 </connections>
@@ -195,15 +194,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JJu-Yp-Wat">
                                         <rect key="frame" x="324" y="0.0" width="160" height="200"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default-Fear" translatesAutoresizingMaskIntoConstraints="NO" id="ILR-K0-rTe">
-                                                <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="meBoyFear" translatesAutoresizingMaskIntoConstraints="NO" id="ILR-K0-rTe">
+                                                <rect key="frame" x="20" y="20" width="120" height="120"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zW4-Dc-NPD">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zW4-Dc-NPD">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" backgroundImage="btn-feelings"/>
-                                                <state key="highlighted" backgroundImage="btn-feelings-pressed"/>
                                                 <connections>
                                                     <action selector="btnTapped:" destination="ecA-si-H8h" eventType="touchUpInside" id="4Ys-Iz-tsR"/>
                                                 </connections>
@@ -225,15 +222,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JtX-Wy-PKk">
                                         <rect key="frame" x="486" y="0.0" width="160" height="200"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default-Disgust" translatesAutoresizingMaskIntoConstraints="NO" id="d2m-ku-Xnx">
-                                                <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="meBoyDisgust" translatesAutoresizingMaskIntoConstraints="NO" id="d2m-ku-Xnx">
+                                                <rect key="frame" x="20" y="20" width="120" height="120"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ue-3N-IpU">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ue-3N-IpU">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" backgroundImage="btn-feelings"/>
-                                                <state key="highlighted" backgroundImage="btn-feelings-pressed"/>
                                                 <connections>
                                                     <action selector="btnTapped:" destination="ecA-si-H8h" eventType="touchUpInside" id="NlS-KA-5lF"/>
                                                 </connections>
@@ -255,15 +250,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ll2-Cc-yCS">
                                         <rect key="frame" x="648" y="0.0" width="160" height="200"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default-Anger" translatesAutoresizingMaskIntoConstraints="NO" id="BEV-Sq-eRt">
-                                                <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="meBoyAnger" translatesAutoresizingMaskIntoConstraints="NO" id="BEV-Sq-eRt">
+                                                <rect key="frame" x="20" y="20" width="120" height="120"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvx-1p-jff">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvx-1p-jff">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" backgroundImage="btn-feelings"/>
-                                                <state key="highlighted" backgroundImage="btn-feelings-pressed"/>
                                                 <connections>
                                                     <action selector="btnTapped:" destination="ecA-si-H8h" eventType="touchUpInside" id="1c4-Dd-pSr"/>
                                                 </connections>
@@ -288,8 +281,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="n53-cY-lXu" secondAttribute="trailing" id="LQK-N6-vjd"/>
+                            <constraint firstItem="n53-cY-lXu" firstAttribute="top" secondItem="GEf-y7-GAv" secondAttribute="top" id="LgD-74-xqx"/>
                             <constraint firstItem="wIi-Oh-92C" firstAttribute="bottom" secondItem="QKX-Et-cv2" secondAttribute="bottom" constant="17" id="MRK-z4-Os1"/>
                             <constraint firstItem="QKX-Et-cv2" firstAttribute="centerX" secondItem="GEf-y7-GAv" secondAttribute="centerX" id="aeW-iA-2KC"/>
+                            <constraint firstAttribute="bottom" secondItem="n53-cY-lXu" secondAttribute="bottom" id="ure-gc-PPu"/>
+                            <constraint firstItem="n53-cY-lXu" firstAttribute="leading" secondItem="GEf-y7-GAv" secondAttribute="leading" id="vtv-0L-w1d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wIi-Oh-92C"/>
                     </view>
@@ -331,12 +328,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Default-Anger" width="160" height="160"/>
-        <image name="Default-Disgust" width="160" height="160"/>
-        <image name="Default-Fear" width="160" height="160"/>
-        <image name="Default-Joy" width="160" height="160"/>
-        <image name="Default-Sadness" width="160" height="160"/>
-        <image name="btn-feelings" width="160" height="160"/>
-        <image name="btn-feelings-pressed" width="160" height="160"/>
+        <image name="BG" width="896" height="414"/>
+        <image name="meBoyAnger" width="120" height="120"/>
+        <image name="meBoyDisgust" width="120" height="120"/>
+        <image name="meBoyFear" width="120" height="120"/>
+        <image name="meBoyJoy" width="120" height="120"/>
+        <image name="meBoySadness" width="120" height="120"/>
     </resources>
 </document>

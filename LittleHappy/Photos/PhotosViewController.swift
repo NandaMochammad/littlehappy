@@ -33,23 +33,23 @@ class PhotosViewController: UIViewController, UINavigationControllerDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = currPerson.description
+        title = currPerson.text
         
-        personLbl.text = currPerson.description
+        personLbl.text = "Let's take photos for \(currPerson.text)!"
         
-        img1.layer.cornerRadius = 80
+        img1.layer.cornerRadius = 60
         img1.layer.masksToBounds = true
-        
-        img2.layer.cornerRadius = 80
+
+        img2.layer.cornerRadius = 60
         img2.layer.masksToBounds = true
-        
-        img3.layer.cornerRadius = 80
+
+        img3.layer.cornerRadius = 60
         img3.layer.masksToBounds = true
-        
-        img4.layer.cornerRadius = 80
+
+        img4.layer.cornerRadius = 60
         img4.layer.masksToBounds = true
-        
-        img5.layer.cornerRadius = 80
+
+        img5.layer.cornerRadius = 60
         img5.layer.masksToBounds = true
         
         refreshPhotos()
@@ -57,7 +57,7 @@ class PhotosViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     func refreshPhotos() {
-        
+                
         img1.image = MediaManager.shared.getPhoto(person: currPerson, feeling: .joy)
         img2.image = MediaManager.shared.getPhoto(person: currPerson, feeling: .sadness)
         img3.image = MediaManager.shared.getPhoto(person: currPerson, feeling: .fear)
@@ -122,6 +122,8 @@ class PhotosViewController: UIViewController, UINavigationControllerDelegate, UI
             myPickerController.delegate = self
             myPickerController.sourceType = .camera
             present(myPickerController, animated: true, completion: nil)
+        } else {
+            photoLibrary()
         }
         
     }
@@ -168,6 +170,7 @@ class PhotosViewController: UIViewController, UINavigationControllerDelegate, UI
                                             withExtension: "mp3") else { return }
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer?.prepareToPlay()
             } catch let error {
                 print(error.localizedDescription)
             }
