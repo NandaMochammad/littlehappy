@@ -123,13 +123,15 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
             }
         }
         
-        UIView.animate(withDuration: 0, animations: {
-            cell.cellImage.frame.origin.y += 10
+        UIView.animate(withDuration: 1, animations: {
+            cell.cellImage.frame.origin.y -= 10
+            cell.cellImage.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.2)
             
         }){_ in
             UIView.animateKeyframes(withDuration: 1, delay: 0.25, options: [.autoreverse, .repeat], animations: {
-                cell.cellImage.frame.origin.y -= 10
-                cell.cellImage.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.2)
+                cell.cellImage.frame.origin.y += 10
+//                cell.cellImage.frame.origin.y -= 10
+//                cell.cellImage.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.2)
             }, completion: nil)
         }
         
