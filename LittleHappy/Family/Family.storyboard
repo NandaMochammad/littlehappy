@@ -53,7 +53,7 @@
                                                         <constraint firstAttribute="width" constant="72" id="iyH-gi-bJb"/>
                                                         <constraint firstAttribute="height" constant="60" id="xnp-dL-XOg"/>
                                                     </constraints>
-                                                    <state key="normal" image="camera"/>
+                                                    <state key="normal" image="camera icon"/>
                                                     <connections>
                                                         <action selector="cellButton:" destination="acy-vX-RjL" eventType="touchUpInside" id="85M-qx-KW0"/>
                                                     </connections>
@@ -62,7 +62,7 @@
                                                     <rect key="frame" x="237" y="96" width="173" height="46"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -93,16 +93,8 @@
                                     <segue destination="zlf-Xd-P2O" kind="presentation" id="8Mk-yC-DvR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cob-CM-sGm">
-                                <rect key="frame" x="742" y="20" width="110" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="information"/>
-                                <connections>
-                                    <segue destination="9xt-Di-JES" kind="presentation" id="Wd7-lt-Yas"/>
-                                </connections>
-                            </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfE-Ji-gwW">
-                                <rect key="frame" x="60" y="20" width="66" height="66"/>
+                                <rect key="frame" x="766" y="29" width="66" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Settings"/>
                             </button>
@@ -113,6 +105,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cob-CM-sGm">
+                                <rect key="frame" x="64" y="29" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="diary icon"/>
+                                <connections>
+                                    <segue destination="9xt-Di-JES" kind="presentation" id="Wd7-lt-Yas"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -156,7 +156,7 @@
     <resources>
         <image name="PLAY" width="128" height="60"/>
         <image name="Settings" width="66" height="66"/>
-        <image name="camera" width="300" height="201"/>
-        <image name="information" width="66" height="66"/>
+        <image name="camera icon" width="60" height="60"/>
+        <image name="diary icon" width="60" height="60"/>
     </resources>
 </document>
