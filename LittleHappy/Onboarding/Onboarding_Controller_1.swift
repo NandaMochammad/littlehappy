@@ -14,6 +14,7 @@ class Onboarding_Controller_1: UIViewController {
     
     @IBOutlet weak var sunPath: UIImageView!
     
+    @IBOutlet weak var littleHappyText: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,8 @@ class Onboarding_Controller_1: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        //littleHappyText.addTextSpacing(spacing: 10)
+        
         animateText()
         
         rotateAnimation(imageview: sunPath)
