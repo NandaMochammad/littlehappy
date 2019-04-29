@@ -26,6 +26,10 @@
 	<string>For Using Photos</string>
 	<key>NSCameraUsageDescription</key>
 	<string>For Taking Photos</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ShadowsIntoLight.ttf</string>
+	</array>
 	<key>UIInterfaceOrientation</key>
 	<string>UIInterfaceOrientationLandscapeLeft</string>
 	<key>UILaunchStoryboardName</key>
@@ -38,7 +42,6 @@
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
-		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>

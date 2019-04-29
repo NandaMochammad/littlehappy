@@ -30,34 +30,57 @@ class PhotosViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet weak var btn4: UIButton!
     @IBOutlet weak var btn5: UIButton!
     
+    @IBOutlet weak var lbl1: UILabel!
+    @IBOutlet weak var lbl2: UILabel!
+    @IBOutlet weak var lbl3: UILabel!
+    @IBOutlet weak var lbl4: UILabel!
+    @IBOutlet weak var lbl5: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = currPerson.description
+        title = currPerson.text
         
-        personLbl.text = currPerson.description
+        personLbl.font = UIFont(name: "ShadowsIntoLight", size: 32)
+        personLbl.text = "Let's take photos for \(currPerson.text)!"
         
-        img1.layer.cornerRadius = 80
+        img1.layer.cornerRadius = 60
         img1.layer.masksToBounds = true
-        
-        img2.layer.cornerRadius = 80
+
+        img2.layer.cornerRadius = 60
         img2.layer.masksToBounds = true
-        
-        img3.layer.cornerRadius = 80
+
+        img3.layer.cornerRadius = 60
         img3.layer.masksToBounds = true
-        
-        img4.layer.cornerRadius = 80
+
+        img4.layer.cornerRadius = 60
         img4.layer.masksToBounds = true
-        
-        img5.layer.cornerRadius = 80
+
+        img5.layer.cornerRadius = 60
         img5.layer.masksToBounds = true
+        
+        lbl1.font = UIFont(name: "ShadowsIntoLight", size: 28)
+        lbl2.font = UIFont(name: "ShadowsIntoLight", size: 28)
+        lbl3.font = UIFont(name: "ShadowsIntoLight", size: 28)
+        lbl4.font = UIFont(name: "ShadowsIntoLight", size: 28)
+        lbl5.font = UIFont(name: "ShadowsIntoLight", size: 28)
         
         refreshPhotos()
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        startAnimations()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        stopAnimations()
+    }
+    
     func refreshPhotos() {
-        
+                
         img1.image = MediaManager.shared.getPhoto(person: currPerson, feeling: .joy)
         img2.image = MediaManager.shared.getPhoto(person: currPerson, feeling: .sadness)
         img3.image = MediaManager.shared.getPhoto(person: currPerson, feeling: .fear)
@@ -66,6 +89,61 @@ class PhotosViewController: UIViewController, UINavigationControllerDelegate, UI
         
     }
 
+    func startAnimations() {
+        
+        let joyAnim = CABasicAnimation(keyPath: "transform.scale")
+        joyAnim.fromValue = 0.9
+        joyAnim.toValue = 1.1
+        joyAnim.duration = 0.2
+        joyAnim.autoreverses = true
+        joyAnim.repeatCount = .greatestFiniteMagnitude
+        joyAnim.isRemovedOnCompletion = false
+        img1.layer.add(joyAnim, forKey: "joy")
+        
+        let sadnessAnim = CABasicAnimation(keyPath: "transform.translation.y")
+        sadnessAnim.fromValue = 0
+        sadnessAnim.toValue = 20
+        sadnessAnim.duration = 1.0
+        sadnessAnim.repeatCount = .greatestFiniteMagnitude
+        sadnessAnim.isRemovedOnCompletion = false
+        img2.layer.add(sadnessAnim, forKey: "sadness")
+        
+        let fearAnim = CABasicAnimation(keyPath: "opacity")
+        fearAnim.fromValue = 0.8
+        fearAnim.toValue = 0.5
+        fearAnim.duration = 0.2
+        fearAnim.autoreverses = true
+        fearAnim.repeatCount = .greatestFiniteMagnitude
+        fearAnim.isRemovedOnCompletion = false
+        img3.layer.add(fearAnim, forKey: "fear")
+        
+        let disgustAnim = CABasicAnimation(keyPath: "transform.rotation")
+        disgustAnim.toValue = Double.pi
+        disgustAnim.isCumulative = true
+        disgustAnim.duration = 1.0
+        disgustAnim.repeatCount = .greatestFiniteMagnitude
+        disgustAnim.isRemovedOnCompletion = false
+        img4.layer.add(disgustAnim, forKey: "disgust")
+        
+        let angerAnim = CABasicAnimation(keyPath: "transform.translation.x")
+        angerAnim.fromValue = -5
+        angerAnim.toValue = 5
+        angerAnim.duration = 0.1
+        angerAnim.autoreverses = true
+        angerAnim.repeatCount = .greatestFiniteMagnitude
+        angerAnim.isRemovedOnCompletion = false
+        img5.layer.add(angerAnim, forKey: "anger")
+        
+    }
+    
+    func stopAnimations() {
+        img1.layer.removeAllAnimations()
+        img2.layer.removeAllAnimations()
+        img3.layer.removeAllAnimations()
+        img4.layer.removeAllAnimations()
+        img5.layer.removeAllAnimations()
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -82,6 +160,7 @@ class PhotosViewController: UIViewController, UINavigationControllerDelegate, UI
         print(#function)
     
         playSound()
+        stopAnimations()
         
         let btn = sender as! UIButton
         
@@ -122,6 +201,8 @@ class PhotosViewController: UIViewController, UINavigationControllerDelegate, UI
             myPickerController.delegate = self
             myPickerController.sourceType = .camera
             present(myPickerController, animated: true, completion: nil)
+        } else {
+            photoLibrary()
         }
         
     }
@@ -168,6 +249,7 @@ class PhotosViewController: UIViewController, UINavigationControllerDelegate, UI
                                             withExtension: "mp3") else { return }
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer?.prepareToPlay()
             } catch let error {
                 print(error.localizedDescription)
             }

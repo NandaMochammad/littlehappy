@@ -16,8 +16,11 @@ class Onboarding_Controller_1: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        animateText()
-        rotateAnimation(imageview: sunImage)
+        DataManager.shared.loadDataFromUserDefaults()
+
+        print("Data Saved \n", DataManager.shared.kindOfFeels,"\n",DataManager.shared.dateOfFeels, "\n", DataManager.shared.timeOfFeels)
+
+
         //Do the basic appear and disappear animation
 
         

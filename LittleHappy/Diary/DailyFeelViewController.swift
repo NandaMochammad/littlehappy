@@ -27,46 +27,51 @@ class DailyFeelViewController: UIViewController {
     @IBOutlet weak var feelAngry: UIButton!
     @IBOutlet weak var feelFear: UIButton!
     @IBOutlet weak var feelDisgust: UIButton!
-    
-    //Membuat User Default untuk menyimpan data array
-    let defaults = UserDefaults.standard
 
     
     //Membuat variabel untuk menyimpan senderTag
     var senderTag : Int = 0
     var gender = DataManager.shared.gender
     
+    @IBOutlet var viewBG: UIView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
-        
-        feelButton()
+        print("Data Saved \n", DataManager.shared.kindOfFeels,"\n",DataManager.shared.dateOfFeels, "\n", DataManager.shared.timeOfFeels)
+
+        setIconFeelButton()
         
         DataManager.shared.loadDataFromUserDefaults()
+        
+        self.viewBG.backgroundColor = UIColor(patternImage: UIImage(named: "BG.png")!)
+
+
 
     }
     
     //MARK: - SET ICON FEEL
-    func feelButton(){
+    func setIconFeelButton(){
+        
+        let feeling = [feelHappy, feelSad, feelAngry, feelFear, feelDisgust]
+        let feels = ["Joy", "Sadness", "Anger", "Fear", "Disgust"]
+        
+        var kelamin = ""
         
         if gender == .male{
-            feelHappy.setImage(UIImage(named: "artborat _test.png"), for: .normal)
-            feelSad.setImage(UIImage(named: "me boy sad.png"), for: .normal)
-            feelDisgust.setImage(UIImage(named: "me boy disgust.png"), for: .normal)
-            feelAngry.setImage(UIImage(named: "me boy angry.png"), for: .normal)
-            feelFear.setImage(UIImage(named: "me boy fear.png"), for: .normal)
-
+            kelamin = "Boy"
+            
         }else{
-            feelHappy.setImage(UIImage(named: "me girl happy.png"), for: .normal)
-            feelSad.setImage(UIImage(named: "me girl sad.png"), for: .normal)
-            feelDisgust.setImage(UIImage(named: "me girl disgust.png"), for: .normal)
-            feelAngry.setImage(UIImage(named: "me girl angry.png"), for: .normal)
-            feelFear.setImage(UIImage(named: "me girl fear.png"), for: .normal)
+            kelamin = "Girl"
         }
+        
+        for i in 0 ... feels.count - 1{
+            feeling[i]?.setImage(UIImage(named: "me\(kelamin)\(feels[i])"), for: .normal)
+            feeling[i]?.layer.cornerRadius = 50
+            feeling[i]?.clipsToBounds = true
+        }
+        
 
         viewHappy.isHidden = true
         viewSad.isHidden = true
@@ -106,6 +111,8 @@ class DailyFeelViewController: UIViewController {
             print("no tap")
         }
         
+        print("Sender Tag Daily : \(senderTag). \(feels[sender.tag])")
+        
         performSegue(withIdentifier: "goToHome", sender: self)
         
     }
@@ -119,9 +126,10 @@ class DailyFeelViewController: UIViewController {
         DataManager.shared.dateOfFeels.append(getDateTime()[0])
         DataManager.shared.timeOfFeels.append(getDateTime()[1])
         
-        
         DataManager.shared.saveDataToUserDefaults()
         
+        print("Data Saved \n", DataManager.shared.kindOfFeels,"\n",DataManager.shared.dateOfFeels, "\n", DataManager.shared.timeOfFeels)
+
     }
 
     //Membuat fungsi untuk mengambil waktu feeling

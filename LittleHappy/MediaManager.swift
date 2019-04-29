@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MediaManager: NSObject {
+final class MediaManager: NSObject {
 
     static let shared = MediaManager()
     
@@ -28,35 +28,36 @@ class MediaManager: NSObject {
             print("found")
             return image
         } else {
-            print("returning default")
-            print("Default-\(feeling.description)")
-            return UIImage(named: "Default-\(feeling.description)")!
+            return getPhotoAssets(person: person, feeling: feeling)
+//            print("returning default")
+//            print("Default-\(feeling.description)")
+//            return UIImage(named: "Default-\(feeling.description)")!
         }
     }
     
     func getPhotoAssets(person: Person, feeling: Feeling) -> UIImage {
         
-        print(person, feeling)
+//        print(person, feeling)
         if person != Person.me {
-            let imageName = "\(person.description.lowercased())_\(feeling.description.lowercased()) face"
+            let imageName = "\(person.description.lowercased())\(feeling.description)"
             if let image = UIImage(named: imageName) {
                 return image
             } else {
                 return UIImage(named: "Default-\(feeling.description)")!
             }
         } else {
-            print(DataManager.shared.gender)
+//            print(DataManager.shared.gender)
             if DataManager.shared.gender == .male {
-                let imageName = "me boy \(feeling.description.lowercased())"
-                print(imageName)
+                let imageName = "meBoy\(feeling.description)"
+//                print(imageName)
                 if let image = UIImage(named: imageName) {
                     return image
                 } else {
                     return UIImage(named: "Default-\(feeling.description)")!
                 }
             } else if DataManager.shared.gender == .female {
-                let imageName = "me girl \(feeling.description.lowercased())"
-                print(imageName)
+                let imageName = "meGirl\(feeling.description)"
+//                print(imageName)
                 if let image = UIImage(named: imageName) {
                     return image
                 } else {

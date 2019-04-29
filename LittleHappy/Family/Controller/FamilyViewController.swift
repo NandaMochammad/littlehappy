@@ -19,11 +19,17 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
     var imgArray3: [UIImage] = []
     var imgArray4: [UIImage] = []
     var imgArray5: [UIImage] = []
+    var timer: Timer? {
+        didSet {
+            self.timer?.fire()
+        }
+    }
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
 //        let value = UIInterfaceOrientation.lan.rawValue
+        
         let flowLayout = UPCarouselFlowLayout()
         
 //        UIDevice.current.setValue(value, forKey: "orientation")
@@ -38,11 +44,34 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         collectionView.collectionViewLayout = flowLayout
         collectionView.delegate = self
         collectionView.dataSource = self
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "BG")!)
         
         loadImages()
         //        print(UIScreen.main.bounds.size.width - 400)
         //        print(collectionView.frame.size.height)
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+            self.timer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.shakeCells), userInfo: nil, repeats: true)
+        }
+    }
+    
+    @objc func shakeCells() {
+        let movementConstant: CGFloat = 10
+        self.collectionView.visibleCells.forEach { (cell) in
+            let cell = cell as! CollectionViewCell
+            UIView.animate(withDuration: 0.5, delay: 2.4, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+                cell.cellImage.frame.origin.y -= movementConstant
+            }) { (_) in
+                UIView.animate(withDuration: 0.5, animations: {
+                    cell.cellImage.frame.origin.y += movementConstant
+                })
+            }
+        }
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -62,7 +91,7 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CollectionViewCell
 //        let image: String = "\(familyArray[indexPath.row].description.lowercased())_happy face"
 //        cell.cellImage.image = UIImage(named: image)
-        cell.cellLabel.text = familyArray[indexPath.row].description
+        cell.cellLabel.text = " \(familyArray[indexPath.row].description)"
         cell.layer.cornerRadius = 120
         cell.cellButton.tag = indexPath.row
 //        print(indexPath.row)
@@ -92,23 +121,31 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         default: break
             
         }
-        
-        cell.cellImage.animationDuration = 8
+        cell.cellLabel.layer.masksToBounds = true
+        cell.cellLabel.layer.cornerRadius = 18
+        cell.cellImage.layer.borderColor = UIColor.gray.cgColor
+        cell.cellImage.layer.borderWidth = 2
+        cell.cellImage.layer.cornerRadius = 72
+        cell.cellImage.animationDuration = 20
         cell.cellImage.startAnimating()
         
-        UIView.animate(withDuration: 0.8, animations: {
-//            cell.cellImage.frame.size.height += 20
-            cell.cellImage.frame.origin.y -= 10
-            
-        }) {_ in
-            UIView.animateKeyframes(withDuration: 0.8, delay: 0, options: [.autoreverse, .repeat], animations: {
-//                cell.cellImage.frame.size.height -= 20
-                cell.cellImage.frame.origin.y += 10
-            }, completion: nil)
-        } 
+//        UIView.animate(withDuration: 0.02, animations: {
+////            cell.cellImage.frame.size.height += 20
+//            cell.cellImage.frame.origin.y -= 10
+//
+//        }) {_ in
+//            UIView.animateKeyframes(withDuration: 0.02, delay: 0, options: [.autoreverse, .repeat], animations: {
+////                cell.cellImage.frame.size.height -= 20
+//                cell.cellImage.frame.origin.y += 10
+//            }, completion: nil)
+//        }
+        
+//        let timer = Timer(timeInterval: 0.02, repeats: true) { (timer) in
+//            print("Timer: \(timer)")
+//        }
+//        timer.fire()
         
         return cell
-        
     }
     
     @IBAction func cellButton(_ sender: UIButton) {
