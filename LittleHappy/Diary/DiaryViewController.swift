@@ -55,7 +55,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        doneButton.setImage(UIImage(named: "BACKCLICKED"), for: .normal)
+        doneButton.setImage(UIImage(named: "BACK"), for: .normal)
         
         self.viewBG.backgroundColor = UIColor(patternImage: UIImage(named: "BG.png")!)
 
@@ -262,7 +262,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBAction func doneBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-        doneButton.setImage(UIImage(named: "BACK"), for: .normal)
+//        doneButton.setImage(UIImage(named: "BACKCLICKED"), for: .normal)
 
     }
     
