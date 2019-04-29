@@ -21,6 +21,7 @@ class NameViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        okButton.isEnabled = false
         yourNameTextBox.delegate = self
         // Do any additional setup after loading the view.
     }
@@ -33,7 +34,7 @@ class NameViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool
     {
-        scrollView.setContentOffset(CGPoint(x: 0, y: 100), animated: true)
+        scrollView.setContentOffset(CGPoint(x: 0, y: 70), animated: true)
         return true
     }
     
