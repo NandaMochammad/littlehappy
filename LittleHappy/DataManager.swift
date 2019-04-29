@@ -40,7 +40,7 @@ final class DataManager: NSObject {
         
         let defaults = UserDefaults.standard
         initialized = defaults.bool(forKey: "initialized")
-        name = defaults.string(forKey: "name") ?? ""
+        name = defaults.string(forKey: "name") ?? "Me"
         age = defaults.integer(forKey: "age")
         let genderRawValue = defaults.string(forKey: "gender") ?? "UNSPECIFIED"
         gender = Gender(rawValue: genderRawValue) ?? .unspecified

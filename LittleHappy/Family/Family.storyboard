@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hNc-h7-1vZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="acy-vX-RjL">
     <device id="retina6_1" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,7 +18,7 @@
             </objects>
             <point key="canvasLocation" x="-364" y="-366"/>
         </scene>
-        <!--Family-->
+        <!--My Family-->
         <scene sceneID="ewh-22-PSa">
             <objects>
                 <viewController id="acy-vX-RjL" customClass="FamilyViewController" customModule="LittleHappy" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="V9j-Gy-vSJ">
-                                <rect key="frame" x="44" y="89" width="808" height="245"/>
+                                <rect key="frame" x="0.0" y="89" width="896" height="245"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NyV-th-AWY">
                                     <size key="itemSize" width="410" height="236"/>
@@ -37,27 +37,18 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="QcT-lT-3Go" customClass="CollectionViewCell" customModule="LittleHappy" customModuleProvider="target">
-                                        <rect key="frame" x="199" y="0.0" width="410" height="236"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="410" height="236"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="410" height="236"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Family Member" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pR-1o-Cfl">
-                                                    <rect key="frame" x="105" y="177" width="192" height="36"/>
-                                                    <color key="backgroundColor" red="0.36518090959999999" green="0.51233154540000003" blue="0.81572562459999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="32"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dOc-Po-5Z8">
-                                                    <rect key="frame" x="133" y="20" width="144" height="144"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="144" id="WWC-m4-HMh"/>
-                                                    </constraints>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dOc-Po-5Z8">
+                                                    <rect key="frame" x="20" y="13" width="209" height="223"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLJ-xv-fOa">
-                                                    <rect key="frame" x="277" y="156" width="72" height="60"/>
+                                                    <rect key="frame" x="330" y="168" width="72" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="72" id="iyH-gi-bJb"/>
                                                         <constraint firstAttribute="height" constant="60" id="xnp-dL-XOg"/>
@@ -67,19 +58,19 @@
                                                         <action selector="cellButton:" destination="acy-vX-RjL" eventType="touchUpInside" id="85M-qx-KW0"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" Family Member" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pR-1o-Cfl">
+                                                    <rect key="frame" x="237" y="96" width="173" height="46"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottomMargin" secondItem="5pR-1o-Cfl" secondAttribute="bottom" constant="15" id="2KY-qW-sHN"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="OLJ-xv-fOa" secondAttribute="bottom" constant="12" id="4U7-6i-P0e"/>
-                                            <constraint firstItem="5pR-1o-Cfl" firstAttribute="leading" secondItem="QcT-lT-3Go" secondAttribute="leadingMargin" constant="53" id="Adg-ah-RHl"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="OLJ-xv-fOa" secondAttribute="trailing" constant="53" id="Q4f-vt-1oZ"/>
-                                            <constraint firstItem="OLJ-xv-fOa" firstAttribute="leading" secondItem="dOc-Po-5Z8" secondAttribute="trailing" id="UIi-9W-G2f"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="dOc-Po-5Z8" secondAttribute="bottom" constant="64" id="bXT-wz-Ej5"/>
-                                            <constraint firstItem="5pR-1o-Cfl" firstAttribute="top" secondItem="QcT-lT-3Go" secondAttribute="topMargin" constant="169" id="c2P-Fu-WKw"/>
-                                            <constraint firstItem="dOc-Po-5Z8" firstAttribute="top" secondItem="QcT-lT-3Go" secondAttribute="topMargin" constant="12" id="hcf-ZO-BN5"/>
-                                            <constraint firstItem="dOc-Po-5Z8" firstAttribute="leading" secondItem="5pR-1o-Cfl" secondAttribute="trailing" constant="-164" id="pxr-ZV-I1m"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="OLJ-xv-fOa" secondAttribute="bottom" id="4U7-6i-P0e"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="OLJ-xv-fOa" secondAttribute="trailing" id="Q4f-vt-1oZ"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="cellButton" destination="OLJ-xv-fOa" id="gz9-FR-Jyw"/>
@@ -89,42 +80,53 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEN-5j-LFZ">
-                                <rect key="frame" x="378" y="339" width="140" height="41"/>
-                                <color key="backgroundColor" red="0.36518090963363647" green="0.51233154535293579" blue="0.81572562456130981" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEN-5j-LFZ">
+                                <rect key="frame" x="378" y="339" width="140" height="54"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="LVO-E0-IHs"/>
+                                    <constraint firstAttribute="height" constant="54" id="LVO-E0-IHs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
-                                <state key="normal" title="Play Game">
-                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Play Game" image="PLAY">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="zlf-Xd-P2O" kind="presentation" id="8Mk-yC-DvR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cob-CM-sGm">
-                                <rect key="frame" x="812" y="48" width="40" height="40"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cob-CM-sGm">
+                                <rect key="frame" x="742" y="20" width="110" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="diary"/>
+                                <state key="normal" image="information"/>
                                 <connections>
                                     <segue destination="9xt-Di-JES" kind="presentation" id="Wd7-lt-Yas"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfE-Ji-gwW">
+                                <rect key="frame" x="64" y="20" width="120" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Settings"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Family" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXf-QW-GcF">
+                                <rect key="frame" x="368" y="32" width="160" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="225-VV-wRf" firstAttribute="trailing" secondItem="GEN-5j-LFZ" secondAttribute="trailing" constant="334" id="6Bb-or-ZVM"/>
-                            <constraint firstItem="V9j-Gy-vSJ" firstAttribute="leading" secondItem="225-VV-wRf" secondAttribute="leading" id="UzF-QY-tTN"/>
-                            <constraint firstItem="225-VV-wRf" firstAttribute="trailing" secondItem="V9j-Gy-vSJ" secondAttribute="trailing" id="Wk9-Cc-gPT"/>
+                            <constraint firstItem="V9j-Gy-vSJ" firstAttribute="leading" secondItem="225-VV-wRf" secondAttribute="leading" constant="-44" id="UzF-QY-tTN"/>
+                            <constraint firstItem="225-VV-wRf" firstAttribute="trailing" secondItem="V9j-Gy-vSJ" secondAttribute="trailing" constant="-44" id="Wk9-Cc-gPT"/>
                             <constraint firstItem="GEN-5j-LFZ" firstAttribute="leading" secondItem="225-VV-wRf" secondAttribute="leading" constant="334" id="Wlv-Yj-aDy"/>
-                            <constraint firstItem="V9j-Gy-vSJ" firstAttribute="top" secondItem="225-VV-wRf" secondAttribute="top" constant="45" id="aEC-P0-Lvt"/>
-                            <constraint firstItem="225-VV-wRf" firstAttribute="bottom" secondItem="GEN-5j-LFZ" secondAttribute="bottom" constant="13" id="lvn-sY-6Vh"/>
+                            <constraint firstItem="V9j-Gy-vSJ" firstAttribute="top" secondItem="225-VV-wRf" secondAttribute="top" constant="89" id="aEC-P0-Lvt"/>
+                            <constraint firstItem="225-VV-wRf" firstAttribute="bottom" secondItem="GEN-5j-LFZ" secondAttribute="bottom" id="lvn-sY-6Vh"/>
                             <constraint firstItem="GEN-5j-LFZ" firstAttribute="top" secondItem="V9j-Gy-vSJ" secondAttribute="bottom" constant="5" id="rex-xT-dtf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="225-VV-wRf"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Family" id="QV7-v6-37B"/>
+                    <navigationItem key="navigationItem" title="My Family" id="QV7-v6-37B"/>
                     <connections>
                         <outlet property="collectionView" destination="V9j-Gy-vSJ" id="qy2-Z9-UV1"/>
                         <segue destination="7mh-U4-LIG" kind="show" identifier="PhotosSegue" id="e5z-kA-e3G"/>
@@ -150,33 +152,11 @@
             </objects>
             <point key="canvasLocation" x="-284" y="631"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ZzD-QU-KRs">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hNc-h7-1vZ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7zF-6P-Hkt">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.36518090959999999" green="0.51233154540000003" blue="0.81572562459999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
-                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="acy-vX-RjL" kind="relationship" relationship="rootViewController" id="7mG-pe-Zgs"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AsH-nd-A5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1183" y="184"/>
-        </scene>
     </scenes>
     <resources>
+        <image name="PLAY" width="128" height="60"/>
+        <image name="Settings" width="66" height="66"/>
         <image name="camera" width="300" height="201"/>
-        <image name="diary" width="112.5" height="112.5"/>
+        <image name="information" width="66" height="66"/>
     </resources>
 </document>
