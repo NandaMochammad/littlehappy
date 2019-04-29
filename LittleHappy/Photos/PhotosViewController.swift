@@ -69,6 +69,16 @@ class PhotosViewController: UIViewController, UINavigationControllerDelegate, UI
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        startAnimations()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        stopAnimations()
+    }
+    
     func refreshPhotos() {
                 
         img1.image = MediaManager.shared.getPhoto(person: currPerson, feeling: .joy)
@@ -79,6 +89,61 @@ class PhotosViewController: UIViewController, UINavigationControllerDelegate, UI
         
     }
 
+    func startAnimations() {
+        
+        let joyAnim = CABasicAnimation(keyPath: "transform.scale")
+        joyAnim.fromValue = 0.9
+        joyAnim.toValue = 1.1
+        joyAnim.duration = 0.2
+        joyAnim.autoreverses = true
+        joyAnim.repeatCount = .greatestFiniteMagnitude
+        joyAnim.isRemovedOnCompletion = false
+        img1.layer.add(joyAnim, forKey: "joy")
+        
+        let sadnessAnim = CABasicAnimation(keyPath: "transform.translation.y")
+        sadnessAnim.fromValue = 0
+        sadnessAnim.toValue = 20
+        sadnessAnim.duration = 1.0
+        sadnessAnim.repeatCount = .greatestFiniteMagnitude
+        sadnessAnim.isRemovedOnCompletion = false
+        img2.layer.add(sadnessAnim, forKey: "sadness")
+        
+        let fearAnim = CABasicAnimation(keyPath: "opacity")
+        fearAnim.fromValue = 0.8
+        fearAnim.toValue = 0.5
+        fearAnim.duration = 0.2
+        fearAnim.autoreverses = true
+        fearAnim.repeatCount = .greatestFiniteMagnitude
+        fearAnim.isRemovedOnCompletion = false
+        img3.layer.add(fearAnim, forKey: "fear")
+        
+        let disgustAnim = CABasicAnimation(keyPath: "transform.rotation")
+        disgustAnim.toValue = Double.pi
+        disgustAnim.isCumulative = true
+        disgustAnim.duration = 1.0
+        disgustAnim.repeatCount = .greatestFiniteMagnitude
+        disgustAnim.isRemovedOnCompletion = false
+        img4.layer.add(disgustAnim, forKey: "disgust")
+        
+        let angerAnim = CABasicAnimation(keyPath: "transform.translation.x")
+        angerAnim.fromValue = -5
+        angerAnim.toValue = 5
+        angerAnim.duration = 0.1
+        angerAnim.autoreverses = true
+        angerAnim.repeatCount = .greatestFiniteMagnitude
+        angerAnim.isRemovedOnCompletion = false
+        img5.layer.add(angerAnim, forKey: "anger")
+        
+    }
+    
+    func stopAnimations() {
+        img1.layer.removeAllAnimations()
+        img2.layer.removeAllAnimations()
+        img3.layer.removeAllAnimations()
+        img4.layer.removeAllAnimations()
+        img5.layer.removeAllAnimations()
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -95,6 +160,7 @@ class PhotosViewController: UIViewController, UINavigationControllerDelegate, UI
         print(#function)
     
         playSound()
+        stopAnimations()
         
         let btn = sender as! UIButton
         
