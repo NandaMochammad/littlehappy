@@ -30,11 +30,18 @@ class PhotosViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet weak var btn4: UIButton!
     @IBOutlet weak var btn5: UIButton!
     
+    @IBOutlet weak var lbl1: UILabel!
+    @IBOutlet weak var lbl2: UILabel!
+    @IBOutlet weak var lbl3: UILabel!
+    @IBOutlet weak var lbl4: UILabel!
+    @IBOutlet weak var lbl5: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = currPerson.text
         
+        personLbl.font = UIFont(name: "ShadowsIntoLight", size: 32)
         personLbl.text = "Let's take photos for \(currPerson.text)!"
         
         img1.layer.cornerRadius = 60
@@ -51,6 +58,12 @@ class PhotosViewController: UIViewController, UINavigationControllerDelegate, UI
 
         img5.layer.cornerRadius = 60
         img5.layer.masksToBounds = true
+        
+        lbl1.font = UIFont(name: "ShadowsIntoLight", size: 28)
+        lbl2.font = UIFont(name: "ShadowsIntoLight", size: 28)
+        lbl3.font = UIFont(name: "ShadowsIntoLight", size: 28)
+        lbl4.font = UIFont(name: "ShadowsIntoLight", size: 28)
+        lbl5.font = UIFont(name: "ShadowsIntoLight", size: 28)
         
         refreshPhotos()
         

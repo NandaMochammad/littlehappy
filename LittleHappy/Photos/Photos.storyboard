@@ -301,6 +301,11 @@
                         <outlet property="img3" destination="ILR-K0-rTe" id="TLh-y9-C4s"/>
                         <outlet property="img4" destination="d2m-ku-Xnx" id="CUK-le-vcW"/>
                         <outlet property="img5" destination="BEV-Sq-eRt" id="vyD-Py-Vma"/>
+                        <outlet property="lbl1" destination="rCQ-8h-Exc" id="93f-NA-7tn"/>
+                        <outlet property="lbl2" destination="kDL-MG-JkE" id="dAE-fM-bpQ"/>
+                        <outlet property="lbl3" destination="Xpq-x1-zzk" id="hNL-db-aK7"/>
+                        <outlet property="lbl4" destination="52L-eP-Oh3" id="jEc-eR-cu4"/>
+                        <outlet property="lbl5" destination="saA-Zd-dB7" id="0YY-hA-275"/>
                         <outlet property="personLbl" destination="afi-39-CBw" id="Vtl-CY-M5i"/>
                     </connections>
                 </viewController>
