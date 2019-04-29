@@ -83,6 +83,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPu-aO-i4d">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onboardingClick:" destination="1ah-Ot-XFp" eventType="touchUpInside" id="myI-EO-afg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18s-Ih-464">
                                 <rect key="frame" x="766" y="20" width="56" height="56"/>
@@ -378,6 +381,6 @@ Keep track of your daily feelings! Have fun!</string>
         <image name="sister" width="885" height="1741"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CBO-T3-28K"/>
+        <segue reference="Ywl-H1-0MV"/>
     </inferredMetricsTieBreakers>
 </document>
