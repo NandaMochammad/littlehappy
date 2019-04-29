@@ -278,6 +278,14 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tT0-co-9qO">
+                                <rect key="frame" x="71" y="39" width="66" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="BACK"/>
+                                <connections>
+                                    <action selector="backBtnTapped:" destination="ecA-si-H8h" eventType="touchUpInside" id="OX9-r7-9Vs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -316,10 +324,9 @@
         <!--Navigation Controller-->
         <scene sceneID="BXr-cu-yNM">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lPB-Jf-XQP" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="lPB-Jf-XQP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0vz-rF-q1A">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -333,6 +340,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BACK" width="66" height="66"/>
         <image name="BG" width="896" height="414"/>
         <image name="meBoyAnger" width="120" height="120"/>
         <image name="meBoyDisgust" width="120" height="120"/>

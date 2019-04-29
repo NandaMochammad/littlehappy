@@ -170,8 +170,8 @@
                                     <constraint firstAttribute="height" constant="150" id="qbP-9N-7U9"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How do you feel today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qo8-Sa-Cef">
-                                <rect key="frame" x="285" y="109" width="327" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How are you feeling today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qo8-Sa-Cef">
+                                <rect key="frame" x="285" y="109" width="380" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="29"/>
                                 <nil key="textColor"/>
@@ -193,6 +193,7 @@
                         <outlet property="feelFear" destination="6bE-mE-ZXf" id="iaF-Yp-nej"/>
                         <outlet property="feelHappy" destination="pUl-vT-juL" id="vP8-Hn-bTI"/>
                         <outlet property="feelSad" destination="YLm-5U-nMh" id="Bga-pU-sUQ"/>
+                        <outlet property="greetingsLabel" destination="sxt-dn-oh6" id="KWp-8a-BLg"/>
                         <outlet property="viewAngry" destination="pty-gj-Iz1" id="qMi-pJ-vb1"/>
                         <outlet property="viewBG" destination="8bC-Xf-vdC" id="Sz2-B1-brH"/>
                         <outlet property="viewDisgust" destination="due-nO-kVO" id="4Hn-wx-eis"/>

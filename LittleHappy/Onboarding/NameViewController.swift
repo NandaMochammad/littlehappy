@@ -43,8 +43,10 @@ class NameViewController: UIViewController, UITextFieldDelegate {
     @IBAction func okButton(_ sender: UIButton) {
         if yourNameTextBox.text != "" {
             DataManager.shared.name = yourNameTextBox.text!
+            DataManager.shared.saveDataToUserDefaults()
         } else {
-            DataManager.shared.name = "Me"
+            DataManager.shared.name = "there"
+            DataManager.shared.saveDataToUserDefaults()
         }
     }
     /*
