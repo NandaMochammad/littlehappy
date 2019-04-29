@@ -55,7 +55,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        doneButton.setImage(UIImage(named: "BACK"), for: .normal)
+//        doneButton.setImage(UIImage(named: "BACK"), for: .normal)
         
         self.viewBG.backgroundColor = UIColor(patternImage: UIImage(named: "BG.png")!)
 

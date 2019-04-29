@@ -248,10 +248,10 @@
                                 <rect key="frame" x="245" y="0.0" width="3" height="414"/>
                                 <color key="backgroundColor" red="0.70206408242291174" green="0.88813020269645404" blue="0.98432868719100952" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAB-WJ-qwn">
-                                <rect key="frame" x="811" y="29" width="42" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAB-WJ-qwn">
+                                <rect key="frame" x="799" y="11" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="DONE"/>
+                                <state key="normal" image="BACK"/>
                                 <connections>
                                     <action selector="doneBtnPressed:" destination="aYY-Nx-T5w" eventType="touchUpInside" id="X2b-tu-O8e"/>
                                 </connections>
@@ -492,6 +492,7 @@
     </scenes>
     <resources>
         <image name="Angry" width="128" height="128"/>
+        <image name="BACK" width="66" height="66"/>
         <image name="Disgust" width="128" height="128"/>
         <image name="Fear" width="128" height="128"/>
         <image name="Happy" width="128" height="128"/>
