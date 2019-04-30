@@ -109,3 +109,5 @@ enum Gender: String {
     case unspecified = "UNSPECIFIED"
 }
 
+var soundPlayed: Bool = false
+

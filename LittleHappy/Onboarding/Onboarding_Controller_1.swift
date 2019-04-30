@@ -27,7 +27,10 @@ class Onboarding_Controller_1: UIViewController, AVAudioPlayerDelegate {
         
         littleHappyText.attributedText = NSAttributedString(string: "LITTLE HAPPY" ,attributes:[ NSAttributedString.Key.kern: 10])
         
+        if soundPlayed == false
+        {
         playSound()
+        }
 
         //Do the basic appear and disappear animation
 
@@ -87,6 +90,8 @@ class Onboarding_Controller_1: UIViewController, AVAudioPlayerDelegate {
             player.delegate = self
             player.numberOfLoops = -1
             player.play()
+            
+            soundPlayed = true
             
         } catch let error as NSError {
             print(error.description)
