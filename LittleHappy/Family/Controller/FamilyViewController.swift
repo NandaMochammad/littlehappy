@@ -14,17 +14,6 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var collectionView: UICollectionView!
     var audioPlayer: AVAudioPlayer?
     let familyArray = [Person.me, Person.father, Person.mother, Person.brother, Person.sister]
-//    let feelingArray = [Feeling.anger, Feeling.disgust, Feeling.fear, Feeling.joy, Feeling.sadness]
-//    var imgArray1: [UIImage] = []
-//    var imgArray2: [UIImage] = []
-//    var imgArray3: [UIImage] = []
-//    var imgArray4: [UIImage] = []
-//    var imgArray5: [UIImage] = []
-//    var timer: Timer? {
-//        didSet {
-//            self.timer?.fire()
-//        }
-//    }
     
     override func viewDidLoad() {
         
@@ -44,6 +33,7 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         collectionView.delegate = self
         collectionView.dataSource = self
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "BG")!)
+        
         
 //        loadImages()
         
@@ -182,42 +172,6 @@ class FamilyViewController: UIViewController, UICollectionViewDataSource, UIColl
         audioPlayer?.stop()
         audioPlayer?.play()
     }
-//    func loadImages() {
-//
-//        for x in familyArray {
-//            switch x {
-//            case Person.me:
-//                imgArray1.removeAll()
-//                for y in feelingArray {
-//                    imgArray1.append(MediaManager.shared.getPhotoAssets(person: x, feeling: y))
-//                }
-//            case Person.father:
-//                imgArray2.removeAll()
-//                for y in feelingArray {
-//                    imgArray2.append(MediaManager.shared.getPhotoAssets(person: x, feeling: y))
-//                }
-//            case Person.mother:
-//                imgArray3.removeAll()
-//                for y in feelingArray {
-//                    imgArray3.append(MediaManager.shared.getPhotoAssets(person: x, feeling: y))
-//                }
-//            case Person.brother:
-//                imgArray4.removeAll()
-//                for y in feelingArray {
-//                    imgArray4.append(MediaManager.shared.getPhotoAssets(person: x, feeling: y))
-//                }
-//            case Person.sister:
-//                imgArray5.removeAll()
-//                for y in feelingArray {
-//                    imgArray5.append(MediaManager.shared.getPhotoAssets(person: x, feeling: y))
-//                }
-//
-//            }
-//
-//        }
-//
-//
-//    }
     
 }
 
